@@ -1,0 +1,219 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Windows 上に Git 環境を構築する方法(TortoiseGit と msysGit) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>Windows 上に Git 環境を構築する方法(TortoiseGit と msysGit)</h1>
+
+<p>このページでは、Windows 上で Git 環境を構築する手順と、GitHub 上のリポジトリを更新するための設定について説明します。</p>
+
+<h2>使用するツールとインストール</h2>
+
+<ul>
+<li><strong>TortoiseGit</strong><br />
+Windows 上の Git クライアント。<a href="http://code.google.com/p/tortoisegit/">配布サイト</a></li>
+<li><strong>msysGit</strong><br />
+Git コマンド群のバイナリディストリビューション。<a href="http://code.google.com/p/msysgit/">配布サイト</a></li>
+</ul>
+
+<h3>msysGit のインストール</h3>
+
+<p>上記配布サイトの「Downloads」ページより、先頭に msysGit がつくインストーラーファイル（Full installer）をダウンロードします。
+ダウンロードが完了したら、インストーラーを実行してインストールしてください。</p>
+
+<p>インストールにはしばらく時間がかかります。</p>
+
+<p>しばらく待つと、コマンドプロンプト（Git bashと呼びます）のような画面に完了メッセージが表示されます。Git bash 上で次のコマンドを入力して、デスクトップに Git bash を起動するショートカットを作成しましょう。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ /share/msysGit/add-shortcut.tcl Desktop
+</code></pre></div>
+<p>コマンドを実行すると、デスクトップに「msysGit」というショートカットアイコンが作成されます。次回から必要な時には、このアイコンをダブルクリックして Git bash を起動してください。</p>
+
+<blockquote>
+<p><strong>CAUTION</strong>
+Git bash は、GitHub に登録する公開鍵を作成する際に必要になります。</p>
+</blockquote>
+
+<h3>TortoiseGit のインストール</h3>
+
+<p>上記配布サイトの「Downloads」ページより、TortoiseGit のインストーラーファイルをダウンロードします。
+32bit 環境用と 64bit 環境用がありますので、お使いの環境に合ったものをダウンロードして下さい。
+ダウンロードが完了したら、インストーラーを実行してインストールしてください。</p>
+
+<h3>インストールの確認</h3>
+
+<p>msysGit と TortoiseGit のインストールが完了し、システムを再起動すると、エクスプローラーでフォルダーを右クリックした際に TortoiseGit のメニューが表示されるようになります。</p>
+
+<h2>SSH 公開鍵の作成</h2>
+
+<p>GitHub 上のリポジトリのファイルをローカルのコンピュータ上で編集し、その編集を GitHub 上へ適用するには、SSH 公開鍵を作成しておく必要があります。
+公開鍵の作成には、Git bash を使います。デスクトップで msysGit のアイコンをダブルクリックして、Git bash のプロンプトを表示させてください。</p>
+
+<p>まずは以下のコマンドをプロンプトに入力して、公開鍵の作成を開始します。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ ssh-keygen -t rsa &quot;メールアドレス&quot;
+</code></pre></div>
+<p>上のコマンドを実行すると、途中でパスフレーズの入力を求められます。この鍵でのアクセスに使用するパスフレーズを適宜入力してください。
+コマンドの実行が完了すると、<code>id_rsa</code> ファイル（秘密鍵）と <code>id_rsa.pub</code> ファイル（公開鍵）ができています。</p>
+
+<blockquote>
+<p><strong>CAUTION</strong>
+コマンドの出力に、ファイルが保存されたディレクトリが表示されていますので、確認してください。</p>
+</blockquote>
+
+<h3>GitHub への SSH 公開鍵の登録</h3>
+
+<p>作成した SSH 公開鍵は、GitHub に登録する必要があります。
+GitHub のサイトへ Web ブラウザでアクセスして「アカウントの設定」をクリックし、「アカウントの概要」の「SSH 公開鍵」を選択してください。
+「別の公開鍵の追加」をクリックしてから、使用するコンピュータの名前などを「鍵のタイトル」に入力します。「キー」欄には、作成した公開鍵のファイル（<code>id_rsa.pub</code>）をテキストエディタで開き、内容をコピー＆ペーストしてください。
+最後に「キーの追加」ボタンをクリックすると、GitHub に公開鍵が登録されます。</p>
+
+<h2>GitHub 上のリポジトリを更新してみる</h2>
+
+<p>では、GitHub 上にテスト用のリポジトリを作成して、それを更新してみましょう。</p>
+
+<h3>リポジトリの作成</h3>
+
+<ol>
+<li>GitHub の「ダッシュボード」で「新しいリポジトリ」ボタンをクリックします。すると、リポジトリの作成画面が表示されます。</li>
+<li>リポジトリの名前と説明を入力します。ここではリポジトリの名前を「test」とします。</li>
+<li>「リポジトリを作る」をクリックすると GitHub 上でリポジトリが初期化され、最初の手順の案内が表示されます。
+
+<ul>
+<li>この画面に表示される「git remote add origin <a href="mailto:git@github.com">git@github.com</a>:hidenorigoto/test.git」というような行の <a href="mailto:git@github.com%EF">git@github.com�</a>�� の URL は後で使いますので、どこかにメモしておくか、この画面をこのまま開いておいてください。（URL*1）</li>
+</ul></li>
+</ol>
+
+<h3>リポジトリの初期コンテンツを作成し、ローカルでコミット</h3>
+
+<ol>
+<li>ローカルコンピュータ上の作業ディレクトリの好きな場所をエクスプローラーで表示し、リポジトリのトップディレクトリとなる「test」という名前のディレクトリを作成します。</li>
+<li>作成した「test」ディレクトリを右クリックして、TortoiseGit のメニューから「Git Create repository here」を選択します。</li>
+<li>「test」ディレクトリ内に「README.txt」というテキストファイルを作成し、内容を適当に作成してください。</li>
+<li>「REEAME.txt」を文字コード UTF-8 で保存してください。（改行コードは LF などに統一することをお勧めします）</li>
+<li>「README.txt」を右クリックし、TortoiseGit のメニューから「Git Add（または TortoiseGit メニュー内の Add）」を選択します。確認ウィンドウが表示されるので、README.txt にチェックがついていることを確認して、OK ボタンをクリックします。
+
+<ul>
+<li>これで、README.txt ファイルが「コミット対象リスト」にステージングされました。</li>
+</ul></li>
+<li>「test」ディレクトリを右クリックし、TortoiseGit のメニューから「Git Commit -&gt; &quot;master&quot;」というようなメニューを選択します。すると、コミット用のウィンドウが表示されます。</li>
+<li>コミットメッセージを入力します。ここでは「first commit」としましょう。</li>
+<li>コミットウィンドウの OK ボタンをクリックすると、コミットされます。
+
+<ul>
+<li>この時点では、ローカルコンピュータ上のリポジトリにコミットが記録されます。</li>
+</ul></li>
+</ol>
+
+<h3>ローカルのコミットを GitHub のリポジトリへ反映</h3>
+
+<ol>
+<li>ローカルのリポジトリの更新を、GitHub のリポジトリへ反映します。この操作を「プッシュ」といいます。
+
+<ul>
+<li>まず、プッシュするための設定を追加します。「test」ディレクトリを右クリックして TortoiseGit のメニューから「Settings」を選択します。</li>
+<li>設定ウィンドウの設定項目で「Git」の「Remote」を選択します。</li>
+<li>リモート設定画面で、以下のように入力します。
+
+<ul>
+<li>Remote: origin</li>
+<li>Url: URL*1 を入力します。</li>
+<li>Putty Key: 作成した SSH の秘密鍵のファイルを選択します。</li>
+</ul></li>
+<li>入力が完了したら「Add New」をクリックして下さい。すると「Remote:」の一覧に「origin」が追加されます。</li>
+<li>ウィンドウ右下の「適用」ボタンをクリックし、その後「キャンセル」ボタンをクリックして設定ウィンドウを閉じて下さい。</li>
+</ul></li>
+<li>「test」ディレクトリを右クリックして TortoiseGit のメニューから「Git Sync...」を選択します。同期用のウィンドウが表示されます。</li>
+<li>同期用のウィンドウで「Push」をクリックすると、GitHub への更新の適用処理が行われます。この処理には少しだけ時間がかかります。</li>
+<li>プッシュが完了したら、ブラウザで GitHub のリポジトリへアクセスしてみてください。README.txt ファイルが正しく登録されていれば、ここまでの手順は完了です。</li>
+</ol>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

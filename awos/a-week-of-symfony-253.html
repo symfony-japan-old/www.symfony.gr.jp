@@ -1,0 +1,231 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony #253 (31 October -> 6 November 2011) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #253 (31 October -&gt; 6 November 2011)</h1>
+
+<p>This week, <a href="http://symfony.com/blog/symfony-2-0-5-released">Symfony 2.0.5 was released</a>, fixing tens of minor bugs and introducing some tweaks (<a href="https://github.com/symfony/symfony/blob/2.0/CHANGELOG-2.0.md">view changelog</a>). Meanwhile, in the <a href="https://groups.google.com/forum/#!topic/symfony-devs/MDi_Yw-7cIY">last weekly IRC meeting</a>, it was announced a big push for Symfony2 components, including a revamped documentation.</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/15xCDUR9tGs">Sonata Admin Bundle Split</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/MDi_Yw-7cIY">Week #44 IRC meeting</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/7g75BvgukPA">ACL/Pager concerns</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/fQ78BPyr30E">Symfony2 + Smarty</a></li>
+</ul>
+
+<h2>Symfony2 development highlights</h2>
+
+<p><a href="http://github.com/symfony/symfony/commits/2.0">2.0 branch</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/c9d05d72365aa2e20e17e3322b82d7a75f542b88" title="c9d05d72365aa2e20e17e3322b82d7a75f542b88 commit on github">c9d05d7</a>: let NumberFormatter handle integer type casting</li>
+<li><a href="http://github.com/symfony/symfony/commit/89cd64a4a512009d11b027014fcb56e0a8fad104" title="89cd64a4a512009d11b027014fcb56e0a8fad104 commit on github">89cd64a</a>: set error code when number cannot be parsed</li>
+<li><a href="http://github.com/symfony/symfony/commit/c5e2defe5f6019bdd24ffa4ccb73b78afac90e47" title="c5e2defe5f6019bdd24ffa4ccb73b78afac90e47 commit on github">c5e2def</a>: fixed ternary operator usage in RequestMatcher::checkIpv6()</li>
+<li><a href="http://github.com/symfony/symfony/commit/af6f0d55489e8cff5d9b753bf5e9e67f4657461e" title="af6f0d55489e8cff5d9b753bf5e9e67f4657461e commit on github">af6f0d5</a>: [Form] removed some incomplete unit tests, added some new ones</li>
+<li><a href="http://github.com/symfony/symfony/commit/dbba79651ab8109c1337967a457d94966f76ee74" title="dbba79651ab8109c1337967a457d94966f76ee74 commit on github">dbba796</a>: [Yaml] fixed dumper for floats when the locale separator is not a dot</li>
+</ul>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">Master branch</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/cbd0c3c8e98c55299066711f6a642cfe2e87dd23" title="cbd0c3c8e98c55299066711f6a642cfe2e87dd23 commit on github">cbd0c3c</a>: [Config] implemented Serializable on resources</li>
+<li><a href="http://github.com/symfony/symfony/commit/d7a5351aaa9a8f523b0ec90eb87a32115a0ddcf1" title="d7a5351aaa9a8f523b0ec90eb87a32115a0ddcf1 commit on github">d7a5351</a>, <a href="http://github.com/symfony/symfony/commit/fc97472f64cd5494f1ec481cec762817cf638464" title="fc97472f64cd5494f1ec481cec762817cf638464 commit on github">fc97472</a>: updated composer.json files to contain information about autoloading and target dirs</li>
+<li><a href="http://github.com/symfony/symfony/commit/05a4e9d3861e0a561401ea495f95ee561ee81bfb" title="05a4e9d3861e0a561401ea495f95ee561ee81bfb commit on github">05a4e9d</a>: [Validators] added support for ctype_* functions + tests</li>
+<li><a href="http://github.com/symfony/symfony/commit/149bdb962b97e72fd788adf3c3008c3cc2320933" title="149bdb962b97e72fd788adf3c3008c3cc2320933 commit on github">149bdb9</a>: enhanced error messages with regard to form type properties</li>
+</ul>
+
+<h2><a href="http://www.symfony-project.org/plugins/newest/">New plugins</a></h2>
+
+<ul>
+<li><a href="http://www.symfony-project.org/plugins/lapeGravatarPlugin">lapeGravatar</a>: helpers to gravatar service and behavior for doctrine ORM.</li>
+<li><a href="http://www.symfony-project.org/plugins/lapeQRCodePlugin">lapeQRCode</a>: (no description)</li>
+<li><a href="http://www.symfony-project.org/plugins/sfBeSocialPlugin">sfBeSocial</a>: adds Facebook and Twitter connect to your project.</li>
+<li><a href="http://www.symfony-project.org/plugins/cpCurrencyDoctrinePlugin">cpCurrencyDoctrine</a>: provides a model for worldwide currencies to use in your application.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfFlexboxPlugin">sfFlexbox</a>: a symfony 1.4 simple widget for jquery flexbox plugin.</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/dcReloadedFormExtraPlugin">dcReloadedFormExtra</a>:</p>
+
+<ul>
+<li>added new widgets for everybody</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfGuardSecurePlugin">sfGuardSecure</a>:</p>
+
+<ul>
+<li>clear attributes holder on logout</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfToolsPlugin">sfTools</a>:</p>
+
+<ul>
+<li>added the sfFileTools class + unit tests</li>
+<li>lowercase iconv result for eur symbol</li>
+<li>added the sfArrayPager class</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/pmPropelGeneratorPlugin">pmPropelGenerator</a>:</p>
+
+<ul>
+<li>added selectable max<em>per</em>page</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/cpTcpdfPlugin">cpTcpdf</a>:</p>
+
+<ul>
+<li>fixed TCPDFX</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>refactored linkToRemote, extracting loadRemote, which loads a URL and updates a container with it immediately, setting loading and loaded classes etc. in the way we&#39;ve come to rely on</li>
+<li>turned off some apostrophe.log called that happen every page load that we don&#39;t need to hear from</li>
+<li>apostrophe&#39;s stylesheets and javascripts triggered by loading the aHelper now load first</li>
+<li>the standardArea component&#39;s list of standard slots and the standard set of options for those slots, as well as the options for the area itself, can now be overridden via app.yml</li>
+<li>the video slot template files are now overrideable</li>
+<li>refactored the actual header in _uploadMultiple to a separate partial so it can be overridden easily without copying a lot of scary code</li>
+<li>added aString::implodeWithAnd() which uses commas and &#39;and&#39; as appropriate</li>
+<li>made the array of Office extensions and mime types public for convenience elsewhere</li>
+<li>added &#39;ESC&#39; to close menuToggles. You can now use the ESC key to close page settings, add content, etc.</li>
+<li>files that should not be minified now load after files that are</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheBlogPlugin">apostropheBlog</a>:</p>
+
+<ul>
+<li>no longer show a &quot;google maps&quot; button next to the address (simply show the first line of the address as a link to google maps)</li>
+<li>blog/event excerpt length shortened to 50 words</li>
+<li>fixed a bug with the event admin popular tags listing</li>
+</ul></li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://symfony-world.blogspot.com/2011/10/symfony-dynamic-maxperpage.html">symfony dynamic max<em>per</em>page</a></li>
+<li><a href="http://blog.liip.ch/archive/2011/11/01/symfony-day-cologne-and-cmf-hackday.html">Symfony Day Cologne and CMF hackday</a></li>
+<li><a href="http://blog.sznapka.pl/why-mockery-is-better-than-phpunit-mock-builder-and-how-to-integrate-it-with-symfony2/">Why Mockery is better than PHPUnit Mock Builder and how to integrate it with Symfony2</a></li>
+<li><a href="http://tigor.com.ua/blog/2011/11/02/symfony-camp-ua-2011-report/">Отзыв о Symfony Camp UA 2011</a></li>
+<li><a href="http://www.symfony.es/2011/11/02/jornadas-sobre-symfony2-en-galicia/">Jornadas sobre Symfony2 en Galicia</a></li>
+<li><a href="http://www.leftontheweb.com/message/DDay_is_coming_to_Finland">D-Day is coming to Finland</a></li>
+<li><a href="http://php-and-symfony.matthiasnoback.nl/2011/11/symfony2-define-your-bundles-configuration-values-using-the-treebuilder/">Symfony2: define your bundle’s configuration values using the TreeBuilder</a></li>
+<li><a href="http://www.symfony.es/2011/11/04/resumen-de-la-reunion-de-desarrolladores-3-11-2011/">Resumen de la reunión de desarrolladores (3-11-2011)</a></li>
+<li><a href="http://www.hugohamon.com/en/blog/dday-conference-2012-helsinki-finland">Please Welcome the D-Day Conference in Finland</a></li>
+<li><a href="http://nerdpress.org/2011/11/04/silex-starter-stubs/">Silex Starter Stubs</a></li>
+<li><a href="http://www.ricardclau.com/2011/11/how-to-use-symfony2-validator-component-without-forms-entities-and-data-arrays/">How to use Symfony2 validator component without forms (Entities and data arrays)</a></li>
+<li><a href="http://dariussadowski.com/2011/11/email-jako-login-w-symfony-2.html">Email jako login w Symfony 2</a></li>
+<li><a href="http://www.davidbl.com/?p=176">symfony 1.4 : Fatal error: Class ‘sfGuardUserFormFilter’ not found</a></li>
+<li><a href="http://monsterbirth.ru/symfony-2-book-na-russkom/routing-rus/">Routing (RUS)</a></li>
+<li><a href="http://developer.e-butik.se/2011/11/symfony-developer-meetup-in-stockholm/">Symfony Developer Meetup in Stockholm</a></li>
+<li><a href="http://www.symfony-zone.com/wordpress/2011/11/04/the-state-of-symfony2-support-in-ides/">The state of Symfony2 support in IDEs</a></li>
+<li><a href="http://451f.com.ua/symfony-camp-ua-2011-as-it-was/397">« Первый трениг по Symfony2 на Украинских просторах – Я иду!</a></li>
+<li><a href="http://symfony.org.ua/2011/11/symfony-conf-2011-v-kieve-nebolshoj-otchet/">Symfony Conf 2011 в Киеве – небольшой отчет</a></li>
+<li><a href="http://www.erreur500.com/?p=143">Définir la hauteur d’une iframe selon son contenu au chargement de la page</a></li>
+<li><a href="http://roberto.costumero.es/2011/11/03/modificando-el-sistema-de-login-de-symfony2/">Modificando el sistema de login de Symfony2</a></li>
+<li><a href="http://www.solidwebcode.com/web-development/twig-extensions-symfony-2/">Twig Extensions in Symfony 2</a></li>
+<li><a href="http://www.elsite.es/symfony-madrid/">Symfony Madrid en El Site</a></li>
+<li><a href="http://webmanufaktur.org/2011/11/02/starten-mit-symfony-2-teil-2-hello-world/">Starten mit Symfony 2 – Teil 2: Hello World!</a></li>
+<li><a href="http://tigor.com.ua/blog/2011/11/02/symfony-camp-ua-2011-report/">Отзыв о Symfony Camp UA 2011</a></li>
+<li><a href="http://hasin.wordpress.com/2011/11/02/which-framework-is-best/">Which framework is best?</a></li>
+<li><a href="http://code.huypv.net/2011/11/symfony-download-file-bi-thua-ky-tu.html">Symfony - Download file bị thừa ký tự xuống dòng</a></li>
+<li><a href="http://mmj.99ing.net/Entry/1085/">Symfony 1.0 開発版(dev) アクセス制限</a></li>
+<li><a href="http://melikedev.com/2011/10/31/symfony-standard-api-for-logging-using-__callstatic/">Symfony – Standard API for Logging Using __callStatic</a></li>
+<li><a href="http://www.mon-beulogue.com/2011/10/31/personnalisation-avance-des-page-derreur-symfony-2/">Personnalisation avancé des pages d’erreurs, Symfony 2</a></li>
+<li><a href="http://www.symfony-grenoble.fr/17/debugger-un-projet-symfony-2-avec-xdebug-et-netbeans/">Débugger un projet Symfony 2 avec Xdebug et Netbeans</a></li>
+<li><a href="http://kronus.me/2011/10/symfony-camp-ua-2011/">Symfony Camp UA 2011</a></li>
+<li><a href="http://www.fractalizer.ru/frpost_658/symfony2-how-redirect-user-to-a-previous-page-correctly/">Symfony2: how to redirect user to a previous page correctly (without using HTTP_REFERER)</a></li>
+<li><a href="http://d.hatena.ne.jp/taka512/20111030/1319982146">10分ぐらいで学べるSymfony2 ～データベース接続設定編～</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

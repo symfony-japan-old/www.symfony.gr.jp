@@ -1,0 +1,215 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony #252 (24->30 October 2011) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #252 (24-&gt;30 October 2011)</h1>
+
+<p>Symfony 1.4.15 was released this week, fixing a few bugs and demonstrating the strong support of symfony 1.4.x branch until its late 2012 deadline. Meanwhile, Symfony2 added <a href="https://github.com/symfony/symfony/commit/24b93928bf783290c0df193f1b9948a174b01d1b">a matcher</a> and <a href="https://github.com/symfony/symfony/commit/8cc3158d8901b8aefadde7f24be92fd9ed2b07e7">a command</a> that help debugging router matching problems.</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/HcWILuuvZ3U">getRouter() instead of get(&#39;router&#39;)</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/HMmMSQPGMZg">Official AdminGenerator?</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/CibR6gKmRug">Making Symfony 2.0 forwards compatible</a></li>
+</ul>
+
+<h2>symfony 1 development highlights</h2>
+
+<p><a href="http://trac.symfony-project.com/trac/timeline?from=30%2F10%2F2011&amp;daysback=6&amp;milestone=on&amp;ticket=on&amp;changeset=on&amp;update=Update">Changelog</a>:</p>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/33151" title="33151 revision on trac">r33151</a>: [1.4] fixed usage of mb_strlen in tasks</li>
+<li><a href="http://trac.symfony-project.org/milestone/1.4.15">Milestone 1.4.15 completed</a></li>
+</ul>
+
+<p>sfDoctrinePlugin:</p>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/33149" title="33149 revision on trac">r33149</a>: [1.4] added missing admin.delete_object event</li>
+</ul>
+
+<h2>Symfony2 development highlights</h2>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">2.0 branch</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/cbb4bbae977eb7e0651b9963cbef84fa75349c3d" title="cbb4bbae977eb7e0651b9963cbef84fa75349c3d commit on github">cbb4bba</a>: [Routing] fixed side-effect in the PHP matcher dumper</li>
+<li><a href="http://github.com/symfony/symfony/commit/808088a3ca607bf62f6c70ef7d3a3066f0cfac98" title="808088a3ca607bf62f6c70ef7d3a3066f0cfac98 commit on github">808088a</a>: added the ability to use dot and single quotes in the keys and values</li>
+<li><a href="http://github.com/symfony/symfony/commit/27d080984ca8f972241cd3e38f0181d1a8722e93" title="27d080984ca8f972241cd3e38f0181d1a8722e93 commit on github">27d0809</a>, <a href="http://github.com/symfony/symfony/commit/e3149318f522c14717041db3ff6b7e64421ce033" title="e3149318f522c14717041db3ff6b7e64421ce033 commit on github">e314931</a>: updated Monolog to 1.0.2</li>
+<li><a href="http://github.com/symfony/symfony/commit/6343bef55e8f0cee33ef185081f128deb3c06656" title="6343bef55e8f0cee33ef185081f128deb3c06656 commit on github">6343bef</a>: [HttpKernel] updated mirror method to check for symlinks before dirs and files</li>
+<li><a href="http://github.com/symfony/symfony/commit/8dcde3c076b5c485dd133466bf20c45e53227dca" title="8dcde3c076b5c485dd133466bf20c45e53227dca commit on github">8dcde3c</a>: [DependencyInjection] fixed int casting for XML files (based on what is done in the YAML component)</li>
+<li><a href="http://github.com/symfony/symfony/commit/4bbb685557c9aebc54d6ee6fb268941695cde4f4" title="4bbb685557c9aebc54d6ee6fb268941695cde4f4 commit on github">4bbb685</a>: [DependencyInjection] added tests for Definition and DefinitionDecorator exceptions</li>
+<li><a href="http://github.com/symfony/symfony/commit/80f0b980baa4dbbd9a4f1dd2f75c7a6e0bbcb0bc" title="80f0b980baa4dbbd9a4f1dd2f75c7a6e0bbcb0bc commit on github">80f0b98</a>: [DependencyInjection] fixed DefinitionDecorator::getArgument() for replacements</li>
+<li><a href="http://github.com/symfony/symfony/commit/851eb737784b06619485c844882e98c800a8f7fb" title="851eb737784b06619485c844882e98c800a8f7fb commit on github">851eb73</a>: removed a ton of unused use statements</li>
+</ul>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">Master branch</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/24b93928bf783290c0df193f1b9948a174b01d1b" title="24b93928bf783290c0df193f1b9948a174b01d1b commit on github">24b9392</a>, <a href="http://github.com/symfony/symfony/commit/8cc3158d8901b8aefadde7f24be92fd9ed2b07e7" title="8cc3158d8901b8aefadde7f24be92fd9ed2b07e7 commit on github">8cc3158</a>: [Routing, FrameworkBundle] added a matcher and a command that help debugging matching problems</li>
+<li><a href="http://github.com/symfony/symfony/commit/8fa061cc6e6635d403cca9b98e934a3b4021b892" title="8fa061cc6e6635d403cca9b98e934a3b4021b892 commit on github">8fa061c</a>: [WebProfilerBundle] added a profiler panel for the router</li>
+<li><a href="http://github.com/symfony/symfony/commit/70e0dba77c0f30154477b4f603be8ff336cf2192" title="70e0dba77c0f30154477b4f603be8ff336cf2192 commit on github">70e0dba</a>: moved the Swiftmailer data collector to the Swifmailer bridge</li>
+<li><a href="http://github.com/symfony/symfony/commit/9077f6a9711730559fe6e8432358c1c8b00a5ca7" title="9077f6a9711730559fe6e8432358c1c8b00a5ca7 commit on github">9077f6a</a>: [SwiftmailerBundle] replaced MessageLogger class with the one from Swiftmailer 4.1.3</li>
+<li><a href="http://github.com/symfony/symfony/commit/95ec41b075fcff99d0dee0769a7ec688bdd7a420" title="95ec41b075fcff99d0dee0769a7ec688bdd7a420 commit on github">95ec41b</a>: [Console] made the defaults in Application more easily customizable</li>
+<li><a href="http://github.com/symfony/symfony/commit/f8065d180574703dee6a7b114dbf7524ecc7408e" title="f8065d180574703dee6a7b114dbf7524ecc7408e commit on github">f8065d1</a>: [HttpKernel] added a way to get the original values returned by the router</li>
+<li><a href="http://github.com/symfony/symfony/commit/c2fa73d33aa0a07e8fba0ce49e1de4b16fd53d61" title="c2fa73d33aa0a07e8fba0ce49e1de4b16fd53d61 commit on github">c2fa73d</a>: [HttpKernel] removed the <em>route entry from _route</em>params</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/sfExtjs3Plugin">sfExtjs3</a>:</p>
+
+<ul>
+<li>fixed matching problem with quote_except value &quot;function&quot;</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/dcReloadedFormExtraPlugin">dcReloadedFormExtra</a>:</p>
+
+<ul>
+<li>added the pmWidgetFormPropelInputByCode</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>added new aFiles::copy, aFiles::close methods that actually return false when things don&#39;t work</li>
+<li>added a new areaHideWhenEmpty option to areas and the standardArea component. If this option is set to true, it will not output any of the area markup on the page to logged-out visitors of the site.</li>
+<li>aTaskTools::setCliHost() now also supports https URLs: if app<em>cli</em>https is true, setCliHost() convinces Symfony to generate https URLs</li>
+<li>added a findOnyBy and findAllBy method to aMysql</li>
+<li>new app<em>a</em>feed<em>hide</em>identical_description doesn&#39;t bother outputting the RSS item&#39;s description if it is the same as the title</li>
+<li>no more js errors from linkUpdates if there is no confirm message</li>
+<li>fixed CkEditor behaves badly when you move slots. Moving edit views around in the DOM can cause unexpected behavior.</li>
+<li>app<em>a</em>enforce<em>minimum</em>width can be set to false to stop standardArea from setting minimumWidth to match width</li>
+</ul></li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://blog.marcw.net/2011/symfony-day-2011-cologne/">Back from Symfony Day 2011 Cologne</a></li>
+<li><a href="http://fabien.potencier.org/article/49/what-is-symfony2">What is Symfony2?</a></li>
+<li><a href="http://www.leftontheweb.com/message/Drupal_just_got_a_whole_lot_more_compatible">Drupal just got a whole lot more compatible</a></li>
+<li><a href="http://www.root.cz/zpravicky/drupal-8-stavi-na-knihovnach-ze-symfony2/">Drupal 8 staví na knihovnách ze Symfony2</a></li>
+<li><a href="http://www.currentgame.de/news/its-all-about-the-community/008277/">It&#39;s all about the community</a></li>
+<li><a href="http://www.fizyk.net.pl/blog/sfforkeddoctrineapplyplugin-1-5-10">sfForkedDoctrineApplyplugin 1.5.10</a></li>
+<li><a href="http://php-and-symfony.matthiasnoback.nl/2011/10/symfony2-use-a-bootstrap-file-for-your-phpunit-tests-and-run-some-console-commands/">Symfony2: use a bootstrap file for your PHPUnit tests and run some console commands</a></li>
+<li><a href="http://habrahabr.ru/blogs/symfony/131158/">Symfony 2. Ограничение количества запросов</a></li>
+<li><a href="http://www.symfony.es/2011/10/26/drupal-8-integra-los-primeros-componentes-de-symfony2/">Drupal 8 integra los primeros componentes de Symfony2</a></li>
+<li><a href="http://www.kamiladryjanek.com/2011/10/symfony-1-4-sfimagefilevalidator-validate-image-dimensions/">Symfony 1.4 – sfImageFileValidator – validate image dimensions</a></li>
+<li><a href="http://www.lyra-cms.com/blog/2011/10/presenting-lyraadminbundle.html">Presenting LyraAdminBundle</a></li>
+<li><a href="http://www.lexik.fr/blog/symfony/symfony2/lexiktranslationbundle-pour-editer-vos-traductions-avec-symfony2-1753">LexikTranslationBundle, pour éditer vos traductions avec Symfony2</a></li>
+<li><a href="http://www.devexp.eu/2011/10/28/how-to-use-a-symfony-1-layout-from-a-different-directory/">How to use a symfony 1 layout from a different directory</a></li>
+<li><a href="http://pooteeweet.org/blog/0/2033#m2033">Auth checks and varnish</a></li>
+<li><a href="http://www.symfony.es/2011/10/29/presentaciones-symfony-en-la-php-barcelona-conference-2011/">Presentaciones Symfony en la PHP Barcelona Conference 2011</a></li>
+<li><a href="http://aryatmajaya.com/symfony/how-to-install-symfony.html">How to install Symfony on Windows</a></li>
+<li><a href="http://www.symfony.es/2011/10/30/se-publica-symfony-1-4-15/">Se publica Symfony 1.4.15</a></li>
+<li><a href="http://developer.e-butik.se/2011/10/symfonys-serializer-component/">Symfony’s Serializer Component</a></li>
+<li><a href="http://it-republik.de/php/news/Drupal-integriert-Symfony-2-Komponenten-060873.html">Drupal integriert Symfony-2-Komponenten</a></li>
+<li><a href="http://blogsh.de/2011/10/26/how-to-customize-form-rendering-in-symfony/">How to customize form rendering in Symfony</a></li>
+<li><a href="http://blog.astrumfutura.com/2011/10/interfacing-the-php-world-would-be-good/">Interfacing The PHP World Would Be Good</a></li>
+<li><a href="http://miller.limethinking.co.uk/2011/10/26/symfony2-obtaining-the-request-object/">Symfony2: Obtaining the Request Object</a></li>
+<li><a href="http://blog.davidweichert.de/2011/10/25/getting-symfony2-to-run-under-plesk/">Getting Symfony2 to run under PLESK</a></li>
+<li><a href="http://webmasterinfo.com.ar/2011/10/ejecutar-query-personalizada-en-symfony/">Ejecutar query personalizada en symfony</a></li>
+<li><a href="http://www.cnblogs.com/ylxeluxi/archive/2011/10/25/2224222.html">Create a symfony widget like sfWidgetFormDateRang</a></li>
+<li><a href="http://www.symfony-zone.com/wordpress/2011/10/25/symfony-day-2011-in-cologne-slides/">Symfony Day 2011 in Cologne (Slides)</a></li>
+<li><a href="http://diman.kz/2011/10/my-apache2-conf-symfony/">Mi configuración del servidor web de un sitio de Symfony</a></li>
+<li><a href="http://www.garfieldtech.com/drupal-symfony2">What Symfonic Drupal means</a></li>
+<li><a href="http://omnioo.com/omnioolab/php/cat666/ubuntu1110-symfony2.php">Ubuntu11.10 Symfony2の開発環境を作る</a></li>
+<li><a href="http://www.symfonylab.com/sfcaptchaplugin-104-has-been-released/">sfCaptchaPlugin 1.0.4 has been released</a></li>
+<li><a href="http://www.phppro.jp/qa/3453">Practical　symfony　12日目について</a></li>
+<li><a href="http://somnathpawar.wordpress.com/2011/10/25/symfony-coding-standards-tips/">Symfony Coding Standards Tips</a></li>
+<li><a href="http://inchoo.net/tools-frameworks/simfony2-rest-put-request/">Symfony2 REST – reading data from PUT request</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

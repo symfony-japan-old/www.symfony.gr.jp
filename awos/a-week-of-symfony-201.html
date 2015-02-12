@@ -1,0 +1,287 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony#201 (1->7 November 2010) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #201 (1-&gt;7 November 2010)</h1>
+
+<p>Symfony2 development focused this week on unit tests. Hundreds of new tests were committed, mostly on the Security component. In addition, the symfony developers mailing list activity surged with some insightful discussions.</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/1badb342882f2f7a">Usage of Controller ArrayAccess and $this[&#39;servicename&#39;] is confusing</a></li>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/3d7a80a5308256e8">Symfony2 form-login redirect loop</a></li>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/97021a9b5739b39c">Symfony2 form validation</a></li>
+</ul>
+
+<h2>Symfony2 development highlights</h2>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">Changelog</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/a4fbf74593cb81a5dc3f2fcde64c491e37a4de38" title="a4fbf74593cb81a5dc3f2fcde64c491e37a4de38 commit on github">a4fbf74</a>: added a user provider for Doctrine MongoDB</li>
+<li><a href="http://github.com/symfony/symfony/commit/a5d4acc54ddd8536404fd3348752865156702800" title="a5d4acc54ddd8536404fd3348752865156702800 commit on github">a5d4acc</a>: [HttpFoundation] updated get() signature to get($key, $default = null, $first = true)</li>
+<li><a href="http://github.com/symfony/symfony/commit/ae888b80f65e4f28803dc28e9f869bcfd3289782" title="ae888b80f65e4f28803dc28e9f869bcfd3289782 commit on github">ae888b8</a>: [HttpFoundation] removed port number from HOST header to be consistent with backup values (SERVER<em>NAME, SERVER</em>ADDR)</li>
+<li><a href="http://github.com/symfony/symfony/commit/dd9b77ed96e768bd0c54755b0ea88272febea285" title="dd9b77ed96e768bd0c54755b0ea88272febea285 commit on github">dd9b77e</a>: [HttpFoundation] added Response::setVary()</li>
+<li><a href="http://github.com/symfony/symfony/commit/3d5054f21fc92a9cff70b5e87f467295252c52a6" title="3d5054f21fc92a9cff70b5e87f467295252c52a6 commit on github">3d5054f</a>: [Security] added unit tests for the Authentication sub-namespace</li>
+<li><a href="http://github.com/symfony/symfony/commit/ec417578caa531a3854ef3c76914471ed22504e9" title="ec417578caa531a3854ef3c76914471ed22504e9 commit on github">ec41757</a>, <a href="http://github.com/symfony/symfony/commit/a19cdce1bcd93cb30a34a3011f745439b9215d40" title="a19cdce1bcd93cb30a34a3011f745439b9215d40 commit on github">a19cdce</a>: [Security] added unit tests to some authenticated providers (code coverage is more than 96% for the Security component now)</li>
+<li><a href="http://github.com/symfony/symfony/commit/58bd4acdd167a6f47343abf5f9eeec99877ab0c5" title="58bd4acdd167a6f47343abf5f9eeec99877ab0c5 commit on github">58bd4ac</a>: [Translation] added some unit tests</li>
+<li><a href="http://github.com/symfony/symfony/commit/556bfcb804b11f2027522d108007e4f7dff86076" title="556bfcb804b11f2027522d108007e4f7dff86076 commit on github">556bfcb</a>: [HttpKernel] added some more unit tests</li>
+<li><a href="http://github.com/symfony/symfony/commit/5bd03e1c588cc39ddd3cc211a468f72a1bcf8d20" title="5bd03e1c588cc39ddd3cc211a468f72a1bcf8d20 commit on github">5bd03e1</a>: [HttpKernel] added unit tests for ESI</li>
+<li><a href="http://github.com/symfony/symfony/commit/e7ea2eb433ff05ae4302b6e3b1c3e7b3fcefacae" title="e7ea2eb433ff05ae4302b6e3b1c3e7b3fcefacae commit on github">e7ea2eb</a>: [FrameworkBundle] ensuring the exception page renders even when the Request format is unknown to Symfony</li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.com/trac/wiki/DevelopersForHire">developers for hire</a></h2>
+
+<ul>
+<li><a href="http://www.knplabs.com">knpLabs</a>: a french web agency who loves quality work, innovation and excitement! We&#39;ve specialized in developing websites and web apps with the symfony and Symfony2 frameworks.</li>
+</ul>
+
+<h2><a href="http://www.symfony-project.org/plugins/newest/">New plugins</a></h2>
+
+<ul>
+<li><a href="http://www.symfony-project.org/plugins/sfWebgrindPlugin">sfWebgrind</a>: (no description)</li>
+<li><a href="http://www.symfony-project.org/plugins/sfI18NPlugin">sfI18N</a>: (no description)</li>
+<li><a href="http://www.symfony-project.org/plugins/smagEntityWorkflowPlugin">smagEntityWorkflow</a>: handles a Workflow for Entities. If you need to bring an Object through several steps before it reaches a Final state, an Article for example, this is what you need.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfDoctrineAdServerPlugin">sfDoctrineAdServer</a>: ad serving platform.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfFilesystemFixturesPlugin">sfFilesystemFixtures</a>: (no description)</li>
+<li><a href="http://www.symfony-project.org/plugins/sfPhpunitHelperPlugin">sfPhpunitHelper</a>: adds some useful helpers for functional selenium tests.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfWpAdminPlugin">sfWpAdmin</a>: a wordpress style menu for application backends with login screen, ability to set credentials and menu items controlled by YAML config file.</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/sfCouchPlugin">sfCouch</a>:</p>
+
+<ul>
+<li>updated documentation</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/pmPropelGeneratorPlugin">pmPropelGenerator</a>:</p>
+
+<ul>
+<li>added a document export option</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfThriftPlugin">sfThrift</a>:</p>
+
+<ul>
+<li>added new config params</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineActAsTaggablePlugin">sfDoctrineActAsTaggable</a>:</p>
+
+<ul>
+<li>no labels for empty divs</li>
+<li>added some more customizability</li>
+<li>fixed warning if there are no suggested tags</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/idlErrorManagementPlugin">idlErrorManagement</a>:</p>
+
+<ul>
+<li>fixed the get_username technics</li>
+<li>added specific logs</li>
+<li>switched to standard SVN structure</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/idlDoctrineMigrationPlugin">idlDoctrineMigration</a>:</p>
+
+<ul>
+<li>switched to standard SVN structure</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/dcReloadedFormExtraPlugin">dcReloadedFormExtra</a>:</p>
+
+<ul>
+<li>added the pmWidgetFormJQuerySearch and pmWidgetFormPropelJQuerySearch</li>
+<li>added mtWidgetFormInputDate and mtValidatorDateString</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfThumbnailPlugin">sfThumbnail</a>:</p>
+
+<ul>
+<li>added the loadData functionality to the sfImagickAdapter class</li>
+<li>included new tests for functionality as well as making sure nothing old was broken</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfCKEditorPlugin">sfCKEditor</a>:</p>
+
+<ul>
+<li>updated README</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfEnvironmentFixturesPlugin">sfEnvironmentFixtures</a>:</p>
+
+<ul>
+<li>now working without app present</li>
+<li>tweaked task messages</li>
+<li>updated documentation</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/swBaseApplicationPlugin">swBaseApplication</a>:</p>
+
+<ul>
+<li>added an security filter base on the module/action name and the related security filter</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineGuardPlugin">sfDoctrineGuard</a>:</p>
+
+<ul>
+<li>use sfWidgetFormInputText instaed of old sfWidgetFormInput</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>improvements to import-site task</li>
+<li>fixed button slot rich text description</li>
+<li>limited getPopulars to 10 tags</li>
+<li>fixed issue with importing images</li>
+<li>partial for easy project level overrides when you want to add a few extra buttons to the admin bar</li>
+<li>aWidgetFormJQueryTime works with both string and array input</li>
+<li>no more $height undefined warnings from aImageSlot/_placeholder</li>
+<li>apostrophe.formUpdates now attaches an &quot;updating&quot; tab to the element being updated, then changes it to &quot;updated,&quot; then removes it</li>
+<li>brought back the ability to actually add a video slot</li>
+<li>videos that we don&#39;t directly support previews of say &quot;Video&quot; rather than nothing</li>
+<li>refactored my update tab functionality so you can use it anytime</li>
+<li>added a visual feedback when saving slots</li>
+<li>updated jquery to 1.4.3</li>
+<li>adjusted a text layout bug when selecting images with constraints and there are no media items in the library</li>
+<li>removed obsolete navigation partials</li>
+<li>eliminated nearly all script blocks from the &#39;a&#39; module</li>
+<li>refactored page queries in aPageTable</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheBlogPlugin">apostropheBlog</a>:</p>
+
+<ul>
+<li>fixed two issues of blog calendar related to output escaping</li>
+<li>limited popular tags on Event and Blog forms to 10</li>
+<li>blog and events admin completely overhauled</li>
+<li>ordering works now and you can see the blog posts slot doing what it&#39;s supposed to do</li>
+<li>you can now see existing selections when you reopen a blog posts slot with specific blog posts in it</li>
+<li>catch routing exceptions and display a helpful &quot;you must have a blog page / events page&quot; message rather than crashing the home page</li>
+<li>fixed migrating brand new sites that don&#39;t have an a<em>blog</em>category table</li>
+</ul></li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.org/wiki/ApplicationsDevelopedWithSymfony">symfony powered websites</a></h2>
+
+<ul>
+<li><a href="http://www.acrworld.com.au/">ACR World</a>: (English) Australian engineering and construction recruitment</li>
+<li><a href="http://aimementoring.com/">AIME Mentoring</a>: (English) Help Indigenous Australians get the mentoring they need and bridging the gap between education and employment</li>
+<li><a href="http://www.stablesmart.com.au/">StableSmart</a>: (English) (no description)</li>
+<li><a href="http://onevoice.generationone.org.au/">OneVoice Competition</a>: (English) Competition for Australian school students to voice their support and message for ending indigenous disparity in Australia</li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.com/trac/wiki/SymfonyBloggers">symfony bloggers</a></h2>
+
+<ul>
+<li><a href="http://pierre-minnieur.de">\0xC0DEDBAD - Pierre Minnieur</a> (<a href="http://pierre-minnieur.de/rss">feed</a>) (English)</li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://www.symfony.es/2010/11/02/se-presenta-la-nueva-version-de-mondongo/">Se presenta la nueva versión de MondonGO</a></li>
+<li><a href="http://pierre-minnieur.de/post/1413374301/symfony2-boilerplate">Symfony2: Boilerplate</a></li>
+<li><a href="http://www.lafermeduweb.net/billet/organisation-et-visibilite-dans-vos-projets-symfony-964.html">Organisation et visibilité dans vos projets symfony</a></li>
+<li><a href="http://pierre-minnieur.de/post/1430628598/symfony-sfwebprofilerplugin">symfony: sfWebProfilerPlugin</a></li>
+<li><a href="http://www.hugohamon.com/en/blog/programmez-numero-special-php">Programmez! Numéro spécial PHP</a></li>
+<li><a href="http://pierre-minnieur.de/post/1446608465/symfony2-http-serverbundle">Symfony2: (Http)ServerBundle</a></li>
+<li><a href="http://www.hugohamon.com/en/blog/forum-php-afup-2010-pare-au-decollage">Forum PHP AFUP 2010 paré au décollage!</a></li>
+<li><a href="http://evoilliot.u7n.org/2010/11/ajouter-une-etoile-aux-champs-obligatoires-de-maniere-automatique/">Ajouter une étoile aux champs obligatoires de manière automatique</a></li>
+<li><a href="http://www.lyra-cms.com/blog/2010/11/lymediamanagerplugin-0-6-0-released.html">lyMediaManagerPlugin 0.6.0 released</a></li>
+<li><a href="http://www.journaldunet.com/developpeur/php/nicolas-silberman-interview-nicolas-silberman-afup.shtml">Nicolas Silberman (AFUP): Microsoft France s&#39;est beaucoup rapproché de la communauté PHP</a></li>
+<li><a href="http://blog.bearwoods.dk/symfony2-project-initilization">Boostrapping a Symfony2 project</a></li>
+<li><a href="http://symfony-world.blogspot.com/2010/10/doctrine-softdelete-behavior-usage.html">Doctrine SoftDelete behavior usage</a></li>
+<li><a href="http://www.symfonylab.com/advanced-symfony-techniques/">Advanced symfony Techniques</a></li>
+<li><a href="http://www.symfony.it/articoli/370/un-anno-senza-orm/">Un anno senza ORM?</a></li>
+<li><a href="http://d.hatena.ne.jp/chobi_e/20101105/1288980901">Symfony2を理解する為にシンプルなアプリケーションを書く</a></li>
+<li><a href="http://codjng.blogspot.com/2010/11/diem-symfony-set-value-for-form-field.html">Diem, Symfony - Set value for Form field in processForm</a></li>
+<li><a href="http://www.lostiemposcambian.com/blog/web-2-0/frameworks-php-symfony-vs-codeigniter-casos-de-exito/">Frameworks PHP: Symfony vs CodeIgniter a traves de dos casos de éxito</a></li>
+<li><a href="http://www.avanim-prod.com/blog/symfony/les-formulaires-symfony-168">Les formulaires Symfony</a></li>
+<li><a href="http://blog.solucionex.com/symfony/30-consejos-para-trabajar-con-symfony">30 Consejos para trabajar con symfony</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

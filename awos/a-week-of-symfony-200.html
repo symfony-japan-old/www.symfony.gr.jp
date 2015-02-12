@@ -1,0 +1,320 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony#200 (25->31 October 2010) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #200 (25-&gt;31 October 2010)</h1>
+
+<p>This week the Output Escaper component was heavily refactored and the Propel bundle was transformed into an independent bundle. In addition, the <a href="http://docs.symfony-reloaded.org/master/guides/cache/http.html">Symfony2 HTTP cache documentation</a> was published.</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/cded44241c728e8b">Contexts for the Symfony DIC</a></li>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/fbe83d11a7ab9aa8">Remember Me Authentication</a></li>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/bec5185f48e8cc0a">Injecting variables into the layout</a></li>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/ff702eccdd787e8b">making _format magic more useful</a></li>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/2fdb3540f8df974f">[Doctrine2] issues with inheritance</a></li>
+</ul>
+
+<h2>symfony 1 development highlights</h2>
+
+<p><a href="http://trac.symfony-project.com/trac/timeline?from=31%2F10%2F2010&amp;daysback=6&amp;milestone=on&amp;ticket=on&amp;changeset=on&amp;update=Update">Changelog</a>:</p>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/31247" title="31247 revision on trac">r31247</a>: [1.3, 1.4] fixed mbstring problem in sfFilesystem</li>
+<li><a href="http://trac.symfony-project.org/changeset/31248" title="31248 revision on trac">r31248</a>: [1.3, 1.4] fixed sfI18nModuleExtract.class.php always assumes a file based message source</li>
+<li><a href="http://trac.symfony-project.org/changeset/31250" title="31250 revision on trac">r31250</a>: [1.3, 1.4] added some missing information in the WDT</li>
+<li><a href="http://trac.symfony-project.org/changeset/31253" title="31253 revision on trac">r31253</a>, <a href="http://trac.symfony-project.org/changeset/31254" title="31254 revision on trac">r31254</a>: [1.3, 1.4] fixed WDT injection</li>
+</ul>
+
+<p>sfDoctrinePlugin:</p>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/31249" title="31249 revision on trac">r31249</a>: [1.3, 1.4] fixed memory leak in Swift_DoctrineSpool</li>
+</ul>
+
+<p>Activity summary: 58 changesets, 13 bugs reported, 15 bugs fixed, 3 enhancements closed, 5 documentation defects reported, 1 documentation defect fixed, and 11 documentation edits</p>
+
+<h2>Symfony2 development highlights</h2>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">Changelog</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/6885f90f17597d9519f44d2b3986664c5703a232" title="6885f90f17597d9519f44d2b3986664c5703a232 commit on github">6885f90</a>: [HttpKernel\Security] fixed use statement and updated parameters constructor</li>
+<li><a href="http://github.com/symfony/symfony/commit/3463f47698fe028029bbff964773a1fbe2ee16c4" title="3463f47698fe028029bbff964773a1fbe2ee16c4 commit on github">3463f47</a>: applied base64 encoding directly to the binary data instead of their hexadecimal representation</li>
+<li><a href="http://github.com/symfony/symfony/commit/1d5ca4910dffd8b07df677d6c9d61b69d9d53c65" title="1d5ca4910dffd8b07df677d6c9d61b69d9d53c65 commit on github">1d5ca49</a>: [FrameworkBundle] refactored ide setting configuration</li>
+<li><a href="http://github.com/symfony/symfony/commit/e1116524ed79cf118568e2c124f546d596a562c0" title="e1116524ed79cf118568e2c124f546d596a562c0 commit on github">e111652</a>: [WebProfiler] fixed WDT display</li>
+<li><a href="http://github.com/symfony/symfony/commit/c065be88b56d3df7463a2d7f940c7885eb390661" title="c065be88b56d3df7463a2d7f940c7885eb390661 commit on github">c065be8</a>: [OutputEscaper] refactored the component</li>
+<li><a href="http://github.com/symfony/symfony/commit/e23c3cc702223612c82fa001a12e136e6ef945bb" title="e23c3cc702223612c82fa001a12e136e6ef945bb commit on github">e23c3cc</a>: [OutputEscaper] made getEscaper*() methods more consistent with the way you can change the escaping strategy in __call()</li>
+<li><a href="http://github.com/symfony/symfony/commit/c448429e62f8ff411ffec67f03e873eb81af8ea0" title="c448429e62f8ff411ffec67f03e873eb81af8ea0 commit on github">c448429</a>: [HttpFoundation] fixed date format for HTTP headers (format must be RFC1123, not RFC2822)</li>
+<li><a href="http://github.com/symfony/symfony/commit/7e6bddedf90319a3e27c3a14b4f6753e38f96007" title="7e6bddedf90319a3e27c3a14b4f6753e38f96007 commit on github">7e6bdde</a>: [TwigBundle] moved Form extension initialization as late as possible (it&#39;s better for performance)</li>
+<li><a href="http://github.com/symfony/symfony/commit/2b613f34d57bc1cdb9bf626ac905e734fdf3c023" title="2b613f34d57bc1cdb9bf626ac905e734fdf3c023 commit on github">2b613f3</a>: [FrameworkBundle] removed the need for decorating  with SafeDecorator</li>
+<li><a href="http://github.com/symfony/symfony/commit/3eee458430e2a918594b41cdbf8be8142fb907db" title="3eee458430e2a918594b41cdbf8be8142fb907db commit on github">3eee458</a>: [OutputEscaper] replaced the JS escaper with the one from Twig</li>
+<li><a href="http://github.com/symfony/symfony/commit/13f36b165778acff165e1f7a4356a2ab784c625c" title="13f36b165778acff165e1f7a4356a2ab784c625c commit on github">13f36b1</a>: Removed logic that tried to avoid double-escaping</li>
+<li><a href="http://github.com/symfony/symfony/commit/88d30f0d7496cf5f60a74827ca54c2b072cd1647" title="88d30f0d7496cf5f60a74827ca54c2b072cd1647 commit on github">88d30f0</a>, <a href="http://github.com/symfony/symfony/commit/b9f33a610ee956647d3321cebac621abf97d1313" title="b9f33a610ee956647d3321cebac621abf97d1313 commit on github">b9f33a6</a>: removed Propel bundle (it has been moved as an independant bundle)</li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.com/trac/wiki/DevelopersForHire">developers for hire</a></h2>
+
+<ul>
+<li>Wojtek Orzech (<a href="mailto:w.orzech@gmail.com">w.orzech@gmail.com</a>): 26 years old PHP developer with almost 4 years of professional experience. Zend PHP5 certified engineer. I have been using Symfony for two years. I&#39;m located in Cracow, Poland.</li>
+</ul>
+
+<h2><a href="http://www.symfony-project.org/plugins/newest/">New plugins</a></h2>
+
+<ul>
+<li><a href="http://www.symfony-project.org/plugins/idlErrorManagementPlugin">idlErrorManagement</a>: set of functionnalities to manage errors on production systems: DB logging, emailing, user feedback, ...</li>
+<li><a href="http://www.symfony-project.org/plugins/sfCatalogoProdottiPlugin">sfCatalogoProdotti</a>: product catalogue.</li>
+<li><a href="http://www.symfony-project.org/plugins/cgHoptoadNotifierPlugin">cgHoptoadNotifier</a>: submits bug reports to hoptoad and works with the api version 2.</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineGuardPlugin">sfDoctrineGuard</a>:</p>
+
+<ul>
+<li>updated french translations</li>
+<li>fixed setupInheritance access</li>
+<li>begin to merge sfDoctrineGuardExtraPlugin into sfDoctrineGuardPlugin</li>
+<li>added more translations</li>
+<li>use mailer compose function</li>
+<li>added username or email validator to password forgot</li>
+<li>removed flash translation in action you can do it in the template my mistake</li>
+<li>moved mailer call into function</li>
+<li>moved query into table class</li>
+<li>fixed mail function</li>
+<li>fixed password change function</li>
+<li>add config param app<em>sf</em>guard<em>plugin</em>password<em>change</em>url and simplified code</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/dcReloadedFormExtraPlugin">dcReloadedFormExtra</a>:</p>
+
+<ul>
+<li>added the change for credentials widget</li>
+<li>added partial widget</li>
+<li>updated README</li>
+<li>added jquery ajax dependence</li>
+<li>added the select jquery autocomplete widget</li>
+<li>updated JavaScript</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfTangoIconsPlugin">sfTangoIcons</a>:</p>
+
+<ul>
+<li>fixed function name</li>
+<li>updated documentation</li>
+<li>added new helper functions</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/ExtjsGeneratorPlugin">ExtjsGenerator</a>:</p>
+
+<ul>
+<li>updated DateTimeField widget for edit panels to enable a time field</li>
+<li>fixed a bug where the generator wasn&#39;t passing the form and filter generators a dbMap</li>
+<li>fixed a bug with mulitple panels batch_actions combo having the same id</li>
+<li>fixed regression with foreign filter date widgets</li>
+<li>added new Plain textfield widget and associated ux</li>
+<li>switched formpanel to used edit configuration</li>
+<li>renamed fieldset config from params_ to config_ for consistancy</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfThriftPlugin">sfThrift</a>:</p>
+
+<ul>
+<li>updated directory structure</li>
+<li>updated documentation</li>
+<li>added Thrift protocol factory</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineActAsTaggablePlugin">sfDoctrineActAsTaggable</a>:</p>
+
+<ul>
+<li>created a Taggable widget that extends the sfWidgetFormInput class</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfPHPUnit2Plugin">sfPHPUnit2</a>:</p>
+
+<ul>
+<li>added task for compiling plugin core classes for external plugin usage</li>
+<li>integrated lime lib to compiled file</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfAssetsLibraryPlugin">sfAssetsLibrary</a>:</p>
+
+<ul>
+<li>fixed pdf thumbnail generation</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfGridPlugin">sfGrid</a>:</p>
+
+<ul>
+<li>added support to custom columns (data is obtainded from invoking methods for the current object-row)</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfAlyssaJqGridPlugin">sfAlyssaJqGrid</a>:</p>
+
+<ul>
+<li>added support for custom columns</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>you can now put :sf<em>culture in the a</em>page route if you wish</li>
+<li>initial version of apostrophe site importer</li>
+<li>changed image<em>tag() to url</em>for() because you can&#39;t use image_tag() inside of an input element</li>
+<li>aImporter now supports loading of richText and foreignHtml</li>
+<li>Fixed a lot of search stuff, providing the underpinnings for several bug reports</li>
+<li>put a mute on aZendSearch</li>
+<li>there is now blog search in the blog sidebar, which is aware of both publication dates and the category restrictions of the blog engine page you are searching on</li>
+<li>aMultipleSelect now has an &quot;autocomplete&quot; option</li>
+<li>changed the cancel helper</li>
+<li>menuToggle needs to accept functions for before and after open and closing</li>
+<li>minifier now inserts a newline after each .js file minified</li>
+<li>created a Taggable widget that extends the sfWidgetFormInput class</li>
+<li>button slots accept an option for image</li>
+<li>removed pages fixtures from the plugin</li>
+<li>added a Focus parameter to the menuToggle so you can focus something after it opens</li>
+<li>added a persistentLabel parameter to apostrophe.selfLabel so you can choose whether or not the label persists on focus</li>
+<li>styled the New Post / New Event modal forms</li>
+<li>refactored the enhanced media pager stuff out of indexSuccess</li>
+<li>added blog slot stuff to a-area-slots.css</li>
+<li>styled blog post pager to be visually consistent with media pager</li>
+<li>fixed bug that was showing esc_raw in the search box</li>
+<li>updated the aAdmin generator theme to more closely resemble the aBlogAdmin theme</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheBlogPlugin">apostropheBlog</a>:</p>
+
+<ul>
+<li>the event form now has an &#39;all day&#39; check box which toggles event time</li>
+<li>the onChange autosave has been replaced by a setInterval autosave</li>
+<li>save button has been added to the top of the form</li>
+<li>the new post / event buttons now use the menuToggle like all of the other menus in apostrophe</li>
+<li>on initial save, don&#39;t override published_at if it has already been specified</li>
+<li>don&#39;t try to setTitle on the page object until it has been saved</li>
+<li>removed stray references to the catTag area</li>
+<li>added apostrophe-blog:generate-test-posts task, which creates 100 posts with random titles and text</li>
+<li>implemented 20/50/100 pager</li>
+</ul></li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.org/wiki/ApplicationsDevelopedWithSymfony">symfony powered websites</a></h2>
+
+<ul>
+<li><a href="http://www.mybestapulia.com">MyBestApulia</a>: (English, Italian) Online hotel booking and tourist info in Apulia (or Puglia), Italy</li>
+<li><a href="http://www.mybesttrentino.com">MyBestTrentino</a>: (English, Italian) Online hotel booking and tourist info in Trentino-Alto Adige, Italy</li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://test.ical.ly/2010/10/25/doctrine-behaviour-loosecoupling-now-collects-garbage-with-a-new-deletion-cascade/">Doctrine behaviour LooseCoupling now collects garbage with a new deletion cascade</a></li>
+<li><a href="http://propel.posterous.com/propel-at-forum-php-paris">Propel at Forum PHP Paris</a></li>
+<li><a href="http://diem-project.org/blog/diem-is-hiring">Diem is hiring!</a></li>
+<li><a href="http://blog.sarabande.jp/post/1409868373">symfony.xrea.jp の閉鎖のお知らせ</a></li>
+<li><a href="http://test.ical.ly/2010/10/27/a-quick-start-guide-to-deploying-symfonydoctrine-applications-to-productive-systems/">A quick start guide to deploying symfony/doctrine applications to productive systems</a></li>
+<li><a href="http://www.lexik.fr/blog/symfony/symfony/utilisation-de-vhost-pour-lacces-au-backend-1307">Utilisation de VHost pour l’accès au backend</a></li>
+<li><a href="http://www.lyra-cms.com/blog/2010/10/lymediamanagerplugin-fckeditor-pdf-thumbnails.html">lyMediaManagerPlugin: FCKEditor and PDF thumbnails</a></li>
+<li><a href="http://pooteeweet.org/blog/0/1850#m1850">Lets talk about JSON in Symfony2</a></li>
+<li><a href="http://test.ical.ly/2010/10/28/one-simple-way-how-to-use-different-symfony-app-yml-settings-for-development-preproduction-and-production-servers/">One simple way how to use different symfony app.yml settings for development, preproduction and production servers</a></li>
+<li><a href="http://blog.servergrove.com/2010/10/28/how-to-customize-the-error-pages-in-symfony2/">How to customize the error pages in Symfony2</a></li>
+<li><a href="http://www.symfony.es/2010/10/30/presentaciones-symfony-en-la-php-barcelona-2010/">Presentaciones Symfony en la PHP Barcelona 2010</a></li>
+<li><a href="http://propel.posterous.com/video-ide-autocompletion-with-propel">Video: IDE Autocompletion with Propel</a></li>
+<li><a href="http://pooteeweet.org/blog/0/1853#m1853">Symfony2 stuff</a></li>
+<li><a href="http://www.symfonylab.com/advanced-symfony-techniques/">Advanced symfony Techniques</a></li>
+<li><a href="http://www.phphatesme.com/blog/qualitatssicherung/unit-testing-symfony-plugins-with-php-unit/">Unit testing symfony plugins with php unit</a></li>
+<li><a href="http://yureg.com/dev-flow/2010/10/symfony-mime-type-problem-uploading-image-files/">Symfony MIME-type problem uploading image files</a></li>
+<li><a href="http://matthieu.igwane.com/2010/10/29/les-tableaux-associatif-dans-les-fichiers-de-configuration-yml-de-symfony/">Les tableaux associatif dans les fichiers de configuration .yml de Symfony</a></li>
+<li><a href="http://www.gerryvandermaesen.com/posts/organizing-larger-symfony-projects-with-plugins">Organizing larger symfony projects with plugins</a></li>
+<li><a href="http://islamkhalil.wordpress.com/2010/10/28/symfony-insert-raw-sql-using-doctrine/">symfony insert raw sql using doctrine</a></li>
+<li><a href="http://hi.baidu.com/54lwh/blog/item/3b48c81b00c6a4f1ae5133e7.html">SYMFONY 助手 （Helpers）</a></li>
+<li><a href="http://symfony-blog.driebit.nl/2010/10/getinstance-method-for-doctrine-tables/">getInstance method for Doctrine tables</a></li>
+<li><a href="http://www.phppro.jp/qa/2941">symfonyでのグローバル定数について</a></li>
+<li><a href="http://www.exgear.jp/blog/2010/10/wordpress-with-symfony/">Wordpressのテンプレートでsymfonyを使う</a></li>
+<li><a href="http://www.meteenee.com/symfony-get-installed-plugin">symfony: get installed plugin</a></li>
+<li><a href="http://www.avanim-prod.com/blog/symfony/bonnes-pratiques-symfony-refactorisons-le-code-142">Bonnes pratiques Symfony: Refactorisons le code</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

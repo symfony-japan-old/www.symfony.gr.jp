@@ -1,0 +1,213 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony #260 (19->25 December 2011) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #260 (19-&gt;25 December 2011)</h1>
+
+<p>This week, the Symfony2 master branch focused on a big <a href="https://github.com/symfony/symfony/tree/master/src/Symfony/Bridge/Doctrine">DoctrineBridge</a> refactorization. In addition, the Filesystem class was <a href="https://github.com/symfony/symfony/commit/818a3321c01c504c5aed05caf9a8b3984071a82d">moved to its own component</a>. Lastly, the 2.0 branch was made compatible with the upcoming Twig 1.5 version.</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/0-k8gNEh-2o">Consider better strategies for regenerating cache files</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/nCrZe29L1Xg">A component for kernel</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/63-dWfagCyE">Asset Dependency Bundle</a></li>
+</ul>
+
+<h2>symfony 1 development highlights</h2>
+
+<p><a href="http://trac.symfony-project.com/trac/timeline?from=25%2F12%2F2011&amp;daysback=6&amp;milestone=on&amp;ticket=on&amp;changeset=on&amp;update=Update">Changelog</a>:</p>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/33292" title="33292 revision on trac">r33292</a>: [1.4] fixed test for PHP 5.3</li>
+</ul>
+
+<h2>Symfony2 development highlights</h2>
+
+<p><a href="http://github.com/symfony/symfony/commits/2.0">2.0 branch</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/29f4111f3e20e6dc123badfb87ea9faa4efa31b7" title="29f4111f3e20e6dc123badfb87ea9faa4efa31b7 commit on github">29f4111</a>: [DoctrineBridge] added a failing test showing the issue for proxy users</li>
+<li><a href="http://github.com/symfony/symfony/commit/649fa5219f98cca4d80908fd73560a854f21de4e" title="649fa5219f98cca4d80908fd73560a854f21de4e commit on github">649fa52</a>: [DoctrineBridge] fixed the entity provider to support proxies</li>
+<li><a href="http://github.com/symfony/symfony/commit/ebc9979a571e223cec27f759b42d97eb720379c5" title="ebc9979a571e223cec27f759b42d97eb720379c5 commit on github">ebc9979</a>: [Process] fixed unit tests on PHP 5.4</li>
+<li><a href="http://github.com/symfony/symfony/commit/3dd1072edc2d955da926c0a081957e4d4552373a" title="3dd1072edc2d955da926c0a081957e4d4552373a commit on github">3dd1072</a>: [HttpKernel] fixed unit tests that can fail randomly</li>
+<li><a href="http://github.com/symfony/symfony/commit/5a6c989abc88d893b725676f678a417b9b0db776" title="5a6c989abc88d893b725676f678a417b9b0db776 commit on github">5a6c989</a>: [FrameworkBundle] added test-attribute in xsd-schema to write functional-tests if using xml-configurations</li>
+<li><a href="http://github.com/symfony/symfony/commit/8235848b5bf588071d766bcc2c00ed81dcb8cc80" title="8235848b5bf588071d766bcc2c00ed81dcb8cc80 commit on github">8235848</a>: [HttpFoundation] added flv file default extension</li>
+<li><a href="http://github.com/symfony/symfony/commit/1b4aaa2c8ee2500ec39f0fa3b9a2e3b75a9fc943" title="1b4aaa2c8ee2500ec39f0fa3b9a2e3b75a9fc943 commit on github">1b4aaa2</a>: [HttpFoundation] fixed ApacheRequest (pathinfo was incorrect when using mod_rewrite; added better test coverage)</li>
+<li><a href="http://github.com/symfony/symfony/commit/bebdd07f4126d4f45d138a617bdeb2ee029c5c01" title="bebdd07f4126d4f45d138a617bdeb2ee029c5c01 commit on github">bebdd07</a>: [TwigBridge] simplified code</li>
+<li><a href="http://github.com/symfony/symfony/commit/6e987307fc42d6b3ca7d3d94fbf7c0efb56ed841" title="6e987307fc42d6b3ca7d3d94fbf7c0efb56ed841 commit on github">6e98730</a>: added forwards compatibility with Symfony 2.1 for the Filesystem component</li>
+<li><a href="http://github.com/symfony/symfony/commit/adea589a3df4047055c6bcb002180080f21eb406" title="adea589a3df4047055c6bcb002180080f21eb406 commit on github">adea589</a>: [Twig] made code compatible with Twig 1.5</li>
+</ul>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">Master branch</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/517eebcb317b971785db78a8d086e81acbc4530d" title="517eebcb317b971785db78a8d086e81acbc4530d commit on github">517eebc</a>: [DoctrineBridge] refactored entity choice list to be ORM independant using an EntityLoader interface</li>
+<li><a href="http://github.com/symfony/symfony/commit/fd174a228b2964ae6f362d2f2b22ee2e353b5803" title="fd174a228b2964ae6f362d2f2b22ee2e353b5803 commit on github">fd174a2</a>: [Tests] use proper assertion for counting</li>
+<li><a href="http://github.com/symfony/symfony/commit/b919d92b523eb5fb35e25f40245d8d00e67627ef" title="b919d92b523eb5fb35e25f40245d8d00e67627ef commit on github">b919d92</a>: [DoctrineBridge] optimized fetching of entities to use WHERE IN and fix other inefficencies</li>
+<li><a href="http://github.com/symfony/symfony/commit/3b5c617ad01e36f74bd949d55d90326c69acc85e" title="3b5c617ad01e36f74bd949d55d90326c69acc85e commit on github">3b5c617</a>: [DoctrineBridge] removed large parts of the EntityChoiceList code that were completly unnecessary</li>
+<li><a href="http://github.com/symfony/symfony/commit/3c81b6295572fe435e2fbc67846d6029be7e5010" title="3c81b6295572fe435e2fbc67846d6029be7e5010 commit on github">3c81b62</a>: [DoctrineBridge] cleanup and move loader into its own method</li>
+<li><a href="http://github.com/symfony/symfony/commit/200ed5490b3ee33dafc465ea2f7ebc53a2f29fad" title="200ed5490b3ee33dafc465ea2f7ebc53a2f29fad commit on github">200ed54</a>: [DoctrineBridge] extracted the common type and made the choice list generic</li>
+<li><a href="http://github.com/symfony/symfony/commit/f1199c0c684f6e16e2be58b9e87905156edd8dc2" title="f1199c0c684f6e16e2be58b9e87905156edd8dc2 commit on github">f1199c0</a>: [DoctrineBridge] decoupled the EntityUserProvider from the ORM (it can now be used by any Doctrine project implementing the interfaces from Doctrine Common 2.2)</li>
+<li><a href="http://github.com/symfony/symfony/commit/84ad40dcc80b9a5cd51e53fc2183f966cadca6fe" title="84ad40dcc80b9a5cd51e53fc2183f966cadca6fe commit on github">84ad40d</a>: added cache clear hook</li>
+<li><a href="http://github.com/symfony/symfony/commit/24319bb0f4e66a269c47d5ed9d2c2896b3620fc7" title="24319bb0f4e66a269c47d5ed9d2c2896b3620fc7 commit on github">24319bb</a>: [DoctrineBridge] made it possible to change the manager used by the provider</li>
+<li><a href="http://github.com/symfony/symfony/commit/9653be618a72885fea2c93d45afab3f57226bcc2" title="9653be618a72885fea2c93d45afab3f57226bcc2 commit on github">9653be6</a>: moved the EntityFactory to the bridge</li>
+<li><a href="http://github.com/symfony/symfony/commit/818a3321c01c504c5aed05caf9a8b3984071a82d" title="818a3321c01c504c5aed05caf9a8b3984071a82d commit on github">818a332</a>: [Component] moved Filesystem class to its own component</li>
+<li><a href="http://github.com/symfony/symfony/commit/74cfd045049267d5bad7fe70131e5d95025aa393" title="74cfd045049267d5bad7fe70131e5d95025aa393 commit on github">74cfd04</a>: [Security] made the logout path check configurable</li>
+<li><a href="http://github.com/symfony/symfony/commit/9daa2a6cc8e073a22c7954994183bf00e02cc353" title="9daa2a6cc8e073a22c7954994183bf00e02cc353 commit on github">9daa2a6</a>: [Profiler] added function to get parent token directly</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/dcReloadedFormExtraPlugin">dcReloadedFormExtra</a>:</p>
+
+<ul>
+<li>added onChange event on autocomplete</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/WebPurifyPlugin">WebPurify</a>:</p>
+
+<ul>
+<li>replaced simple<em>xml</em>call with sfWebBrowser, which uses CURL</li>
+<li>added 10 second timeout</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfSphinxPlugin">sfSphinx</a>:</p>
+
+<ul>
+<li>updated main lib to version 2.0.2-beta</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/cpUniFormPlugin">cpUniForm</a>:</p>
+
+<ul>
+<li>added a missing require_once</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>fixed bug with singleton slots and the areaHideWhenEmpty flag</li>
+<li>more flexible form fields in the blog / events admin sidebar</li>
+<li>the placeholder of media slots is now sized automatically and clickable</li>
+<li>created a utility function for checking and calling a callback</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheBlogPlugin">apostropheBlog</a>:</p>
+
+<ul>
+<li>added more descriptive labels for the delete button in the admin form</li>
+<li>when app<em>a</em>simple_permissions is true (PR), there is no list of allowed editors for a blog post</li>
+<li>moved that refactored JS to a.js from aBlog.js because it can be shared by both admin generator skeletons</li>
+</ul></li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://www.noop.lv/2011/12/20/pst-zsh-now-friends-with-symfony/">Pst...Zsh now friends with symfony</a></li>
+<li><a href="http://www.noop.lv/2011/12/20/fosuserbundle-compatibility-break/">FOSUserBundle – compatibility break</a></li>
+<li><a href="http://php-and-symfony.matthiasnoback.nl/2011/12/symfony2-doctrine-common-creating-powerful-annotations/">Symfony2 &amp; Doctrine Common: creating powerful annotations</a></li>
+<li><a href="http://www.leftontheweb.com/message/Introducing_IngewikkeldWrapperBundle">Introducing IngewikkeldWrapperBundle</a></li>
+<li><a href="http://www.symfony.es/2011/12/22/un-llamamiento-a-la-solidaridad-de-la-comunidad-symfony/">Un llamamiento a la solidaridad de la comunidad Symfony</a></li>
+<li><a href="http://www.strangebuzz.com/post/2011/12/21/Une-semaine-symfonique-259-du-12-au-18-d%C3%A9cembre-2011">Une semaine symfonique #259 - du 12 au 18 décembre 2011</a></li>
+<li><a href="http://sstaynov.com/posts/symfony-google-recaptcha-widget-validator/">Symfony Google Recaptcha Widget + Validator</a></li>
+<li><a href="http://d.hatena.ne.jp/koyhoge/20111226/symfonyadvent">業務連絡 Symfony Advent Calendar JP 2011 参加者の皆さんへ</a></li>
+<li><a href="http://www.jpgranja.com/2011/12/25/symfony-custom-configuration-files/">Symfony custom configuration files</a></li>
+<li><a href="http://bordenia.wordpress.com/2011/12/20/continuous-testing-of-lime-unit-tests-in-symfony-1-4-using-watchr-growl-growlnotify-and-launchd-plists/">Continuous Testing of lime unit tests in Symfony 1.4 using watchr, Growl, growlnotify and launchd plists</a></li>
+<li><a href="http://fivestar.hatenablog.com/entry/2011/12/21/013929">[symfony] Symfony2のRequestクラスの解説</a></li>
+<li><a href="http://devdream.wordpress.com/2011/12/20/how-to-make-a-twig-extension-in-symfony2/">How to make a twig extension in symfony2</a></li>
+<li><a href="http://www.symfony-blog.de/symfony-1-4/default-validation-messages-uberschreiben/">Default Validation Messages überschreiben</a></li>
+<li><a href="http://www.phperblog.net/?p=329">Configuration Reference(配置参考)</a></li>
+<li><a href="http://ehipygeb.blogspot.com/2011/12/symfony.html">■２日目■　symfonyの学習-プロジェクト作成→モジュール作成まで-</a></li>
+<li><a href="http://ivansudakov.blogspot.com/2011/12/default-context-does-not-exist-symfony.html">The &quot;default&quot; context does not exist и symfony doctrine:data-dump</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,212 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony #255 (14->20 November 2011) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #255 (14-&gt;20 November 2011)</h1>
+
+<p>This week, <a href="http://symfony.com/blog/security-release-symfony-2-0-6">Symfony 2.0.6 was published</a> as an important security release. Meanwhile, the official Symfony Community celebrated its first week introducing several improvements and announcing its 1,000th member milestone.</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/IZ4a_-Oyt2c">Monolog swiftmailer handler configuration</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/cjlktnXGmN0">[RFC] Symfony2 CI server</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/bp2QyeKRQR8">LTS release</a></li>
+</ul>
+
+<h2>symfony 1 development highlights</h2>
+
+<p><a href="http://trac.symfony-project.com/trac/timeline?from=20%2F11%2F2011&amp;daysback=6&amp;milestone=on&amp;ticket=on&amp;changeset=on&amp;update=Update">Changelog</a>:</p>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/33208" title="33208 revision on trac">r33208</a>: [1.4] fixed ob_start usage (to avoid warning in PHP 5.4)</li>
+<li><a href="http://trac.symfony-project.org/changeset/33214" title="33214 revision on trac">r33214</a>: [1.4] fixed ob_start() behavior on CLI</li>
+</ul>
+
+<h2>Symfony2 development highlights</h2>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">2.0 branch</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/0462a895620bee27053c7b2444f7a31fed69db9b" title="0462a895620bee27053c7b2444f7a31fed69db9b commit on github">0462a89</a>: [Security] fixed HttpUtils::checkRequestPath() to not catch all exceptions</li>
+<li><a href="http://github.com/symfony/symfony/commit/d67fbe9e48b90c29c7e0d3ce19e5d1ef643ace7a" title="d67fbe9e48b90c29c7e0d3ce19e5d1ef643ace7a commit on github">d67fbe9</a>: [HttpFoundation] added an exception to MimeTypeGuesser::guess() when no guesser are available</li>
+<li><a href="http://github.com/symfony/symfony/commit/f7c5bf1db2d18dfb480ac4dc1e6b1be160952edf" title="f7c5bf1db2d18dfb480ac4dc1e6b1be160952edf commit on github">f7c5bf1</a>: [HttpKernel] fixed Content-Length header when using ESI tags</li>
+<li><a href="http://github.com/symfony/symfony/commit/86a8b9f567d8d30a1c629c46a6a8950944d2a4bb" title="86a8b9f567d8d30a1c629c46a6a8950944d2a4bb commit on github">86a8b9f</a>: allow vendors checkout transport method to be overridden manually (http, https, git)</li>
+<li><a href="http://github.com/symfony/symfony/commit/79ae3fced982331aa89885289b942a5961646846" title="79ae3fced982331aa89885289b942a5961646846 commit on github">79ae3fc</a>: [Form] fixed radio and checkbox when data is not bool</li>
+</ul>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">Master branch</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/6d7e6a87a8eb76b8a18de42bd04eed5e0d1be9f7" title="6d7e6a87a8eb76b8a18de42bd04eed5e0d1be9f7 commit on github">6d7e6a8</a>: [DoctrineBundle] enhanced error reporting during mapping validation when nested exceptions occur</li>
+<li><a href="http://github.com/symfony/symfony/commit/62fb019c6283ee0510f34ea188159cdb83fee47b" title="62fb019c6283ee0510f34ea188159cdb83fee47b commit on github">62fb019</a>: added event priorities in the profiler</li>
+<li><a href="http://github.com/symfony/symfony/commit/43e6c3690908ba59c9a7eb9bee5cdd62b60dff19" title="43e6c3690908ba59c9a7eb9bee5cdd62b60dff19 commit on github">43e6c36</a>: [FrameworkBundle] changed the session listeners to be subscribers</li>
+<li><a href="http://github.com/symfony/symfony/commit/264a033728e6063bb19702463e3c3c0989d924fd" title="264a033728e6063bb19702463e3c3c0989d924fd commit on github">264a033</a>: fixed uncompatible closure declaraction in FileldTypeValidatorExtensionTest</li>
+<li><a href="http://github.com/symfony/symfony/commit/e3655f3a5ccfdf866d4cd629c283203330516d67" title="e3655f3a5ccfdf866d4cd629c283203330516d67 commit on github">e3655f3</a>: changed priorities for kernel.request listeners (the Firewall is now executed after the Router)</li>
+<li><a href="http://github.com/symfony/symfony/commit/5e4b7cb1ba06445dd5370d861caeb5cc5eacf912" title="5e4b7cb1ba06445dd5370d861caeb5cc5eacf912 commit on github">5e4b7cb</a>: renamed Propel Bridge from Propel to Propel1</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/dcReloadedFormExtraPlugin">dcReloadedFormExtra</a>:</p>
+
+<ul>
+<li>updated crWidgetFormJsTree</li>
+<li>fixed jstreemerge special case</li>
+<li>added suport for view selection on tree when editing</li>
+<li>fixed required option now working and widget configuration option merge</li>
+<li>modified alWidgetFormTimepicker to adapt to current jquery ui theme</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/cpDatePickerPlugin">cpDatePicker</a>:</p>
+
+<ul>
+<li>added &#39;noscript&#39; option</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>set REMOTE_ADDR if it is missing in aTaskTools::signinAsTaskUser()</li>
+<li>added rsync-extras to apostrophe:deploy</li>
+<li>cleaned up some of the variable namespacing in slotEnableForm and slotEnableFormButtons</li>
+<li>moved the php below the doctype in layout so there&#39;s no whitespace at the top of the document when it&#39;s rendered</li>
+<li>fixed display of tiny images in the media library</li>
+<li>use pnmflip, not pamflip, because many systems still don&#39;t have pamflip (notably Ubuntu)</li>
+<li>links to files in the file slot open in a new tab/window</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheCkEditorPlugin">apostropheCkEditor</a>:</p>
+
+<ul>
+<li>removed an error_log() call and an apostrophe.log() call from the plugin</li>
+</ul></li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://pooteeweet.org/blog/0/2046#m2046">Travis, CI for OSS</a></li>
+<li><a href="http://www.noop.lv/2011/11/14/symfony2-how-to-find-current-environment/">Symfony2 – how to find current environment</a></li>
+<li><a href="http://php-and-symfony.matthiasnoback.nl/2011/11/symfony2-an-alternative-to-symfony-1s-routing-load_configuration-event/">Symfony2: An alternative to Symfony 1&#39;s routing.load_configuration event</a></li>
+<li><a href="http://www.symfony.it/articoli/540/abilitare-estensioni-twig/">Abilitare estensioni aggiuntive per Twig</a></li>
+<li><a href="http://www.funstaff.ch/2011/11/14/funstafftikabundle-wrapper-pour-tika">FunstaffTikaBundle: Wrapper pour Tik</a></li>
+<li><a href="http://www.lafermeduweb.net/billet/symfony2-tutorial-3-premiers-chapitres-du-tuto-watch-my-desk-1232.html">Symfony2 Tutorial: 3 premiers chapitres du tuto Watch My Desk</a></li>
+<li><a href="http://www.symfony.es/2011/11/17/se-publica-la-actualizacion-de-seguridad-2-0-6/">Se publica la actualización de seguridad 2.0.6</a></li>
+<li><a href="http://sf.khepin.com/2011/11/symfony-backbone-js-for-highly-dynamic-apps/">Symfony + Backbone.js for highly dynamic apps</a></li>
+<li><a href="http://www.symfony.es/2011/11/18/resumen-de-la-reunion-de-desarrolladores-17-11-2011/">Resumen de la reunión de desarrolladores (17-11-2011)</a></li>
+<li><a href="http://relevant.at/wirtschaft/pr/323075/drupal8-symfony2-gehen-gemeinsame-wege.story">Drupal8 und Symfony2 gehen gemeinsame Wege</a></li>
+<li><a href="http://www.noop.lv/2011/11/19/setting-phpunit-for-symfony-projects-on-ubuntu/">Setting PHPUnit for symfony projects on Ubuntu</a></li>
+<li><a href="http://shared-memos.blogspot.com/2011/11/twitter-anywhere-and-php-symfony.html">Twitter @Anywhere and PHP Symfony. Implementing login action</a></li>
+<li><a href="http://d.hatena.ne.jp/Kmusiclife/20111119/1321690826">symfony1.4でとにかく初期化するためのコマンド</a></li>
+<li><a href="http://www.polyglot-software.com/2011/11/19/238">開発環境でsymfonyのプロジェクトをpost-commit + svn update + Capistrano + rsync + sshで簡単デプロイする方法</a></li>
+<li><a href="http://www.dinduks.com/symfony-2-render-helper-for-calling-an-action-from-a-view">Symfony 2: “render” helper for calling an action from a view</a></li>
+<li><a href="http://kulouxia.com/view/2011-11-17/install-symfony-in-pear.html">pear下安装symfony的步骤</a></li>
+<li><a href="http://png-tech.blogspot.com/2011/11/symfony-2.html">Symfony 2 Фиктивные модели для форм</a></li>
+<li><a href="http://simelo-es.blogspot.com/2011/11/insertando-calendarios-de-jquery-con.html">Insertando calendarios de jQuery con Symfony</a></li>
+<li><a href="http://www.yylog.net/archives/41/">配置nginx支持Symfony</a></li>
+<li><a href="http://omnioo.com/omnioolab/php/-hello-worldsymfonyurl---symfony5w1h-symfony-hello-worldhello-world-symfony.php">SymfonyでHello world!を作ってみる</a></li>
+<li><a href="http://ihsanrama.wordpress.com/2011/11/16/instalasi-symfony-di-mac-os/">Instalasi Symfony di Mac OS</a></li>
+<li><a href="http://weblabor.hu/forumok/temak/110469">Symfony 2 SQLite</a></li>
+<li><a href="http://blog.oxagile.com/2011/11/15/symfony-development-community-encourages-every-contribution/">Symfony Development Community Encourages Every Contribution</a></li>
+<li><a href="http://www.symfony-zone.com/wordpress/2011/11/15/installing-and-using-coffee-script-with-assetic-on-windows/">Installing and using Coffee-Script with Assetic on Windows</a></li>
+<li><a href="http://www.testically.org/2011/11/15/a-static-cache-for-symfony-and-silex-would-you-use-it/">A Static Cache for Symfony and Silex – Would you use it?</a></li>
+<li><a href="http://blogsh.de/2011/11/15/change-user-roles-during-a-session-in-symfony/">Change user roles during a session in Symfony</a></li>
+<li><a href="http://uzulla.hateblo.jp/entry/2011/11/15/033321">Symfony忘れた…→Symfonyめんどい→Symfonyすごい→(半年後)→Symfony忘れた…</a></li>
+<li><a href="http://desarrolla2.com/php-symfony/el-final-del-autoloading/">El final del autoloading</a></li>
+<li><a href="http://www.phppro.jp/qa/2972">php、Symfony　Widgetsについての質問</a></li>
+<li><a href="http://mmj.99ing.net/Entry/1103/">Symfony 1.0 NULL</a></li>
+<li><a href="http://www.swiftwater-solutions.com/?p=219">Symfony on Plesk 10.2</a></li>
+<li><a href="http://www.cnblogs.com/dreamhome/archive/2011/11/13/2247541.html">openPNE创建项目</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,307 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony#197 (4->10 October 2010) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #197 (4-&gt;10 October 2010)</h1>
+
+<p>This week the symfony community gathered around the <a href="http://www.symfonyday.com/">Symfony Day 2010</a> conference. The event hosted many insightful sessions and the <a href="http://github.com/symfony-cmf/symfony-cmf/wiki/Post-Symfony-Day-Cologne-2010-Meeting-Notes">Symfony2 CMF meetup</a>. In addition, a new major component of Symfony2 was introduced: the Firewall component, which provides authentication and authoritation for applications.</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/2308fe4e5f9a7dc2">Symfony2 security feedback</a></li>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/fb60300108652cb4">Symfony2: Preferred languages and culture fallback</a></li>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/74290e62ae026d23">asset installation</a></li>
+</ul>
+
+<h2>symfony 1 development highlights</h2>
+
+<p>Activity summary: 43 changesets, 14 bugs reported, 10 bugs fixed, 7 enhancements suggested, 1 enhancement closed, 2 documentation defects reported, and 13 documentation edits</p>
+
+<h2>Symfony2 development highlights</h2>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">Changelog</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/2525998f6e47299438ccf07e6c5c92b4755f66a5" title="2525998f6e47299438ccf07e6c5c92b4755f66a5 commit on github">2525998</a>: replaced form field rendering with plain templates</li>
+<li><a href="http://github.com/symfony/symfony/commit/ff683a694e37ecf779e1a16b5058666d6443ce85" title="ff683a694e37ecf779e1a16b5058666d6443ce85 commit on github">ff683a6</a>, <a href="http://github.com/symfony/symfony/commit/3bc3115d8c784c5be201d0156a51d6626135a246" title="3bc3115d8c784c5be201d0156a51d6626135a246 commit on github">3bc3115</a>: integrated new data fixtures code</li>
+<li><a href="http://github.com/symfony/symfony/commit/caa9d827463a40fe2c1454351218be93b9c10817" title="caa9d827463a40fe2c1454351218be93b9c10817 commit on github">caa9d82</a>: [HttpFoundation] added support for attributes in RequestMatcher</li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.com/trac/wiki/DevelopersForHire">developers for hire</a></h2>
+
+<ul>
+<li><a href="http://www.ScenicCityLabs.com">Scenic City Labs</a>: is a web application development company with 10+ years of experience. We are currently based in Chattanooga, TN. We use symfony for the majority of our projects but can custom tailer any application to whatever you desire.</li>
+<li>Tejaswi Sharma (<a href="mailto:tej.nri@gmail.com">tej.nri@gmail.com</a>): I am Tejaswi Sharma and I am working in PHP/MySql/Apache for 4 years and symfony for 2 years. Feel free to contact me if you have any issues in symfony.</li>
+</ul>
+
+<h2><a href="http://www.symfony-project.org/plugins/newest/">New plugins</a></h2>
+
+<ul>
+<li><a href="http://www.symfony-project.org/plugins/themeTwentytenPlugin">themeTwentyten</a>: TwentyTen Wordpress theme version under symfony sfThemePlugin.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfPrintableFormPlugin">sfPrintableForm</a>: Make a form printable version.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfPLValidatorsPlugin">sfPLValidators</a>: Provides validation of polish specific codes (NIP, Polish tax identification number and Pesel, Polish human identification number)</li>
+<li><a href="http://www.symfony-project.org/plugins/acHostDependantPlugin">acHostDependant</a>: provides the ability to have different configuration depending on the hostname.</li>
+<li><a href="http://www.symfony-project.org/plugins/fpBackupPlugin">fpBackup</a>: (no description)</li>
+<li><a href="http://www.symfony-project.org/plugins/pokretWidgetFormDateTimeWithAmPmPlugin">pokretWidgetFormDateTimeWithAmPm</a>: (no description)</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineActAsSignable">sfDoctrineActAsSignable</a>:</p>
+
+<ul>
+<li>added sfDoctrineGuardPlugin behavior</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineActAsTaggablePlugin">sfDoctrineActAsTaggable</a>:</p>
+
+<ul>
+<li>added query method to fetch tags and tagging counts for various a set of taggable models</li>
+<li>modified TagTable::queryTagsWithCountsByModel to be more compatible with existing doctrine relations</li>
+<li>fixed Iterators for escaped arrays stop when a false value is encountered</li>
+<li>added function to merge two tags</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/tdCorePlugin">tdCore</a>:</p>
+
+<ul>
+<li>improvements in tdSubpage</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/ExtjsGeneratorPlugin">ExtjsGenerator</a>:</p>
+
+<ul>
+<li>fixed sorting route generated url</li>
+<li>added listpanel loader</li>
+<li>added Listview CheckboxSelection ux and checkbox selection support to ListView</li>
+<li>updated ListView RowActions css</li>
+<li>added ListView override to fix a bug with IE (can be removed when ExtJs 3.3.0 is released)</li>
+<li>added ListView support to batch actions</li>
+<li>added tasks to create admin modules in an existing plugin</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfPHPUnit2Plugin">sfPHPUnit2</a>:</p>
+
+<ul>
+<li>refactored loading of sfApplicationConfiguration instance</li>
+<li>added helper method for debugging</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfFormExtra">sfFormExtra</a>:</p>
+
+<ul>
+<li>fixed the impossibility to remove the value for the sfWidgetFormJQueryAutocompleter</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/srPageChooserPlugin">srPageChooser</a>:</p>
+
+<ul>
+<li>removed srValidatorSlug (deprecated by aValidatorSlug)</li>
+<li>cleaned up the widget class</li>
+<li>fixed javascript error on button click</li>
+<li>allowed for output escaping to be turned on</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfAssetsLibraryPlugin">sfAssetsLibrary</a>:</p>
+
+<ul>
+<li>new helper for ckeditor browser</li>
+<li>updated readme with instructions how to use sfAssetsLibraryPlugin as CKEditor file browser without other Plugin</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfCKEditorPlugin">sfCKEditor</a>:</p>
+
+<ul>
+<li>updated readme waiting for deploymet of sfAssetsLibraryPlugin with CK Editor addon</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfI18nFormExtractorPlugin">sfI18nFormExtractor</a>:</p>
+
+<ul>
+<li>now translates help messages from forms</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfAtosPaymentPlugin">sfAtosPayment</a>:</p>
+
+<ul>
+<li>fixed some syntax bugs</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>initial version of aTagAdmin</li>
+<li>styled the feedback you get after using the Replace File feature</li>
+<li>if the update&#39;s timestamp is no good, don&#39;t attempt to strtotime() it</li>
+<li>moved the ajax submit function to a.js to get it out of the edit partial</li>
+<li>created apostrophe.linkToRemote so we can begin replacing all of those inline jq<em>link</em>to_remote() functions</li>
+<li>working on getting editing working correctly in the four-up view in Media</li>
+<li>added disqus partial includes to layout.php</li>
+<li>made it easier to override default behavior of aCategoryAdmin</li>
+<li>page editing permissions have been completely overhauled (a big win for large sites with many editors)</li>
+<li>slideshow slots now support displaying everything with certain categories and tags as an alternative to browsing for individual images</li>
+<li>removed Image slot</li>
+<li>renamed Slideshow slot in BaseaTools as the first step to unifying aImage and aSlideshow</li>
+<li>updated instructions for choosing a photo or photos with the slideshow slot</li>
+<li>new aMediaItem::getImageAvailable method is preferred to checking for a width before trying to display a thumbnail</li>
+<li>fixed some of the default dimensions issues in the button slot</li>
+<li>adjusted four-up behavior for non-images</li>
+<li>created active states for the View settings so you know which one is selected</li>
+<li>the new view permissions are roughed in and working</li>
+<li>fixed potential bug in category merging</li>
+<li>added category merging to tag admin</li>
+<li>moved slide show image ordering into Slot classes</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheBlogPlugin">apostropheBlog</a>:</p>
+
+<ul>
+<li>integrated disqus comments</li>
+<li>added orderBy to aEventActions:buildQuery</li>
+<li>added &#39;Preview&#39; to the Blog and Events admin</li>
+<li>added a max<em>per</em>page setting to aBlog and aEvent in app.yml</li>
+<li>BlogItem::getMediaForAreas() now respects slide show ordering</li>
+</ul></li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.org/wiki/ApplicationsDevelopedWithSymfony">symfony powered websites</a></h2>
+
+<ul>
+<li><a href="http://www.blidoo.com/">Blidoo</a>: (English) a generalist classified ads site</li>
+<li><a href="http://www.dramadance.pl/">dramadance.pl</a>: (Polish) website of an entertainment company</li>
+<li><a href="http://www.avendresurle.net/">EticWeb</a>: (French) our site offers to reduce the carbon footprint of individuals while minimizing travel-related purchases, sales and barter of goods and services</li>
+<li><a href="http://www.reflector-guide.com">Reflector Guide</a>: (English, Spanish, Finnish, Russian) site about pedestrian reflectors</li>
+<li><a href="https://www.tyokyvyntuki.fi">Työkyvyntuki</a>: (Finnish) work ability service for medium sized companies</li>
+<li><a href="http://mediaburse.ru">MediaBurse.ru</a>: (Russian) place where journalists and publishers buy\sell articles</li>
+<li><a href="http://interscientia.com">InterScientia.com</a>: (English, Finnish, French, Russian, Swedish) a Workshop for All Men And Women Seeking to Share Knowledge Across Borders</li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.com/trac/wiki/SymfonyBloggers">symfony bloggers</a></h2>
+
+<ul>
+<li><a href="http://sf.khepin.com/">Synofony</a> (<a href="http://sf.khepin.com/feed/">feed</a>) (English)</li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://test.ical.ly/2010/10/04/how-to-make-symfony-use-a-different-login-page-depending-on-your-current-moduleaction/">How to make symfony use a different login page depending on your current module/action?</a></li>
+<li><a href="http://sf.khepin.com/2010/10/symfony-filter-forms-and-related-tables/">Symfony filter forms and related tables</a></li>
+<li><a href="http://sf.khepin.com/2010/10/easy-list-ordering-sorting-on-any-field/">Easy list ordering / sorting on any field</a></li>
+<li><a href="http://blog.servergrove.com/2010/10/05/logging-mongodb-queries-using-symfony-2-and-doctrine-odm/">Logging MongoDB queries using Symfony2 and Doctrine ODM</a></li>
+<li><a href="http://www.kennethvr.be/blog/2010/10/05/sfdoctrineguardplugin-bug-unknown-method-sfguardusertableretrievebyusername/">SfDoctrineGuardPlugin bug: Unknown method SfGuardUserTable::retrieveByUsername</a></li>
+<li><a href="http://symfony-world.blogspot.com/2010/10/symfonydoctrine-behavior-review.html">symfony &amp; Doctrine behavior review</a></li>
+<li><a href="http://test.ical.ly/2010/10/06/how-to-define-a-default-value-in-your-schema-yml-when-using-the-doctrine-data-type-array/">How to define a default value in your schema.yml when using the Doctrine data type Array</a></li>
+<li><a href="http://jlcoady.net/symfony/doctrine-query-caching-causing-invalid-parameter-number-error">Doctrine query caching causing &#39;Invalid parameter number&#39; error for queries using &#39;IN ?&#39;</a></li>
+<li><a href="http://pugi-pogi.blogspot.com/2010/10/thank-you-for-phpmatsuri.html">Thank you for PHPMatsuri!</a></li>
+<li><a href="http://dev.esl.eu/blog/2010/10/06/setting-up-a-symfony-project-and-phpunit-on-hudson/">Setting up a symfony project with PHPUnit on Hudson</a></li>
+<li><a href="http://www.silicon.fr/ocari-le-cms-francais-%C2%AB-oriente-presse-pour-les-gens-de-la-presse-%C2%BB-41835.html">Ocari, le CMS français orienté presse, pour les gens de la presse</a></li>
+<li><a href="http://www.01net.com//editorial/520821/projet-plante-demandez-laide-dun-gourou-de-l-open-source/">Projet planté ? Demandez l&#39;aide d&#39;un gourou de l’open source</a></li>
+<li><a href="http://www.saynotoflash.com/archives/symfony-parallel-content-delivery/">Symfony Parallel Content Delivery</a></li>
+<li><a href="http://www.whiteoctober.co.uk/blog/2010/10/07/symfony-file-uploads-with-custom-names-and-paths/">Symfony – file uploads with custom names and paths</a></li>
+<li><a href="http://blog.servergrove.com/2010/10/07/creating-indexes-for-your-doctrine-odm-documents-with-symfony-2/">Creating indexes for your Doctrine ODM documents with Symfony 2</a></li>
+<li><a href="http://www.inar.de/blog/webwelt/20101007/relaunch-der-softscience-homepage.html">Relaunch der softSCIENCE-Homepage</a></li>
+<li><a href="http://test.ical.ly/2010/10/08/symfony-day-2010-in-cologne/">symfony day 2010 in Cologne</a></li>
+<li><a href="http://sebastien.porati.me/blog/2010/10/justmarried-mise-a-jour-de-symfony2/">JustMarried : mise à jour de Symfony2</a></li>
+<li><a href="http://www.symfony.es/2010/10/10/el-estado-actual-de-symfony2/">El estado actual de Symfony2</a></li>
+<li><a href="http://www.symfonylab.com/doctrine-and-zend-framework/">Doctrine and Zend Framework</a></li>
+<li><a href="http://blog.micayael.com/2010/10/07/extendiendo-el-sfactions-de-symfony-ii/">Extendiendo el sfActions de Symfony 2/2</a></li>
+<li><a href="http://www.maquiavelica.com.ar/formularios-en-symfony/">Formularios en Symfony</a></li>
+<li><a href="http://codesauce.com/2010/10/07/symfony-cron-and-html-emails-getpartial-from-cron/">Symfony, cron and HTML emails (getPartial from cron)</a></li>
+<li><a href="http://www.ftassi.com/2010/10/howto-gestire-pagine-statiche-symfony.html">Come gestire pagine statiche con symfony</a></li>
+<li><a href="http://labs.unoh.net/2010/10/symfony.html">絵文字のためにsymfonyのカスタムハンドラーを作ってみました</a></li>
+<li><a href="http://www.michelsalib.com/2010/10/add-properties-to-a-relationship-dealing-with-forms-in-symfony-1-4/">Add properties to a relationship – Dealing with forms in symfony 1.4</a></li>
+<li><a href="http://onoki.jp/archives/1230">まずSymfony中。</a></li>
+<li><a href="http://botchedcode.com/2010/10/08/symfony-1-4-quick-commands/">Symfony 1.4 quick commands</a></li>
+<li><a href="http://www.fonini.net/posts/51-desenvolvendo-um-modulo-de-contato-no-symfony-14">Desenvolvendo um módulo de contato no Symfony 1.4</a></li>
+<li><a href="http://www.learnwebdev.com/?p=197">Установка и конфигурирование php-фреймворка symfony</a></li>
+<li><a href="http://www.angelontheweb.com/es/dialogos-con-jquery-y-symfony/">Dialogos con Jquery y symfony</a></li>
+<li><a href="http://symfony.cl/blog/2010/10/5-pasos-para-trasladar-aplicacion-symfony-a-ambiente-de-produccion/">5 pasos para trasladar aplicación Symfony a ambiente de producción</a></li>
+<li><a href="http://www.ausgebloggt.de/2010/10/05/doctrine-nested-sets-in-symfony/">Doctrine Nested Sets in Symfony</a></li>
+<li><a href="http://jasonswett.net/saving-multiple-objects-with-one-form-in-symfony/">Saving Multiple Objects With One Form in symfony</a></li>
+<li><a href="http://lampstudy.net/post/t201010/symfony-framework-develop-a-cms.html">symfony框架实战视频：60分钟开发一个CMS</a></li>
+<li><a href="http://symfony-blog.driebit.nl/2010/10/creating-an-arbitrary-pulldown-filter/">Creating an arbitrary pulldown filter</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

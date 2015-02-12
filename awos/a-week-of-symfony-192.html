@@ -1,0 +1,359 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony#192 (30 August -> 5 September 2010) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #192 (30 August -&gt; 5 September 2010)</h1>
+
+<p>Symfony2 introduced this week its new Web Profiler Bundle. The Symfony Profiler augments the web development toolbar and provides the most detailed debug information available in any framework.</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/636c059a6000b3a3">GitHub Pull Requests 2.0 and Symfony</a></li>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/7861beb34be45af1">UUID of Propel mirror server</a></li>
+</ul>
+
+<h2>symfony 1 development highlights</h2>
+
+<p><a href="http://trac.symfony-project.com/trac/timeline?from=05%2F09%2F2010&amp;daysback=6&amp;milestone=on&amp;ticket=on&amp;changeset=on&amp;update=Update">Changelog</a>:</p>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/30790" title="30790 revision on trac">r30790</a>: [1.3, 1.4] fixed logging of PHP errors to the WDT when error messages include a &quot;%&quot; character</li>
+</ul>
+
+<p>Activity summary: 49 changesets, 10 bugs reported, 16 bugs fixed, 3 enhancements suggested, 3 enhancements closed, 5 documentation defects reported, 1 documentation defect fixed, and 8 documentation edits</p>
+
+<h2>Symfony2 development highlights</h2>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">Changelog</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/478fcca88d9357779f353d07bb3ca301966e88d6" title="478fcca88d9357779f353d07bb3ca301966e88d6 commit on github">478fcca</a>: [Templating] added Engine::exists()</li>
+<li><a href="http://github.com/symfony/symfony/commit/6b5c3d05bd25b250918fbaec14774e408dee71f9" title="6b5c3d05bd25b250918fbaec14774e408dee71f9 commit on github">6b5c3d0</a>: [FrameworkBundle] removed usage of Controller class for internal controllers</li>
+<li><a href="http://github.com/symfony/symfony/commit/994a6c36ac1e24f8f940a20a3debc91ee9e22c4c" title="994a6c36ac1e24f8f940a20a3debc91ee9e22c4c commit on github">994a6c3</a>: changed actions::render() helper method signature</li>
+<li><a href="http://github.com/symfony/symfony/commit/8c6478dab976700a247e819179a21d196e252cb1" title="8c6478dab976700a247e819179a21d196e252cb1 commit on github">8c6478d</a>: [HttpKernel] added import/export to Profiler</li>
+<li><a href="http://github.com/symfony/symfony/commit/d94271ba9c5e27d8767693a5e073fc4849535694" title="d94271ba9c5e27d8767693a5e073fc4849535694 commit on github">d94271b</a>: [FrameworkBundle] removed dependency with the DIC</li>
+<li><a href="http://github.com/symfony/symfony/commit/d40d1746e0f5f5c3c081b2fc8f53541e80a44e2c" title="d40d1746e0f5f5c3c081b2fc8f53541e80a44e2c commit on github">d40d174</a>: [ZendBundle] added an option to register zend logger as an error handler</li>
+<li><a href="http://github.com/symfony/symfony/commit/7503463a1e0f78737bf34c31e6cb3e4e28b236af" title="7503463a1e0f78737bf34c31e6cb3e4e28b236af commit on github">7503463</a>: [DoctrineMongoDBBundle] updated log format to look more like the javascript shell</li>
+<li><a href="http://github.com/symfony/symfony/commit/935ac5633c5a04421e78a62ef917176d9173d9b3" title="935ac5633c5a04421e78a62ef917176d9173d9b3 commit on github">935ac56</a>: [DoctrineBundle] fixed bug in data:load when purging many-to-many relationships</li>
+<li><a href="http://github.com/symfony/symfony/commit/60ea1eef698c6eae0d19465e00e9ff9be29bfc4b" title="60ea1eef698c6eae0d19465e00e9ff9be29bfc4b commit on github">60ea1ee</a>: added a configuration to allow the profiler to be enabled only when an exception occurs</li>
+<li><a href="http://github.com/symfony/symfony/commit/ad835f8a1693111a46aaffeee19bcbeecbdaaf2d" title="ad835f8a1693111a46aaffeee19bcbeecbdaaf2d commit on github">ad835f8</a>: [HttpKernel] added purge() in the profiler storage interface</li>
+<li><a href="http://github.com/symfony/symfony/commit/ab9be87354a29bba11ca8644fcd26bcbaced9956" title="ab9be87354a29bba11ca8644fcd26bcbaced9956 commit on github">ab9be87</a>: [HttpKernel] fixed FlattenException status code</li>
+<li><a href="http://github.com/symfony/symfony/commit/a29211a9ee79a687aa1ecc691e9d91b76271c11c" title="a29211a9ee79a687aa1ecc691e9d91b76271c11c commit on github">a29211a</a>: [FrameworkBundle] removed usage of array access for helpers in templates</li>
+<li><a href="http://github.com/symfony/symfony/commit/4e57899374edd84bab3c98f852035a5626f7fa7b" title="4e57899374edd84bab3c98f852035a5626f7fa7b commit on github">4e57899</a>, <a href="http://github.com/symfony/symfony/commit/5913c40a12becf5775dabf7fd10be524ef4d055e" title="5913c40a12becf5775dabf7fd10be524ef4d055e commit on github">5913c40</a>, <a href="http://github.com/symfony/symfony/commit/7e2f135245c0d789a8d3f2f7bd3b8e178992afec" title="7e2f135245c0d789a8d3f2f7bd3b8e178992afec commit on github">7e2f135</a>, <a href="http://github.com/symfony/symfony/commit/c8935cc25a08fa009681c8e1c4afd82b4d08e51f" title="c8935cc25a08fa009681c8e1c4afd82b4d08e51f commit on github">c8935cc</a>: [WebProfilerBundle] added the bundle</li>
+<li><a href="http://github.com/symfony/symfony/commit/ebae1d7bf20d7e68f19f83c6ef71a43967a29d10" title="ebae1d7bf20d7e68f19f83c6ef71a43967a29d10 commit on github">ebae1d7</a>, <a href="http://github.com/symfony/symfony/commit/a4d496309ba68ed5d0aea897e10fe8bb2b3440ab" title="a4d496309ba68ed5d0aea897e10fe8bb2b3440ab commit on github">a4d4963</a>: [FrameworkBundle] updated skeleton with the web profiler configuration</li>
+<li><a href="http://github.com/symfony/symfony/commit/2d04ca34434f00751e903d8b6ab41f7fef87d5bd" title="2d04ca34434f00751e903d8b6ab41f7fef87d5bd commit on github">2d04ca3</a>: [EventDispatcher] added a way to disconnect all listeners for an event name</li>
+<li><a href="http://github.com/symfony/symfony/commit/15cd2643c04a1441db3476aa5d09ff05e9c0d83f" title="15cd2643c04a1441db3476aa5d09ff05e9c0d83f commit on github">15cd264</a>: [HttpFoundation] added Request::getClientIp()</li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.com/trac/wiki/DevelopersForHire">developers for hire</a></h2>
+
+<ul>
+<li><a href="http://www.laveaucoupet.fr">Laveaucoupet.fr</a>: french small web agency based in le Mans. We develop onligne app and website for any kind of business model. See our site for details.</li>
+</ul>
+
+<h2><a href="http://www.symfony-project.org/plugins/newest/">New plugins</a></h2>
+
+<ul>
+<li><a href="http://www.symfony-project.org/plugins/twLoremIpsumPlugin">twLoremIpsum</a>: false data generator with more-or-less normal distribution of letters.</li>
+<li><a href="http://www.symfony-project.org/plugins/gjShortUrlPlugin">gjShortUrl</a>: easy and flexible management of redirect rules and keyword landing pages.</li>
+<li><a href="http://www.symfony-project.org/plugins/twAdminPlugin">twAdmin</a>: plugin based on sfAdminDashPlugin with style projected for Thunderwolf system backend.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfJqueryValidationPlugin">sfJqueryValidation</a>: creates a powerful system to handle validation by both jQuery Validation and Symfony 1.3/1.4 in a unified manner (displays the same error messages in same markup whether validated server side or client side and can handle directly most symfony validation formats)</li>
+<li><a href="http://www.symfony-project.org/plugins/bsJobQueuePlugin">bsJobQueue</a>: allows to postpone the execution of function from any Table class.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfHarmonyRestPlugin">sfHarmonyRest</a>: (no description)</li>
+<li><a href="http://www.symfony-project.org/plugins/sdInteractiveChartPlugin">sdInteractiveChart</a>: allows you to use Google&#39;s Visualization API without writing any javascript, it simplifies the creation of charts and makes the code a lot neater which is especially useful if your planning to include more than one chart in a page.</li>
+<li><a href="http://www.symfony-project.org/plugins/ajDoctrineLuceneablePlugin">ajDoctrineLuceneable</a>: provides three things: 1) a behaviour to add your doctrine records automaticly to a lucene index, 2) a way to add lucene search to FilterForms, 3) a wrapper class to search Lucene indexes.</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/sfPostgresDoctrinePlugin">sfPostgresDoctrine</a>:</p>
+
+<ul>
+<li>fixed bugs with inheritance and with tables patterns</li>
+<li>updated README</li>
+<li>fixed bug with yml files</li>
+<li>added One To One relation in schema and model generation</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/idlDropboxPlugin">idlDropbox</a>:</p>
+
+<ul>
+<li>added option to select OAuth library (Pear or Standard PHP lib)</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfAssetsLibraryPlugin">sfAssetsLibrary</a>:</p>
+
+<ul>
+<li>changed from doSave to updateObject in sfAssetForm to allow saving of external objects</li>
+<li>changed schema to get more friendly relation names</li>
+<li>fixed a bug for moved files</li>
+<li>added a check for file correctly saved</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/pmPropelWorkflowableBehaviorPlugin">pmPropelWorkflowableBehavior</a>:</p>
+
+<ul>
+<li>behavior improved to work on sf 1.4</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfReCaptchaPlugin">sfReCaptcha</a>:</p>
+
+<ul>
+<li>added option to validator to use classic invalid error</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineJCroppablePlugin">sfDoctrineJCroppable</a>:</p>
+
+<ul>
+<li>fixed bug with cropper image height not getting set correctly</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/swBaseApplicationPlugin">swBaseApplication</a>:</p>
+
+<ul>
+<li>added jquery 1.4.2 and jquery-ui 1.8.4</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/ExtjsGeneratorPlugin">ExtjsGenerator</a>:</p>
+
+<ul>
+<li>added support for listview in generator as the default list</li>
+<li>fridpanel and Listview are now set via list.layout generator.yml config</li>
+<li>created new rowactions plugin to support object_actions for listview</li>
+<li>created new checkcolumn plugin to support boolean checkbox columns for listview</li>
+<li>created new ListPanel extension to hold listview and handle paging and toolbars</li>
+<li>added ProgressColumn plugins for listview and grid</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfSparklinePlugin">sfSparkline</a>:</p>
+
+<ul>
+<li>added support for symfony 1.4.x</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfTaskLoggerPlugin">sfTaskLogger</a>:</p>
+
+<ul>
+<li>updated sample and purge tasks</li>
+<li>moved &quot;env&quot; and &quot;application&quot; options at the base task level</li>
+<li>prepared package and README for 1.0.2 version</li>
+<li>fixed typos</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineActAsTaggablePlugin">sfDoctrineActAsTaggable</a>:</p>
+
+<ul>
+<li>new inline taggable widget</li>
+<li>added jQueryAutocompleteSuccess.php</li>
+<li>InlineTaggableWidget: performance enhancements, code readability enhancements, and moved functionality for unsetting existing popular tags to this script</li>
+<li>refactored the makeLink function into two separate functions (makePopularLinks and makeRemoveLinks)</li>
+<li>added the ability to pass in a label for the &#39;Existing Tags&#39;</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfAdminDashPlugin">sfAdminDash</a>:</p>
+
+<ul>
+<li>updated French translation</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/dcReloadedFormExtraPlugin">dcReloadedFormExtra</a>:</p>
+
+<ul>
+<li>added mtWidgetFormPlain widget</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/tdCorePlugin">tdCore</a>:</p>
+
+<ul>
+<li>enable the graphics module from tdCorePlugin to enable AJAX actions in other plugins to run correctly</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/tdGuestbookPlugin">tdGuestbook</a>:</p>
+
+<ul>
+<li>added the activate/deactivate AJAX interface in the backend</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/tdVideoPlugin">tdVideo</a>:</p>
+
+<ul>
+<li>added the activate/deactivate AJAX interface in the backend</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/tdAudioPlugin">tdAudio</a>:</p>
+
+<ul>
+<li>added the activate/deactivate AJAX interface in the backend</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/tdVisualFactoryPlugin">tdVisualFactory</a>:</p>
+
+<ul>
+<li>added the activate/deactivate AJAX interface in the backend</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/tdBlogPlugin">tdBlog</a>:</p>
+
+<ul>
+<li>added the activate/deactivate AJAX interface in the backend</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>fixed pushTargetEnginePage to work when passed with a slug and no engine specified</li>
+<li>don&#39;t try to calculate dimensions if PDF preview is turned off</li>
+<li>backported improvements to aImageConverter and aValidatorFilePersistent</li>
+<li>reworked a few engine link_to() calls to remove the need to query the database</li>
+<li>never return attributes for a logged-out users in the media repository</li>
+<li>removed the reference to the non-existent inline tagging widget</li>
+<li>cleaned up some of the unused tagging code</li>
+<li>saving page settings now updates the search index</li>
+<li>fixed a bug with the Link option in button slots</li>
+<li>improved stability when clicking save multiple times on an image selection</li>
+<li>modified Page Settings Form to use the new Inline Taggable Widget</li>
+<li>stopped unsetting some of the popular tags for the new tagging widget</li>
+<li>you now can upload any mix of allowed file extensions</li>
+<li>the set of file extensions, mime types and overall media types (&quot;images,&quot; &quot;video,&quot; &quot;office&quot;) are now configurable (in principle) via app.yml</li>
+<li>every item is now previewed either with an icon for its format or (for images) with an actual preview</li>
+<li>you can now remove items during the annotation pass</li>
+<li>when you are browsing for images for a slot, you can only upload images. When you are filtering by images, you can only upload images</li>
+<li>the file upload widget is much smarter about detecting mime types and preferred file extensions correctly for a wide variety of file types including Office files</li>
+<li>previews can be templated anywhere in the template containing the form</li>
+<li>removed the &quot;active&quot; field in favor of paying attention to the names of the item fields</li>
+<li>re-worked the page settings form significantly</li>
+<li>fixed uploads in which one or more files are not acceptable</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheBlogPlugin">apostropheBlog</a>:</p>
+
+<ul>
+<li>made sure new calendar widget defaults to false</li>
+<li>fixed alphabetizing of categories in show actions for aEvent and aBlog</li>
+<li>fixed save trigger for date widgets in blog and event admins</li>
+<li>updated the blog plugin sidebar in the admin view to output a slightly different set of text for events and blog posts that are already published</li>
+<li>switched the php date to use the aDate help for internationalization</li>
+<li>updated the published at or published on interface so that it works with Ajax refreshes</li>
+<li>refactored code in aBlogActions and aEventActions</li>
+<li>fixed issue where past events were not showing up in calendar view</li>
+</ul></li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.org/wiki/ApplicationsDevelopedWithSymfony">symfony powered websites</a></h2>
+
+<ul>
+<li><a href="http://www.corsi-lezioni-ripetizioni.it/">Corsi, lezioni e ripetizioni private</a>: (Italian) classified ads site for tutoring</li>
+<li><a href="http://alojamientodominicano.com">Alojamientos Dominicanos</a>: (Spanish) Hotel Guide Dominican Republic</li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.com/trac/wiki/SymfonyBloggers">symfony bloggers</a></h2>
+
+<ul>
+<li><a href="http://www.symfonic.fr">symfonic.fr</a> (<a href="http://www.symfonic.fr/feed/">feed</a>) (English, French)</li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://test.ical.ly/2010/08/30/options-for-setting-up-a-doctrine-database-connection-when-phpunit-testing-symfony-plugins/">Options for setting up a Doctrine database connection when PHPUnit testing symfony plugins</a></li>
+<li><a href="http://refineweb.co.uk/2010/08/30/deploying-a-symfony-project-into-production-using-capistrano/">Deploying a symfony project into production using capistrano</a></li>
+<li><a href="http://broderix.blogspot.com/2010/08/mysql-error-1005-hy000-cant-create.html">Mysql ERROR 1005 (HY000): Can&#39;t create table (errno: 150)</a></li>
+<li><a href="http://test.ical.ly/2010/08/31/gjshorturlplugin-creating-seo-landing-pages-and-manage-redirection-of-legacy-urls-with-the-symfony-and-doctrine-plugin/">gjShortUrlPlugin – Creating SEO landing pages and manage redirection of legacy URLs with the symfony and Doctrine plugin</a></li>
+<li><a href="http://refineweb.co.uk/2010/08/31/update-sending-emails-stored-in-xml-with-sfmailer/">Storing emails in XML and sending them with sfMailer</a></li>
+<li><a href="http://blog.servergrove.com/2010/08/31/php-conferences-update/">PHP conferences update</a></li>
+<li><a href="http://www.jnieto.org/article/highlight_code_with_symfony_and_geshi">Highlight code with symfony and Geshi</a></li>
+<li><a href="http://rabaix.net/en/articles/2010/09/01/a-small-symfony-doctrine-migration-improvement-task">A small symfony doctrine migration improvement task</a></li>
+<li><a href="http://www.jazzou.com/index.php?option=com_content&amp;task=view&amp;id=8338">Frameworks for PHP Development in India Why and Which One to Use</a></li>
+<li><a href="http://www.symfony.es/2010/09/01/symfony2-presenta-su-webprofiler/">Symfony2 presenta su WebProfiler</a></li>
+<li><a href="http://www.presseanzeiger.de/meldungen/it-computer-internet/383223.php">symfony Day 2010: Entwickler aus aller Welt treffen sich in Köln</a></li>
+<li><a href="http://www.nacho-martin.com/hint-to-avoid-memory-exhausted-error-symfony-doctrine1-2">Hint to avoid memory exhausted error (symfony + doctrine1.2)</a></li>
+<li><a href="http://www.symfonic.fr/2010/09/symfony-et-doctrine-connexions-multiples/">Symfony et Doctrine : connexions multiples</a></li>
+<li><a href="http://shout.setfive.com/2010/09/03/ahdoctrineeasyembeddedrelationsplugin-and-composite-primarykeys/">ahDoctrineEasyEmbeddedRelationsPlugin and Composite Primary Keys</a></li>
+<li><a href="http://www.channelinsider.fr/fr/entretien/2010/09/03/zend_technologies_____notre_but_est_d_industrialiser_et_de_professionnaliser_l_utilisation_de_php__">Zend Technologies : « Notre but est d&#39;industrialiser et de professionnaliser l&#39;utilisation de PHP »</a></li>
+<li><a href="http://d.hatena.ne.jp/chronos_devel/20100905/1283695223">[symfony]EclipseのAntタスクからsymfonyコマンドを実行に関して</a></li>
+<li><a href="http://www.symfonylab.com/high-performance-mobile-symfony/">High Performance Mobile Symfony</a></li>
+<li><a href="http://www.securesilverlight.net/935024-Symfony-Web-Development-Offering-Fast-Paced-Web-Application-Development.html">Symfony Web Development: Offering Fast Paced Web Application Development</a></li>
+<li><a href="http://www.loalf.com/2010/09/instanciando-la-vista-sfview-y-accediendo-al-contender-de-variables/">Instanciando la vista (sfView) y accediendo al contender de variables</a></li>
+<li><a href="http://www.foxmask.info/post/2010/09/04/foxmask-au-pays-des-merveilles-du-web-developpement/">FoxMaSk au pays des merveilles du Web Developpement</a></li>
+<li><a href="http://jasonswett.net/how-to-validate-and-sanitize-a-url-in-symfony/">How to validate and sanitize a URL in symfony</a></li>
+<li><a href="http://www.tejimaya.com/archives/6221">symfony×OpenPNE3勉強会のまとめ（9/2@Nifty会議室）</a></li>
+<li><a href="http://symfony.cl/blog/2010/09/crear-modulo-inicio-para-tu-proyecto/">Crear Módulo Inicio para tu Proyecto</a></li>
+<li><a href="http://www.tonarticles.com/5-php-frameworks-to-help-php-developer-code-better-in-less-time.html">5 PHP Frameworks to Help PHP Developer Code Better in Less Time</a></li>
+<li><a href="http://www.typeed.de/blog/2010/08/31/ajax-und-flash-variablen-in-symfony">AJAX und Flash-Variablen in symfony</a></li>
+<li><a href="http://dev.halhal.info/archives/145">CentOS に symfony 1.2.9 を入れ直す</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

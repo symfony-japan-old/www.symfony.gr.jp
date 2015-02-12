@@ -1,0 +1,221 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony #251 (17->23 October 2011) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #251 (17-&gt;23 October 2011)</h1>
+
+<p>This week, Symfony2 <a href="https://github.com/symfony/symfony/commit/106ebdbe184b0cd9ff8f3a12232cf242b0696f58">added a stopwatch</a> to profile code. The first use of this stopwatch is the new <a href="https://github.com/symfony/symfony/commit/842ac36f339a65e3e31fd345a01ba4002a7430ae">timeline panel</a> in the web profiler. All these new features were introduced during the last <a href="http://www.symfonyday.com/en/">Symfony Day 2011</a> conference.</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/kJwLcRhrtmM">Doctrine2 Inheritance</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/GrYkFF7eo9s">Chain an additional display function in Twig</a></li>
+</ul>
+
+<h2>Symfony2 development highlights</h2>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">Master branch</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/97d6591985cb1c427b55cabb15664a882c55f532" title="97d6591985cb1c427b55cabb15664a882c55f532 commit on github">97d6591</a>: [WebProfilerBundle] tweaked the default layout to make more room for interesting content</li>
+<li><a href="http://github.com/symfony/symfony/commit/347053c363aac66e79e91a3c0a205e417521c153" title="347053c363aac66e79e91a3c0a205e417521c153 commit on github">347053c</a>: moved most of the logic from ResponseListener to the Response::prepare() method (this allows projects that only use HttpFoundation and not HttpKernel to be able to enforce the HTTP specification rules)</li>
+<li><a href="http://github.com/symfony/symfony/commit/312b20f94b5a2fed200908c5d41eb97917a8ba52" title="312b20f94b5a2fed200908c5d41eb97917a8ba52 commit on github">312b20f</a>: [FrameworkBundle] added more info to debug command output</li>
+<li><a href="http://github.com/symfony/symfony/commit/fbc422b978cc2b5840c3452d21e62b1044f6e03d" title="fbc422b978cc2b5840c3452d21e62b1044f6e03d commit on github">fbc422b</a>: [BrowserKit] added the standard output when an error occurs during the request execution</li>
+<li><a href="http://github.com/symfony/symfony/commit/106ebdbe184b0cd9ff8f3a12232cf242b0696f58" title="106ebdbe184b0cd9ff8f3a12232cf242b0696f58 commit on github">106ebdb</a>: [HttpKernel] added a Stopwatch</li>
+<li><a href="http://github.com/symfony/symfony/commit/842ac36f339a65e3e31fd345a01ba4002a7430ae" title="842ac36f339a65e3e31fd345a01ba4002a7430ae commit on github">842ac36</a>: added Stopwatch support in debug mode, added a timeline representing the stopwatch events in the web profiler</li>
+<li><a href="http://github.com/symfony/symfony/commit/c5ca40c711511c245039c4a4cafb204c4ccd46bf" title="c5ca40c711511c245039c4a4cafb204c4ccd46bf commit on github">c5ca40c</a>: [Routing] added support for _scheme requirement in UrlMatcher</li>
+<li><a href="http://github.com/symfony/symfony/commit/46a69f1ca004f712d39478d9c23076e03b781e88" title="46a69f1ca004f712d39478d9c23076e03b781e88 commit on github">46a69f1</a>, <a href="http://github.com/symfony/symfony/commit/ad7fcf5206cc4f1f98effcb4feaf1cc18c8f23f2" title="ad7fcf5206cc4f1f98effcb4feaf1cc18c8f23f2 commit on github">ad7fcf5</a>: define a WarmableInterface and only warm the cache if it implements warmable to allow replacing the core router</li>
+<li><a href="http://github.com/symfony/symfony/commit/3134ef132a00267a6aded6f3b0075ec2d40e51e0" title="3134ef132a00267a6aded6f3b0075ec2d40e51e0 commit on github">3134ef1</a>: [HttpKernel] removed usage of assertCount which has been introduced in PHPUnit 3.6</li>
+<li><a href="http://github.com/symfony/symfony/commit/2e1344eb7ef1e4a6c5cc21e098fd2a6404f2b289" title="2e1344eb7ef1e4a6c5cc21e098fd2a6404f2b289 commit on github">2e1344e</a>: [Routing] added the possibility to define default values and requirements for placeholders in prefix</li>
+</ul>
+
+<p><a href="http://github.com/symfony/symfony/commits/2.0">2.0 branch</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/e81c71078464d32a4537cc8dcbec6db29d44c447" title="e81c71078464d32a4537cc8dcbec6db29d44c447 commit on github">e81c710</a>, <a href="http://github.com/symfony/symfony/commit/1a43505a3e690394bef2ecdf75c5ce194f687a7e" title="1a43505a3e690394bef2ecdf75c5ce194f687a7e commit on github">1a43505</a>: [FrameworkBundle] increased the priority of the profiler request listener</li>
+<li><a href="http://github.com/symfony/symfony/commit/HttpKernel" title="HttpKernel commit on github">HttpKer</a>: check if cache_warmer service is available before doing the actual cache warmup</li>
+</ul>
+
+<h2><a href="http://www.symfony-project.org/plugins/newest/">New plugins</a></h2>
+
+<ul>
+<li><a href="http://www.symfony-project.org/plugins/sfExportPlugin">sfExport</a>: (no description)</li>
+<li><a href="http://www.symfony-project.org/plugins/sfDoctrineTablePlugin">sfDoctrineTable</a>: generates feature packed base tables to each model. Base table contains PHPDocs of available pre-generated WHERE, COUNT and JOIN considering table relations and its depth.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfToolsPlugin">sfTools</a>: provides some tools and debugging functions. * sfDebugTools.class.php (dump(), dump2(), getElapsedTime()).</li>
+<li><a href="http://www.symfony-project.org/plugins/sfDoctrineExtraPlugin">sfDoctrineExtra</a>: includes the following behaviors: Blameable, EventLoggable, GoogleI18n, Localizable, Sortable, Taggable, Temporal.</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/sfRedisPlugin">sfRedis</a>:</p>
+
+<ul>
+<li>upgraded Predis to 0.6.6</li>
+<li>deprecated commands alias in Predis</li>
+<li>added option for reversing ZSET pager</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/pmPropelGeneratorPlugin">pmPropelGenerator</a>:</p>
+
+<ul>
+<li>fixed show_when stuff on linkTo* methods</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheExtraSlotsPlugin">apostropheExtraSlots</a>:</p>
+
+<ul>
+<li>fixed bug with IE and the map JS</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>fixed a bug with the .a-normal / .a-editing class name that is toggled on areas and slots when the edit view is toggled</li>
+<li>singleton slots were missing the .a-slot toggle because of the nature of the markup and the way the slot was being targeted</li>
+<li>verbose logging for static file sync while we test a few things</li>
+<li>fixed menuToggle issue</li>
+<li>AJAX media edit form now supports CKEditor</li>
+<li>a little clean up in layout for assembling the body class</li>
+<li>added handy getDatabases() and databaseExists() methods in aMysql</li>
+<li>aString::limitWords now supports an ellipsis option that lets you override what is appended as an ellipsis</li>
+<li>added aHtml::lazyUrls, which turns likely hostnames into proper http:// URLs so that textToHtml() can pick up on them</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheBlogPlugin">apostropheBlog</a>:</p>
+
+<ul>
+<li>disabled the save on blur behavior for the blog admin interface in old apostrophe 1.4</li>
+</ul></li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://php-and-symfony.matthiasnoback.nl/2011/10/symfony2-create-a-response-filter-and-set-extra-response-headers/">Symfony2: create a response filter and set extra response headers</a></li>
+<li><a href="http://jsltbh.blogspot.com/2011/10/streaming-content-with-symfony-14.html">Streaming content with Symfony 1.4</a></li>
+<li><a href="http://blog.sznapka.pl/how-to-add-a-custom-class-to-form-field-in-symfony2/">How to add a custom class to form field in Symfony2</a></li>
+<li><a href="http://sf.khepin.com/2011/10/disabling-remember-me-in-fosuserbundle/">Disabling remember me in FOSUserBundle</a></li>
+<li><a href="http://nerdpress.org/2011/10/19/symfony-2-twig-enabling-native-twig-extensions/">[Symfony 2][Twig] – Enabling (native) Twig Extensions</a></li>
+<li><a href="http://php-and-symfony.matthiasnoback.nl/2011/10/use-docblox-in-symfony2-for-inspecting-doccomment-blocks/">Use DocBlox in Symfony2 for inspecting DocComment blocks</a></li>
+<li><a href="http://vvv.tobiassjosten.net/symfony/symfony-day-2011">Symfony Day 2011</a></li>
+<li><a href="http://php-and-symfony.matthiasnoback.nl/2011/10/symfony2-how-to-create-a-custom-response-using-an-event-listener/">Symfony2: how to create a custom Response using an event listener</a></li>
+<li><a href="http://www.strangebuzz.com/post/2011/10/22/symfony1-sfToolsPlugin-1-0-0-released">symfony1 sfToolsPlugin 1-0-0 released</a></li>
+<li><a href="http://pooteeweet.org/blog/0/2008#m2008">Interfacing the PHP world</a></li>
+<li><a href="http://blog.sznapka.pl/use-proxy-object-in-symfony2-applictions-to-test-non-public-methods/">Use Proxy-Object in Symfony2 applications to test non-public methods</a></li>
+<li><a href="http://www.symfony.es/2011/10/23/todas-las-presentaciones-del-symfony-day-2011/">Todas las presentaciones del Symfony Day 2011</a></li>
+<li><a href="http://blog.starweb.hu/php/symfony-telepites.php">Symfony – Telepítés</a></li>
+<li><a href="http://developer.e-butik.se/2011/10/photos-from-symfony-day-2011/">Photos from Symfony Day 2011</a></li>
+<li><a href="http://symfony-blog.driebit.nl/2011/10/symfony-day-11-cologne/">Symfony Day 11 Cologne</a></li>
+<li><a href="http://books.bod.idv.tw/2011/10/symfony-jobeet-jobeetthe-data-model.html">symfony Jobeet學習紀錄--Jobeet網站的資料模型(The Data Model)--(03/24)</a></li>
+<li><a href="http://www.seattleveggieburgers.com/blog/?p=130">Linking between applications in symfony 1.4</a></li>
+<li><a href="http://blog.aelius.fr/blog/2011/10/symfony2-generate-entities-starting-from-a-database/">Symfony2 Generate Entities Starting from a Database</a></li>
+<li><a href="http://mmj.99ing.net/Entry/1067/">Symfony 1.0 action url_for</a></li>
+<li><a href="http://www.jessehanson.com/2011/10/19/symfony2-first-impressions/">Symfony2 – first impressions</a></li>
+<li><a href="http://www.nigeldunn.com/2011/10/20/my-first-thoughts-on-symfony2/">My first thoughts on Symfony2</a></li>
+<li><a href="http://blogsh.de/2011/10/19/how-to-use-the-repeated-field-type-in-symfony/">How to use the repeated field type in Symfony</a></li>
+<li><a href="http://comunidadcodificada.com/portal/index.php/2011/10/symfony-error-unable-to-load-i18nhelper-php/">Symfony: Error Unable to load i18nHelper.php</a></li>
+<li><a href="http://ikesser.com/?p=15">How to Create a Page for your Website Using Symfony</a></li>
+<li><a href="http://blog.riadbenguella.com/bloginy-3-symfony-2-retour-dexperience/">Bloginy 3, Symfony 2, retour d’expérience</a></li>
+<li><a href="http://blog.aelius.fr/fr/2011/10/19/envoi-de-mails-a-partir-dun-fichier-batch-symfony-1-4/">Envoi d’e-mails à partir d’un fichier batch Symfony 1.4</a></li>
+<li><a href="http://clycks.fr/2011/10/495-mon-premier-projet-en-symfony2-part2-creation-de-la-base-de-donnees-du-model-doctrine2">Mon premier projet en Symfony2 PART2 – Création de la base de données et du model Doctrine2</a></li>
+<li><a href="http://pedrobonilla.blogspot.com/2011/10/memoria-agotada-al-intentar-generar-el.html">¿Memoria agotada al intentar generar el modelo en Symfony 1.4.6 con Propel?</a></li>
+<li><a href="http://blog.aelius.fr/ro/2011/10/19/trimiterea-de-e-mail-uri-dintr-un-fisier-batch-symfony-1-4/">Trimiterea de e-mail-uri dintr-un fişier batch Symfony 1.4</a></li>
+<li><a href="http://www.dinduks.com/silex-le-service-de-traduction-et-les-templates-twig">Silex: Le service de traduction et les templates Twig</a></li>
+<li><a href="http://www.reecefowell.com/2011/10/18/symfony-embedded-forms-take-2/">Symfony Embedded Forms (take 2)</a></li>
+<li><a href="http://carlosaisa.com.es/2011/10/18/preparando-lighttpd-sobre-windows-para-symfony/">Preparando LightTPD sobre Windows para Symfony</a></li>
+<li><a href="http://desarrolla2.com/php-symfony/doctrine-migrations-para-actualizar-la-base-de-datos-desde-el-fichero-schema-ml/">Doctrine migrations para actualizar la base de datos desde el fichero schema.yml</a></li>
+<li><a href="http://blog.datasolutions.pe/index.php/20111017/creacion-de-reportes-graficos-con-high-charts-symfony-1-4/">Creación de Reportes Graficos con High Charts y symfony 1.4</a></li>
+<li><a href="http://netsket-koshiba.blogspot.com/2011/10/symfonydateformat1-doctrinequerycreate.html">symfonyでDATE_FORMATを使う</a></li>
+<li><a href="http://symfony.artsofte.ru/blog/post/id/13">Firesymfony: как сделать WebDebugToolbar еще более удобным</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

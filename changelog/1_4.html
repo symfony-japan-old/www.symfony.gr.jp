@@ -1,0 +1,214 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Changelog for 1.4.x | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>Changelong for 1.4.X</h1>
+
+<p>公式サイトの<a href="http://www.symfony-project.org/installation/1_4/changelog">Changelog for 1.4.X</a>の翻訳です。</p>
+
+<h2>07/01/11: Version 1.4.12</h2>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/32634">32634</a> エラーメッセージ中のtypoを修正 (<a href="http://trac.symfony-project.org/ticket/9762">#9762</a>をクローズ - garakからのパッチ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/32635">32635</a> typoを修正 (<a href="http://trac.symfony-project.org/ticket/9682">#9682</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/32637">32637</a> フランス語向けの不足していた翻訳を追加 (Garfield-frからのパッチ - <a href="http://trac.symfony-project.org/ticket/9025">#9025</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/32638">32638</a> ドイツ語向けの不足していた翻訳を追加 (<em>GeG</em>からのパッチ - <a href="http://trac.symfony-project.org/ticket/9659">#9659</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/32639">32639</a> typoを修正 (<a href="http://trac.symfony-project.org/ticket/9561">#9561</a>をクローズ、Elvis<em>the</em>Kingからのパッチ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/32641">32641</a> スタックトレース中の追加コードを修正 (<a href="http://trac.symfony-project.org/ticket/9511">#9511</a>をクローズ、tomiからのパッチ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/32652">32652</a> sfRouteがいくつかのパラメータをシリアライズしなかった問題を修正 (<a href="http://trac.symfony-project.org/ticket/9833">#9833</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/32653">32653</a> PHP のノーティスが出る問題を修正 (<a href="http://trac.symfony-project.org/ticket/9813">#9813</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/32654">32654</a> sfObjectRouteCollectionの標準アクションを修正 (HEADリクエストをGETリクエストと等価に。<a href="http://trac.symfony-project.org/ticket/9669">#9669</a>をクローズ、ganchikuからのパッチ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/32677">32677</a> Swiftmailerのバージョンについての情報が不足していた問題を修正 (<a href="http://trac.symfony-project.org/ticket/9838">#9838</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/32678">32678</a> 値に負の指数がある場合のsfNumberFormat::format()の問題を修正 (<a href="http://trac.symfony-project.org/ticket/9836">#9836</a>をクローズ)</li>
+</ul>
+
+<h2>03/30/11: Version 1.4.11</h2>
+
+<ul>
+<li>Doctrineのexternalを、GitHubのmasterブランチからの独自のミラーリポジトリへ切り替え</li>
+</ul>
+
+<h2>03/21/11: Version 1.4.10</h2>
+
+<ul>
+<li>Doctrine 1.2.4へ更新 (セキュリティリリース)</li>
+</ul>
+
+<h2>02/04/11: Version 1.4.9</h2>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/31928">31928</a> cache.ymlでパーシャルがcontextualに指定されている場合に、キャッシュ可能なパーシャルのコピーされたレスポンスへより多くの変数を保存するように修正 (<a href="http://trac.symfony-project.org/ticket/7192">#7192</a> をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/31895">31895</a> 複雑なフラグメントがある場合に<em>auto</em>link_urls()ヘルパーでURLを抽出できなかった問題を修正 (RFC3986を参照 - <a href="http://trac.symfony-project.org/ticket/9424">#9424</a> をクローズ - benlancasterからのパッチ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/31893">31893</a> クラス名にハイフンがある場合のsfDomCssSelectorの動作を修正 (richsageからのパッチ、<a href="http://trac.symfony-project.org/ticket/9411">#9411</a> をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/31471">31471</a> session<em>cache</em>limiterのデフォルト値を&#39;null&#39;に変更</li>
+<li><a href="http://trac.symfony-project.org/changeset/31399">31399</a> sfViewCacheManagerが、キャッシュされたhttp_protocolを間違って返す問題を修正 (<a href="http://trac.symfony-project.org/ticket/9254">#9254</a> をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/31254">31254</a> WDTの追加処理の修正 (<a href="http://trac.symfony-project.org/ticket/9107">#9107</a> をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/31249">31249</a> Swift_DoctrineSpoolのメモリリークの修正</li>
+<li><a href="http://trac.symfony-project.org/changeset/31248">31248</a> sfI18nModuleExtract.class.phpが常にファイルベースのメッセージソースを仮定している問題の修正 (<a href="http://trac.symfony-project.org/ticket/9153">#9153</a> をクローズ - daReaperからのパッチ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/31247">31247</a> sfFilesystemのmbstringの問題を修正 (<a href="http://trac.symfony-project.org/ticket/9139">#9139</a> をクローズ - nresniからのパッチをもとに修正)</li>
+<li><a href="http://trac.symfony-project.org/changeset/31002">31002</a> Adminジェネレータで生成したアクションクラスに、parent::preExecute()呼び出しを追加 (<a href="http://trac.symfony-project.org/ticket/9099">#9099</a> をクローズ)</li>
+</ul>
+
+<h2>09/24/10: Version 1.4.8</h2>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/30969">30969</a> ドイツ語とイタリア語の翻訳を追加 (<a href="http://trac.symfony-project.org/ticket/9088">#9088</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30968">30968</a> Adminジェネレーターのペルシア語翻訳を修正 (<a href="http://trac.symfony-project.org/ticket/8960">#8960</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30967">30967</a> 中国繁体字のi18nサポートを追加 (<a href="http://trac.symfony-project.org/ticket/8885">#8885</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30966">30966</a> DoctrineとPropelのスロベニア語の翻訳を更新 (<a href="http://trac.symfony-project.org/ticket/8985">#8985</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30961">30961</a> WDTのJavaScriptコードが追加されなくなっていた問題を修正 (<a href="http://trac.symfony-project.org/ticket/9083">#9083</a>をクローズ、<a href="http://trac.symfony-project.org/ticket/9080">#9080</a>に関連)</li>
+</ul>
+
+<h2>09/21/10: Version 1.4.7</h2>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/30951">30951</a> WDTが複数回挿入される問題を修正 (<a href="http://trac.symfony-project.org/ticket/9080">#9080</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30915">30915</a> &quot;image/x-ms-bmp&quot; MIMEタイプのサポートを追加 (<a href="http://trac.symfony-project.org/ticket/9069">#9069</a>をクローズ、pbowyerからのパッチ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30912">30912</a> ビュークラスのオーバーライドを修正 (<a href="http://trac.symfony-project.org/ticket/5097">#5097</a>をクローズ、caeferからのパッチ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30901">30901</a> Doctrineが生成したテーブルクラスのコメントを削除する処理をリバート (<a href="http://trac.symfony-project.org/ticket/8880">#8880</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30900">30900</a> リクエストがセキュアなページからフォワードされた場合のgetUriPrefix()の動作を修正 (<a href="http://trac.symfony-project.org/ticket/4723">#4723</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30790">30790</a> PHPのエラーメッセージに&quot;%&quot;が含まれていた場合のWDTへのロギングを修正</li>
+<li><a href="http://trac.symfony-project.org/changeset/30563">30563</a> sfWebController::redirectメソッドがHTTP仕様に適合していなかった問題を修正 (<a href="http://trac.symfony-project.org/ticket/8952">#8952</a>をクローズ、randeからのパッチ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30530">30530</a> Windows上でプロジェクトを作成し、Linux上で使う場合のパスの問題を修正 (<a href="http://trac.symfony-project.org/ticket/8835">#8835</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30529">30529</a> Swift_PropelSpoolでメッセージがGLOBカラムに保存される場合の問題を修正 (<a href="http://trac.symfony-project.org/ticket/8869">#8869</a>と<a href="http://trac.symfony-project.org/ticket/8558">#8558</a>をクローズ、netounetからのパッチ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30526">30526</a> Adminジェネレーターのロシア語とウクライナ語の翻訳を更新 (<a href="http://trac.symfony-project.org/ticket/8814">#8814</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30445">30445</a> コンパイルされたコアを使うために、Doctrineがすでに読み込まれているかどうかのチェックを追加 (<a href="http://trac.symfony-project.org/ticket/8917">#8917</a>をクローズ、gnukixありがとう)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30444">30444</a> DoctrineではなくDoctrine_Coreを読み込むようにdoctrineプラグインを更新</li>
+<li><a href="http://trac.symfony-project.org/changeset/30442">30442</a> <code>Doctrine</code>の呼び出しを<code>Doctrine_Core</code>に変更</li>
+<li><a href="http://trac.symfony-project.org/changeset/30441">30441</a> DoctrineのオートローダーをDoctrine_Coreを使うように変更</li>
+</ul>
+
+<h2>06/29/10: Version 1.4.6</h2>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/30031">30031</a> ビューキャッシュにおけるディレクトリトラバーサルの注入脆弱性を回避 (<a href="http://trac.symfony-project.org/ticket/8805">#8805</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/30008">30008</a> shell_execが無効な場合の使用方法を修正 (<a href="http://trac.symfony-project.org/ticket/8758">#8758</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29990">29990</a> sfOutputEscaperObjectDecorator::__isset()の追加 (<a href="http://trac.symfony-project.org/ticket/8793">#8793</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29818">29818</a> PHP 5.2におけるsimple xmlのエスケープを修正 (<a href="http://trac.symfony-project.org/ticket/8756">#8756</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29716">29716</a> default.cssのスタイルを修正 (<a href="http://trac.symfony-project.org/ticket/7750">#7750</a>を修正)</li>
+</ul>
+
+<h2>05/31/10: Version 1.4.5</h2>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/29678">29678</a> sfForm::getName()をより厳密に (<a href="http://trac.symfony-project.org/ticket/8318">#8318</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29677">29677</a> フォームの生成が無効になった場合にdoctrine:cleanタスクでフォームクラスを削除するように修正 (<a href="http://trac.symfony-project.org/ticket/7777">#7777</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29675">29675</a> DoctrineとPropelのchoiceウィジェットで、add_emptyの文字列をtranslateするように修正 (<a href="http://trac.symfony-project.org/ticket/8571">#8571</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29674">29674</a> id_formatが考慮されるように日付と日時のウィジェットを更新 (<a href="http://trac.symfony-project.org/ticket/8446">#8446</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29661">29661</a> 外部キーではないプライマリーキーのフォームフィールドの生成を変更。プライマリーキーが変更された場合はバリデーションに失敗するように (<a href="http://trac.symfony-project.org/ticket/8639">#8639</a>をクローズ、<a href="http://trac.symfony-project.org/ticket/8704">#8704</a>を参照)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29643">29643</a> プライマリーキーとi18nフィールドがデフォルトではない場合のi18nフォームでの問題を修正 (<a href="http://trac.symfony-project.org/ticket/8650">#8650</a>を修正)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29641">29641</a> Adminジェネレーターで使うCSSをより限定的に (<a href="http://trac.symfony-project.org/ticket/7750">#7750</a>を修正)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29608">29608</a> sfFinderのディレクトリパーミッションの問題の修正 (<a href="http://trac.symfony-project.org/ticket/8684">#8684</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29570">29570</a> Doctrineフォームフィルターのmany to manyクエリーのロジックを修正</li>
+<li><a href="http://trac.symfony-project.org/changeset/29553">29553</a> Doctrineフォームの不正なEOLを修正 (<a href="http://trac.symfony-project.org/ticket/8075">#8075</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29531">29531</a> limeを1.0.9にアップデート</li>
+<li><a href="http://trac.symfony-project.org/changeset/29528">29528</a> sfBasicSecurityUserでcredentialの設定前にhasCredentialsが呼び出された場合の警告を修正 (<a href="http://trac.symfony-project.org/ticket/8512">#8512</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29527">29527</a> sfViewCacheManager::isCacheable()でのNoticeを修正 (<a href="http://trac.symfony-project.org/ticket/8527">#8527</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29526">29526</a> ロックファイルがある場合の不正なHTTPステータスコードを修正 (<a href="http://trac.symfony-project.org/ticket/8536">#8536</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29524">29524</a> sfController::getPresentationFor()におけるsfController::forward()からのsfWebResponse::sendHttpHeaders()の呼び出しにより、メインコントローラー内の後続のsendHttpHeaders()が呼び出されなくなるのを修正 (<a href="http://trac.symfony-project.org/ticket/8568">#8568</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29520">29520</a> sfI18N内の不正なarray_flip()の使用による警告を修正 (<a href="http://trac.symfony-project.org/ticket/8522">#8522</a>を参照)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29519">29519</a> sfCacheSessionStorageクラスを使用している場合のレスポンスをprivateに設定 (<a href="http://trac.symfony-project.org/ticket/8535">#8535</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29490">29490</a> sfMemcacheCache内の非推奨なdeleteを修正 (<a href="http://trac.symfony-project.org/ticket/8663">#8663</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29417">29417</a> TextHelperのstrip<em>links</em>text()の不正と複数リンクが処理されなかったのを修正 (<a href="http://trac.symfony-project.org/ticket/8589">#8589</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29416">29416</a> Adminジェネレーターのi18Nに繁体字中国語サポートを追加 (<a href="http://trac.symfony-project.org/ticket/8633">#8633</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29415">29415</a> WindowsでのsfProjectOptimizeTaskを修正 (<a href="http://trac.symfony-project.org/ticket/8640">#8640</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29390">29390</a> ルートコレクションのdefault<em>params: { sf</em>format: xml }の修正</li>
+<li><a href="http://trac.symfony-project.org/changeset/29309">29309</a> 選択肢が自動翻訳の実行を選択できるように修正。デフォルトでtrueの&quot;translate_choices&quot;オプションを追加 (<a href="http://trac.symfony-project.org/ticket/7714">#7714</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29285">29285</a> Accept-* ヘッダーの不正な分割を修正 (<a href="http://trac.symfony-project.org/ticket/8591">#8591</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29218">29218</a> Propelを1.4.2にアップデート</li>
+<li><a href="http://trac.symfony-project.org/changeset/29158">29158</a> falseと評価される属性を元に選択する場合のsfDomCssSelectorの動作を修正 (<a href="http://trac.symfony-project.org/ticket/8120">#8120</a>をクローズ)</li>
+<li><a href="http://trac.symfony-project.org/changeset/29156">29156</a> Doctrineでレコードが初期化される前のデフォルトカルチャーの設定を修正</li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+
