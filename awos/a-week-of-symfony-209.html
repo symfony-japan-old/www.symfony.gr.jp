@@ -1,0 +1,226 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony#209 (27 December 2010 -> 2 January 2011) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #209 (27 December 2010 -&gt; 2 January 2011)</h1>
+
+<p>This week marks the start of what could be the most important year of the symfony project history. For starters, in less than three months&#39; time, Symfony2 will be published and two <a href="http://www.symfony-live.com/">official symfony conferences</a> will be held at Paris and San Francisco. Therefore, symfony project wishes a very happy new year to all its supporters and developers.</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/x56tv1fOssQ">Symfony2 Core third party dependencies</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/nKXPNmVwwg4">Sandbox and some Guides&#39; improvements request</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/V3mR28IWw4c">config.yml and config_dev.yml inheritance: duplicate DI Extension calls</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/1diLYnE86OY">Changes to Doctrine ORM and MongoDB Bundles: Explicit Mapping necessary!</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/0mahjntCGoY">[Symfony2] Establishing bundle dependencies?</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/qe0y7FwmBLM">Abstract Bundles?</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/mdB62W3diak">[Symfony2] Implementing a service controller</a></li>
+</ul>
+
+<h2>Symfony2 development highlights</h2>
+
+<p>The <a href="https://github.com/symfony/symfony">official Symfony2 repository</a> didn&#39;t receive this week any commit. Anyway, the <a href="https://github.com/fabpot/symfony/">repository forked by Fabien Potencier</a> got a ton of commits.</p>
+
+<h2><a href="http://www.symfony-project.org/plugins/newest/">New plugins</a></h2>
+
+<ul>
+<li><a href="http://www.symfony-project.org/plugins/SinaTPlugin">SinaT</a>: publish Sina microblogs.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfDoctrineTableGetterPlugin">sfDoctrineTableGetter</a>: allows you to have code completion for doctrine tables in your favorite IDE.</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/pmSuperfishMenuPlugin">pmSuperfishMenu</a>:</p>
+
+<ul>
+<li>fixed generated code to assure code is W3C valid (add type attribute to script tag and wrap content into CDATA tag)</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/pmPropelGeneratorPlugin">pmPropelGenerator</a>:</p>
+
+<ul>
+<li>improvents in <em>form, _form</em>tabbed and <em>form</em>folded templates</li>
+<li><em>form</em>tabbed, <em>filters and _form</em>folded templates refactored</li>
+<li>improved stylesheets, specially for filters, folded and tabbed layouts</li>
+<li>updated README</li>
+<li>added a form formatter that adds the &#39;required&#39; class to required widgets&#39; label</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/pmPDFKitPlugin">pmPDFKit</a>:</p>
+
+<ul>
+<li>updated a bunch of broken stuff</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/pmJSCookMenuPlugin">pmJSCookMenu</a>:</p>
+
+<ul>
+<li>heavily updated documentation</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/dcStatefulSecurityPlugin">dcStatefulSecurity</a>:</p>
+
+<ul>
+<li>better plugin organization</li>
+<li>updated README and LICENSE files</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/pmPropelWorkflowableBehaviorPlugin">pmPropelWorkflowableBehavior</a>:</p>
+
+<ul>
+<li>better plugin organization</li>
+<li>removed the config directory</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfAlyssaJqGridPlugin">sfAlyssaJqGrid</a>:</p>
+
+<ul>
+<li>fixed wrong page and record information</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>forced the correct character set when parsing Zend search expressions</li>
+<li>the aMysql class is a lightweight wrapper for PDO (aMySql is not an ORM, it just makes working with raw SQL a lot more pleasant)</li>
+<li>the a<em>remove</em>filter_button helper outputs a link that removes one or more parameters from a URL when clicked</li>
+<li>search engine tags are indexed in a sensible and simple way for the benefit of plaintext searches</li>
+<li>added the constraintExists method to aMigrate</li>
+<li>cancel the media selection if the user browses away from the media repository by following a link</li>
+<li>we now have clear error messages when the maximum post size or maximum upload size is exceeded</li>
+<li>a blog posts slot with a post in the jobs category will now link to the jobs-specific engine page</li>
+<li>aSecurityUser is now more convenient to override (added BaseaSecurityUser class)</li>
+<li>aSecurityUser clears the apostrophe_media namespace</li>
+<li>users are now restricted to assigning media to categories they have been given access to, just like blog posts and events</li>
+<li>implemented double click protection for completing a slideshow or cancelling a slideshow does not produce a 404</li>
+<li>worked around video search doesn&#39;t crash the browser when you search for something popular on YouTube anymore</li>
+<li>no more race conditions when two people edit the same area</li>
+<li>implemented: if an admin adds a category you don&#39;t have control over to your media item, blog post or event, you are not able to remove that category from the item</li>
+<li>removed support for the unsustainable app<em>a</em>routes_register, which was incompatible by design with plugins like the blog plugin, and updated the wiki documentation</li>
+<li>updated sample fixtures files</li>
+<li>email obfuscation now uses a<em>js</em>call and is caching-friendly because random GUIDs are not involved</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheBlogPlugin">apostropheBlog</a>:</p>
+
+<ul>
+<li>you can now combine browsing by date, tag, category and plaintext search</li>
+<li>need an inner join for both the a<em>blog</em>item<em>to</em>category table and the a_category table to prevent posts with no categories from being returned when a page is restricted by category</li>
+<li>forgot to pass the url parameter to the sidebar in the show actions</li>
+<li>fixed &quot;New Event&quot; was crashing, and both posts and events were creating an extra virtual page</li>
+<li>browsing events by month was showing events that have already ended by that month</li>
+<li>sdded in some code to show categories for posts and events</li>
+</ul></li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://programmazione.it/index.php?entity=eitem&amp;idItem=46114">Le novità di Doctrine 2, un ORM per PHP</a></li>
+<li><a href="http://sebastien.porati.me/blog/2010/12/symfony2esi-le-code/">Symfony2/ESI : le code</a></li>
+<li><a href="http://www.hugohamon.com/en/blog/talking-at-confoo-2011-montreal-canada">Talking at Confoo 2010, Montreal, Canada</a></li>
+<li><a href="http://www.symfony.es/2010/12/28/se-publica-la-primera-version-estable-de-doctrine-2-0/">Se publica la primera versión estable de Doctrine 2.0</a></li>
+<li><a href="http://tcuvelier.developpez.com/php/symfony/sfdoctrineguardplugin/authentification-externe/">sfDoctrineGuardPlugin et l&#39;authentification externe</a></li>
+<li><a href="http://blog.adryjanek.eu/2010/12/30/symfony-14-and-ssl-playing-with-symfony-filters/">Symfony 1.4 and SSL - playing with symfony filters</a></li>
+<li><a href="http://www.programmez.com/magazine_articles.php?titre=Symfony-20--PHP-comme-vous-ne-l%E2%80%99avez-jamais-vu-!&amp;id_article=1490&amp;magazine=137">Symfony 2.0 : PHP comme vous ne l’avez jamais vu!</a></li>
+<li><a href="http://symfony-world.blogspot.com/2010/12/symfony-sfadmindashplugin-icons.html">symfony sfAdminDashPlugin icons</a></li>
+<li><a href="http://blog.micayael.com/2010/12/31/modificando-el-double-list-del-sfformextraplugin-de-symfony/">Modificando el double list del sfFormExtraPlugin de Symfony</a></li>
+<li><a href="http://lukasz.klis.pl/blog/symfony-wlasne-formattery-formularzy/">Symfony: własne formattery formularzy</a></li>
+<li><a href="http://www.cotrun.net/blog/577.html">Windows下安装Symfony实践</a></li>
+<li><a href="http://www.sylvaindeloux.com/blog/geek/bonnes-pratiques-developpement-php-symfony">Bonnes pratiques de développement PHP/symfony</a></li>
+<li><a href="http://www.scottyob.com/2011/01/01/symfony-not-sortable-generate-admin-crud/">Symfony not sortable in CRUD</a></li>
+<li><a href="http://www.loalf.com/2010/12/evitando-la-generacion-de-los-forms-y-filters-en-doctrine/">Evitando la generación de los forms y filters en Doctrine</a></li>
+<li><a href="http://ameblo.jp/kurt560222/entry-10753698167.html">【PHP+symfonyでMVC】 Part6：テーブル認証 仕切りなおし</a></li>
+<li><a href="http://asiermarques.com/2010/12/29/symfony-wordpress-o-php-desde-0/">Symfony, wordpress o php desde 0</a></li>
+<li><a href="http://www.makingitscale.com/2010/grails-vs-symfony-performance.html">Grails vs Symfony Performance</a></li>
+<li><a href="http://d.hatena.ne.jp/d4-1977/20101228/1293527454">symfony 1.4.4でjson出力をアクション固定で行う</a></li>
+<li><a href="http://blog.netha.fr/2010/12/symfony-passer-votre-site-en-mode-maintenance/">Symfony – Passer votre site en mode maintenance</a></li>
+<li><a href="http://symfony2bundles.org/lapistano/SF2-FeedImportBundle">Data importer for Symfony 2</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

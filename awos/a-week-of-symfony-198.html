@@ -1,0 +1,321 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony#198 (11->17 October 2010) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #198 (11-&gt;17 October 2010)</h1>
+
+<p>This week, symfony project unveiled all the details for the upcoming <a href="http://www.symfony-live.com/">Symfony Live 2011</a> conferences in Paris and San Francisco. Meanwhile, Symfony2 development showed an impressive activity boosted by lots of patches committed by the community. Lastly, as a proof that time flies when you&#39;re having fun programming, the next week symfony turns 5 years old (on October 18).</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/74bdcfdad018cd10">Polymorphic Route in Sf2?</a></li>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/944d9d42f7de4ba9">Symfony2 - Validator framework and external constraints dependencies</a></li>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/f7894031a34aa966">Where to switch to a theme</a></li>
+<li><a href="http://groups.google.com/group/symfony-devs/browse_thread/thread/dd4049cffdf81207">RFC - hardcoded route classes</a></li>
+</ul>
+
+<h2>Symfony2 development highlights</h2>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">Changelog</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/af8cb480a3e9f77a8788ea1b80b2bba4399c337f" title="af8cb480a3e9f77a8788ea1b80b2bba4399c337f commit on github">af8cb48</a>: [FrameworkBundle] changed Template renderers to be lazy-loaded</li>
+<li><a href="http://github.com/symfony/symfony/commit/dbde494424d89f50b8614f2e50040dcd21c17f7a" title="dbde494424d89f50b8614f2e50040dcd21c17f7a commit on github">dbde494</a>: made locale determination for translation lazy-loaded (this allows to have a stateless-website, without any cookie)</li>
+<li><a href="http://github.com/symfony/symfony/commit/f033fc5578b0a2953fe5e95bac6c99766c28625e" title="f033fc5578b0a2953fe5e95bac6c99766c28625e commit on github">f033fc5</a>: refactor ValueTransformers to recieve the original value when reverseTransform() is called</li>
+<li><a href="http://github.com/symfony/symfony/commit/0d9d4ac583ad73859880973d3ffcc8f90866cbf3" title="0d9d4ac583ad73859880973d3ffcc8f90866cbf3 commit on github">0d9d4ac</a>: Optimize some code in Form/Configurable, Have ChoiceField always pass data to transformers, implemented and fully unit-tested two Doctrine ORM specific transformers that do Collection to String/Choice Transformations</li>
+<li><a href="http://github.com/symfony/symfony/commit/ec3b3f7637c94be6e9be4c8061b35f9e10129a6d" title="ec3b3f7637c94be6e9be4c8061b35f9e10129a6d commit on github">ec3b3f7</a>: added and tested EntityToIDTransformer to transform Many-To-One and One-To-One entities into their identifier values</li>
+<li><a href="http://github.com/symfony/symfony/commit/db3476aeaa74a6b888e60381929dda8a92c7491a" title="db3476aeaa74a6b888e60381929dda8a92c7491a commit on github">db3476a</a>: [WebProfilerBundle] simplified DIC extension</li>
+<li><a href="http://github.com/symfony/symfony/commit/bf1eb56a34cf8aa809150f28c5dfc2ca04593c73" title="bf1eb56a34cf8aa809150f28c5dfc2ca04593c73 commit on github">bf1eb56</a>: [EventDispatched] event doesn&#39;t need to implement ArrayAccess</li>
+<li><a href="http://github.com/symfony/symfony/commit/d8f4cb79c92f631d3de2bcc719a8a38245c42c14" title="d8f4cb79c92f631d3de2bcc719a8a38245c42c14 commit on github">d8f4cb7</a>: [Form] turned FieldGroup::getFields() into 4 specialized methods for more flexibility</li>
+<li><a href="http://github.com/symfony/symfony/commit/fafcd02684ef4029beb40b11ca72dabe2eabff2f" title="fafcd02684ef4029beb40b11ca72dabe2eabff2f commit on github">fafcd02</a>: [HttpFoundation] changed RequestMatcher pattern syntax</li>
+<li><a href="http://github.com/symfony/symfony/commit/7ad510d6ef66ba7471d8d4e7fee003752c0618f9" title="7ad510d6ef66ba7471d8d4e7fee003752c0618f9 commit on github">7ad510d</a>: added --symlink option to assets:install command</li>
+<li><a href="http://github.com/symfony/symfony/commit/aa1cb87f603ef87f5b5c0506ffa92e0387debf39" title="aa1cb87f603ef87f5b5c0506ffa92e0387debf39 commit on github">aa1cb87</a>: [FrameworkBundle] clarified exception message in InitBundleCommand.php</li>
+<li><a href="http://github.com/symfony/symfony/commit/ade5fd6574d8c17537a058d055d78489505e6992" title="ade5fd6574d8c17537a058d055d78489505e6992 commit on github">ade5fd6</a>: fixed the bug of request_panel.php in WebProfiler</li>
+<li><a href="http://github.com/symfony/symfony/commit/f667b6928fa481745ca4c942b79b66a7b394a5ad" title="f667b6928fa481745ca4c942b79b66a7b394a5ad commit on github">f667b69</a>: [TwigBundle] added a template block to render CollectionField fields</li>
+<li><a href="http://github.com/symfony/symfony/commit/1fab031d4d91719d49d42e6edcdc8d6da4f10339" title="1fab031d4d91719d49d42e6edcdc8d6da4f10339 commit on github">1fab031</a>: added missing EntityToIDTransformer files</li>
+<li><a href="http://github.com/symfony/symfony/commit/e1be4e96899bfb03193c83b0c979c45e462e0436" title="e1be4e96899bfb03193c83b0c979c45e462e0436 commit on github">e1be4e9</a>: [Form] refactored logic to read and set values from Field to PropertyPath</li>
+<li><a href="http://github.com/symfony/symfony/commit/a66d883afd1cf69f5879734e7b6d7a2b75ebbfcd" title="a66d883afd1cf69f5879734e7b6d7a2b75ebbfcd commit on github">a66d883</a>: [Form] removed CSRF setters because they have no effect once CSRF protection is enabled. Re-enable CSRF protection with the desired values instead</li>
+<li><a href="http://github.com/symfony/symfony/commit/2a9ddee162e184efc862b557673b17640d2fa83a" title="2a9ddee162e184efc862b557673b17640d2fa83a commit on github">2a9ddee</a>: [HttpFoundation] added Session::invalidate()</li>
+<li><a href="http://github.com/symfony/symfony/commit/30cf0868281fa2e34ce347ea0fb1201842bf1d6e" title="30cf0868281fa2e34ce347ea0fb1201842bf1d6e commit on github">30cf086</a>: overrides the default {% include %} token parser since it loads through the right template renderer</li>
+<li><a href="http://github.com/symfony/symfony/commit/d376596f7e490257db04ce307c60f1ef33767672" title="d376596f7e490257db04ce307c60f1ef33767672 commit on github">d376596</a>: [EventDispatcher] fixed bug in EventDispatcher::disconnect if the second argument is null or ommitted</li>
+<li><a href="http://github.com/symfony/symfony/commit/df9ef799536a68c23367e11ebdd6e13947b57bb5" title="df9ef799536a68c23367e11ebdd6e13947b57bb5 commit on github">df9ef79</a>: [Form] readPropertyPath should return null instead of empty array</li>
+<li><a href="http://github.com/symfony/symfony/commit/7e669338761f1b856efa0ecd01a91cc1e1180996" title="7e669338761f1b856efa0ecd01a91cc1e1180996 commit on github">7e66933</a>: fixed inconsistency when calling the Http Kernel instance from an event</li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.com/trac/wiki/JobPostings">job postings</a></h2>
+
+<ul>
+<li>Symfony developer at <a href="http://www.tigreblanc.fr">Tigre Blanc</a> - full-time based in Douai, France - Contact: <a href="mailto:yoann@tigreblanc.fr">yoann@tigreblanc.fr</a></li>
+</ul>
+
+<h2><a href="http://www.symfony-project.org/plugins/newest/">New plugins</a></h2>
+
+<ul>
+<li><a href="http://www.symfony-project.org/plugins/themeBlueprintPlugin">themeBlueprint</a>: Blueprint CSS Grid Framework theme under symfony sfThemePlugin, is based on Blueprint CSS Grid Framework.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfDoctrineNestedSetEasyManagerPlugin">sfDoctrineNestedSetEasyManager</a>: Plugin to manage nested set models using Doctrine. Inspired by sfDoctrineNestedSetManagerPlugin.</li>
+<li><a href="http://www.symfony-project.org/plugins/euzeoCDNPlugin">euzeoCDN</a>: this plugin adds a helper for parallel content delivery.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfHostAwareRoutingPlugin">sfHostAwareRouting</a>: add subdomains to your routing rules.</li>
+<li><a href="http://www.symfony-project.org/plugins/tmcContactPlugin">tmcContact</a>: plugin to send e-mail after submitting a contact form.</li>
+<li><a href="http://www.symfony-project.org/plugins/tmcI18nPlugin">tmcI18n</a>: replaces the XLIFF files with a MySQL backend. Depends on doctrine.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfHttpHeaderCachePlugin">sfHttpHeaderCache</a>: provides a means to facilitate caching by reverse proxies like nginx or Varnish, using cache.yml for configuration, as well as using an alternative cache (like sfApcCache or sfMemcacheCache) for partials.</li>
+<li><a href="http://www.symfony-project.org/plugins/xwsWidgetsPlugin">xwsWidgets</a>: adds some jQuery UI powered widgets.</li>
+<li><a href="http://www.symfony-project.org/plugins/sfAltCaptchaPlugin">sfAltCaptcha</a>: easily protects your forms with different kind of captchas (random code, math captcha).</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDatagridPlugin">sfDatagrid</a>:</p>
+
+<ul>
+<li>added order<em>by</em>for_filters option for propel admin generator</li>
+<li>added lcfirst definition for no php5.3 and Jquery</li>
+<li>updated formatter propel for non automatic phpName FK tables</li>
+<li>fixed XHTML formatter</li>
+<li>include is model generator for more options</li>
+<li>added modal thickbox formatter</li>
+<li>prepare a new show action for generator</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfSocialPlugin">sfSocial</a>:</p>
+
+<ul>
+<li>moved Propel classes to plugin classes</li>
+<li>fixed javascript bug in message</li>
+<li>improved Doctrine schema and classes</li>
+<li>improved Propel schema</li>
+<li>added some translations</li>
+<li>fixed regression after Doctrine schema change</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfAssetsLibraryPlugin">sfAssetsLibrary</a>:</p>
+
+<ul>
+<li>avoid of use sfContext inside helper</li>
+<li>rewriting helper to Symfony Conventions</li>
+<li>resigning from not needed rewrite rule</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/ExtjsGeneratorPlugin">ExtjsGenerator</a>:</p>
+
+<ul>
+<li>fixed generated route problem</li>
+<li>removed catchall route</li>
+<li>fixed bug with form validator options generation</li>
+<li>fixed bug with routing for export action link</li>
+<li>added checkcolumn plugin by default for boolean fields</li>
+<li>fixed a problem with combo validators when using combo for local columns</li>
+<li>fixed routing problem for formpanel combos</li>
+<li>fixed a bug with list.sort configuration</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfTrafficCMSPlugin">sfTrafficCMS</a>:</p>
+
+<ul>
+<li>check for existance of hasAccess method on sfGuardUser before calling it</li>
+<li>added auto-hiding of deleted_at</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineRestGeneratorPlugin">sfDoctrineRestGenerator</a>:</p>
+
+<ul>
+<li>fixed bug on many to many relations loading</li>
+<li>fixed a bug in n-n relation display</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/ddOnlineStorePlugin">ddOnlineStore</a>:</p>
+
+<ul>
+<li>created a gallery for the product images using Sortable and JCroppeable behaviors</li>
+<li>created the ddOnlineStoreProduct module</li>
+<li>added the capacity field in product</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineActAsTaggablePlugin">sfDoctrineActAsTaggable</a>:</p>
+
+<ul>
+<li>updated the getPopulars method to take a limit parameter so I can easily ask for less tags where appropriate</li>
+<li>fixed wrong encoding when charset of site is not UTF-8</li>
+<li>changed &#39;tagsLabel&#39; to &#39;tags-label&#39;</li>
+<li>added a preference for an allTags array if it is present (over the ajax typeahead)</li>
+<li>provided some default error-checking for empty arrays</li>
+<li>eliminated the need to provide an array of existing tags</li>
+<li>added the commit-event option</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfErrorNotifierPlugin">sfErrorNotifier</a>:</p>
+
+<ul>
+<li>added a new report404 option to specifically target 404 errors</li>
+<li>fixed a bug when page<em>not</em>found event was fired a PHP error was fired</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineGuardPlugin">sfDoctrineGuard</a>:</p>
+
+<ul>
+<li>documented migration procedure from 4.0.0 to 5.0.0</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/pmPropelGeneratorPlugin">pmPropelGenerator</a>:</p>
+
+<ul>
+<li>show context where re-implemented accepting a layout and the possibility of using partials</li>
+<li>added support for actions above the form and above the list. The paginator also can be put before the list</li>
+<li>updated show context templates</li>
+<li>added support for canNew conditions</li>
+<li>updated readme</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfExtjs3Plugin">sfExtjs3</a>:</p>
+
+<ul>
+<li>switched external definition to Extjs 3.3.0 tag</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheBlogPlugin">apostropheBlog</a>:</p>
+
+<ul>
+<li>timepicker2() is now part of timepicker.js. The widget has been updated to call the timepicker2 function with some good default options</li>
+<li>all IDs and foreign key IDs use Doctrine&#39;s default integer size now</li>
+<li>fixed a bug with disqus comments</li>
+<li>fixed bug that required two saves before title of a blog post or event was saved</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>started debugging media in ie7</li>
+<li>enabled the &#39;Add&#39; functionality for multiple select for media</li>
+<li>apostrophe:import-files is alive again</li>
+<li>limited Popular Tags to 10</li>
+<li>fixed a bug with the Multiple Select markup for a-btns</li>
+<li>styled the media edit for some more</li>
+<li>no more hardcoded 4-byte integer IDs for tables</li>
+<li>apostrophe:migrate now converts your existing database from 4-byte IDs to Doctrine&#39;s new 8-byte IDs for compatibility with sfDoctrineGuardPlugin</li>
+<li>apostrophe:migrate also stubs in unique (although not usable) email addresses</li>
+<li>addressed case changes in relation names</li>
+<li>added first name and last name to users list view</li>
+<li>added email address, first name, last name to users edit form</li>
+<li>removed space-wasting &#39;updated_at&#39; field from list views</li>
+<li>changed language for saving selections so that it doesn&#39;t always say slideshow</li>
+<li>styled the create page form so simplify the process</li>
+<li>made the radioToggleButton into an a.js function</li>
+<li>updated search success to display the number of results</li>
+<li>slideshow slot and new smart slideshow slot have been disentangled</li>
+<li>you can now template out the global buttons in the admin bar. The new aTools::getGlobalButtonsByName() method makes it easy to fetch the possibilities in a ready-to-go form</li>
+<li>added tag admin to standard list of buttons</li>
+</ul></li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.com/trac/wiki/SymfonyBloggers">symfony bloggers</a></h2>
+
+<ul>
+<li><a href="http://vvv.tobiassjosten.net/">Tobias Sjösten</a> (<a href="http://vvv.tobiassjosten.net/symfony.atom">feed</a>) (English)</li>
+<li><a href="http://lyra-cms.com/blog">Lyra CMS Blog</a> (<a href="http://feeds.feedburner.com/lyracms-blog">feed</a>) (English)</li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://test.ical.ly/2010/10/11/symfony-day-2010%E2%80%93a-review/">symfony day 2010 – a review</a></li>
+<li><a href="http://www.symfony.es/2010/10/11/presentaciones-del-symfony-day-2010/">Presentaciones del Symfony Day 2010</a></li>
+<li><a href="http://fabien.potencier.org/article/46/twitter-and-emails-are-good-postcards-are-better">Twitter and Emails are good; Postcards are better</a></li>
+<li><a href="http://test.ical.ly/2010/10/12/conditional-presentation-of-symfony-forms/">Conditional presentation of symfony forms</a></li>
+<li><a href="http://vvv.tobiassjosten.net/symfony/tracking-google-analytics-events-with-symfony">Tracking Google Analytics events with Symfony</a></li>
+<li><a href="http://vvv.tobiassjosten.net/symfony/symfony-cli-helper-script">Symfony CLI helper script</a></li>
+<li><a href="http://test.ical.ly/2010/10/13/a-word-about-doctrine-record-behaviours/">A word about Doctrine Record Behaviours</a></li>
+<li><a href="http://www.presseanzeiger.de/meldungen/it-computer-internet/399436.php">symfony Day 2010: PHP-Entwicklerkonferenz übertrifft Erwartungen</a></li>
+<li><a href="http://www.symfony.es/2010/10/13/ofertas-de-trabajo-symfony-en-espana/">Ofertas de trabajo Symfony en España</a></li>
+<li><a href="http://shout.setfive.com/2010/10/13/iphone-style-checkboxes-for-symfony/">iPhone style checkboxes for Symfony</a></li>
+<li><a href="http://test.ical.ly/2010/10/14/so-you-want-a-clean-and-easy-way-to-manage-dynamic-doctrine-relations-in-your-symfony-forms/">So you want a clean and easy way to manage dynamic doctrine relations in your symfony forms?</a></li>
+<li><a href="http://blog.servergrove.com/2010/10/14/creating-console-commands-with-symfony2/">Creating console commands with Symfony2</a></li>
+<li><a href="http://www.leftontheweb.com/message/International_PHP_Conference_2010">International PHP Conference 2010</a></li>
+<li><a href="http://test.ical.ly/2010/10/15/a-simple-way-to-debug-your-embedded-symfony-forms/">A simple way to debug your embedded symfony forms</a></li>
+<li><a href="http://blog.liip.ch/archive/2010/10/15/symfony-day.html">Symfony Day</a></li>
+<li><a href="http://www.symfony.es/2010/10/16/conferencias-symfony-live-2011-en-paris-y-san-francisco/">Conferencias Symfony Live 2011 en París y San Francisco</a></li>
+<li><a href="http://www.jnieto.org/article/symfony_genurl_method">Symfony genUrl method</a></li>
+<li><a href="http://www.lyra-cms.com/blog/2010/10/new-symfony-plugin-sfaltcaptchaplugin.html">New symfony plugin, sfAltCaptchaPlugin</a></li>
+<li><a href="http://www.charnad.com/blog/symfony-day-2010-in-cologne/">Symfony: Symfony Day 2010 в Кёльне</a></li>
+<li><a href="http://www.funstaff.ch/2010/10/12/sfdoctrineguardplugin-ajout-de-permissions-et-de-groupes-apres-un-register">sfDoctrineGuardPlugin: Ajout de permissions et de groupes après un register</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

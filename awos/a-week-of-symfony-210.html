@@ -1,0 +1,334 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony #210 (3->9 January 2011) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #210 (3-&gt;9 January 2011)</h1>
+
+<p>Symfony2 repository received this week a massive amount of commits, mostly on Twig, Form, Security and Doctrine components. Twig bundle was heavily refactored to match the important changes introduced in Twig 1.0 RC1, which was also <a href="http://blog.twig-project.org/post/2665679442/twig-1-0-0-rc1-released">published this week</a>. Security component added a brand-new ACL system and Form component added support for virtual field groups and a FieldFactory mechanism to automatically create fields by introspecting metadata of a class.
+Meanwhile, in <a href="http://trac.symfony-project.org/wiki/IRCLogs20110106">the last weekly IRC meeting</a>, Fabien unveiled some interesting information about Symfony2, including a new way to handle web assests and the expected roadmap until its final release.</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/13tR02waev4">Sending emails from command line scripts with Symfony2 and twig</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/-ZClznjOk7I">[Symfony2] RFC: Translations</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/LaeOR7TQ-0M">[symfony2] redirect issue in action Controller</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/BuPiIGzPySs">Security Acl - Add custom permissions</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/lsUe6_jrAEI">RFC: Naming issues</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/ET78rq4wCsU">Symfony2: RFC overwrite specific Resources files of a Bundle</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/19oEaZAz7Ac">Absolute assets url</a></li>
+</ul>
+
+<h2>Symfony2 development highlights</h2>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">Changelog</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/baf07a13acd1270c23b615f8d3077ad560911a35" title="baf07a13acd1270c23b615f8d3077ad560911a35 commit on github">baf07a1</a>, <a href="http://github.com/symfony/symfony/commit/1af21221ae2c0003041d7e905f685027280a3152" title="1af21221ae2c0003041d7e905f685027280a3152 commit on github">1af2122</a>, <a href="http://github.com/symfony/symfony/commit/3516a043bcc4dda95b0a6cc74f0bed05b34b844e" title="3516a043bcc4dda95b0a6cc74f0bed05b34b844e commit on github">3516a04</a>: added converter manager and converter interface including tests</li>
+<li><a href="http://github.com/symfony/symfony/commit/cbd6d0aecee7dd9fa6ca941f6c401e7cfb0ece22" title="cbd6d0aecee7dd9fa6ca941f6c401e7cfb0ece22 commit on github">cbd6d0a</a>: [DoctrineBundle] added a request param converter for Doctrine</li>
+<li><a href="http://github.com/symfony/symfony/commit/f8a88e822f17e2b4bf70bdb7ba8113e97b6e369a" title="f8a88e822f17e2b4bf70bdb7ba8113e97b6e369a commit on github">f8a88e8</a>, <a href="http://github.com/symfony/symfony/commit/13fc13519edfd777fa1fe0fef2a18e0670f530e4" title="13fc13519edfd777fa1fe0fef2a18e0670f530e4 commit on github">13fc135</a>, <a href="http://github.com/symfony/symfony/commit/2ee4252a1f9500697f8582878fce151c593d1ce0" title="2ee4252a1f9500697f8582878fce151c593d1ce0 commit on github">2ee4252</a>: [HttpFoundation] added ArraySessionStorage for usage in tests</li>
+<li><a href="http://github.com/symfony/symfony/commit/385ad72d643cd58d5d224e3128d4660b73abeeeb" title="385ad72d643cd58d5d224e3128d4660b73abeeeb commit on github">385ad72</a>: [FrameworkBundle] converted the special routing resolver to a DIC compiler pass</li>
+<li><a href="http://github.com/symfony/symfony/commit/8e6a3849ee68d9d4f4e200579ea1ba41b2b2a42e" title="8e6a3849ee68d9d4f4e200579ea1ba41b2b2a42e commit on github">8e6a384</a>: [TwigBundle] converted the special Twig Environment class to a DIC compiler class</li>
+<li><a href="http://github.com/symfony/symfony/commit/2985cfa5a91deefb401d2eb0047b607041e6afb3" title="2985cfa5a91deefb401d2eb0047b607041e6afb3 commit on github">2985cfa</a>: [FrameworkBundle] converted the special Profiler class to a DIC compiler class</li>
+<li><a href="http://github.com/symfony/symfony/commit/59996bd8b91ceac3327eb14ecd5d1cb8e1c1efe5" title="59996bd8b91ceac3327eb14ecd5d1cb8e1c1efe5 commit on github">59996bd</a>: [TwigBundle] fixed form.twig calls to {% display %}</li>
+<li><a href="http://github.com/symfony/symfony/commit/46949e2c22c7663516d99b88a51e919160fba6b6" title="46949e2c22c7663516d99b88a51e919160fba6b6 commit on github">46949e2</a>: [DoctrineBundle, DoctrineMongoDBBundle] makes it possible to use shortcuts for defining document or entity classes when using the DaoAuthenticationProvider</li>
+<li><a href="http://github.com/symfony/symfony/commit/ba2b1aad281d389d9464bc53ef31e565272cdb5e" title="ba2b1aad281d389d9464bc53ef31e565272cdb5e commit on github">ba2b1aa</a>: refactored Doctrine*Bundle to allow a much more flexible configuration</li>
+<li><a href="http://github.com/symfony/symfony/commit/db5e180d3750687ab6d65ebbdd951b80e16590d6" title="db5e180d3750687ab6d65ebbdd951b80e16590d6 commit on github">db5e180</a>: tweaked DI container</li>
+<li><a href="http://github.com/symfony/symfony/commit/6aa750d1ceb49dfae1e9d9f8d782ce385401f9b4" title="6aa750d1ceb49dfae1e9d9f8d782ce385401f9b4 commit on github">6aa750d</a>: [DoctrineBundle] added tests for DoctrineConverter class</li>
+<li><a href="http://github.com/symfony/symfony/commit/46b1b5bd60432ba07bde2732a2310a5e76f94174" title="46b1b5bd60432ba07bde2732a2310a5e76f94174 commit on github">46b1b5b</a>: [Security] LogoutListener should not invoke handlers&#39; logout() method if token is empty</li>
+<li><a href="http://github.com/symfony/symfony/commit/500e02d4fd123cc03f7456527a9f70cdedb2d3d5" title="500e02d4fd123cc03f7456527a9f70cdedb2d3d5 commit on github">500e02d</a>: fixed inconsistency between MongoDB and ORM Annotation Reader definition that lead to a bug in the common code</li>
+<li><a href="http://github.com/symfony/symfony/commit/c886d88bf367c2f7be1afc3e861c05b8e2baf9e6" title="c886d88bf367c2f7be1afc3e861c05b8e2baf9e6 commit on github">c886d88</a>, <a href="http://github.com/symfony/symfony/commit/5c73619d801ad0e006a9bc3d05c820ef0439afc0" title="5c73619d801ad0e006a9bc3d05c820ef0439afc0 commit on github">5c73619</a>: [DependencyInjection] forced loading of class file when resolving interface injections</li>
+<li><a href="http://github.com/symfony/symfony/commit/b4288459cc440fda95eb7f2b431d04dd3e54f80e" title="b4288459cc440fda95eb7f2b431d04dd3e54f80e commit on github">b428845</a>: added ACL system to the Security Component</li>
+<li><a href="http://github.com/symfony/symfony/commit/49a3e52fa8c25a7307b4ce33fa679b9cd068f368" title="49a3e52fa8c25a7307b4ce33fa679b9cd068f368 commit on github">49a3e52</a>: [HttpFoundation] changed the default name of the session to _SESS as using _SESSION does not seem to work with PHP 5.3.</li>
+<li><a href="http://github.com/symfony/symfony/commit/62cd09e7081795809a4f1f5e24f2db287b905913" title="62cd09e7081795809a4f1f5e24f2db287b905913 commit on github">62cd09e</a>: [TwigBundle] replaced the asset tag with an asset function (from {% asset css/foo.css %} to {{ asset(&#39;css/foo.css&#39;) }}</li>
+<li><a href="http://github.com/symfony/symfony/commit/d8b8ae0608b8b9933865a84f8d3acb6e044bbfb4" title="d8b8ae0608b8b9933865a84f8d3acb6e044bbfb4 commit on github">d8b8ae0</a>: [FrameworkBundle, TwigBundle] introduced field_row template for Form rendering</li>
+<li><a href="http://github.com/symfony/symfony/commit/b9c2e983159d31b217873d446138fde6e0e10489" title="b9c2e983159d31b217873d446138fde6e0e10489 commit on github">b9c2e98</a>: [Form, Locale] implemented LocaleField and added script for updating ICU data</li>
+<li><a href="http://github.com/symfony/symfony/commit/52ecffe51b93afa93a38dd46839889ca9dd5c287" title="52ecffe51b93afa93a38dd46839889ca9dd5c287 commit on github">52ecffe</a>: [Validator] implemented Locale constraint</li>
+<li><a href="http://github.com/symfony/symfony/commit/2daa6b5bfedac13702cd75f4dc5d12a5d742724d" title="2daa6b5bfedac13702cd75f4dc5d12a5d742724d commit on github">2daa6b5</a>: [TwigBundle] fixed display of DateFields in twig templates</li>
+<li><a href="http://github.com/symfony/symfony/commit/a99d8c8558717d5d0cd29bcdc23f5ac077ade106" title="a99d8c8558717d5d0cd29bcdc23f5ac077ade106 commit on github">a99d8c8</a>: fixed possible duplicate security identities</li>
+<li><a href="http://github.com/symfony/symfony/commit/55a48bcfa629059b3b86c4319f38a15fbc8920e9" title="55a48bcfa629059b3b86c4319f38a15fbc8920e9 commit on github">55a48bc</a>: optimized AclVoter and added unit tests</li>
+<li><a href="http://github.com/symfony/symfony/commit/fa7fdedf4b4ea492d38dff7e5f1a4094b6cd7ff0" title="fa7fdedf4b4ea492d38dff7e5f1a4094b6cd7ff0 commit on github">fa7fded</a>: introduced meta-bundle DoctrineAbstractBundle to squash 400+ loc of code duplication from ORM and MongoDB Bundles</li>
+<li><a href="http://github.com/symfony/symfony/commit/302dbd12257fb00cc7198bac01af6ad4994cc908" title="302dbd12257fb00cc7198bac01af6ad4994cc908 commit on github">302dbd1</a>: refactor Doctrine Bundle to use Symfony DIC Enabled EventManager</li>
+<li><a href="http://github.com/symfony/symfony/commit/eb4788e98e4e578ae4178536c41536a79b4a1dfd" title="eb4788e98e4e578ae4178536c41536a79b4a1dfd commit on github">eb4788e</a>: [DependencyInjection] made service keys and aliases case insensitive (as method names are case insensitive in PHP)</li>
+<li><a href="http://github.com/symfony/symfony/commit/840bd8aacd4ab48474e0600ecd54acee7b82f080" title="840bd8aacd4ab48474e0600ecd54acee7b82f080 commit on github">840bd8a</a>: [TwigBundle] removed usage of HelperTokenParser for the &#39;render&#39; tag</li>
+<li><a href="http://github.com/symfony/symfony/commit/3f492cae400bcfed53537c675d69cd13e64ef699" title="3f492cae400bcfed53537c675d69cd13e64ef699 commit on github">3f492ca</a>: [TwigBundle] removed usage of HelperTokenParser for the js/css tags</li>
+<li><a href="http://github.com/symfony/symfony/commit/5c6b594daed30f30bd5152d3021943b1f6642978" title="5c6b594daed30f30bd5152d3021943b1f6642978 commit on github">5c6b594</a>: [TwigBundle] converted form filters to functions</li>
+<li><a href="http://github.com/symfony/symfony/commit/8b843e266203e3c5416eb01c72dffe91d87a7e1a" title="8b843e266203e3c5416eb01c72dffe91d87a7e1a commit on github">8b843e2</a>: [TwigBundle] fixed trans tag due to Twig changes</li>
+<li><a href="http://github.com/symfony/symfony/commit/ba422e8472c8c16235760cb095f228f6ee9496f5" title="ba422e8472c8c16235760cb095f228f6ee9496f5 commit on github">ba422e8</a>: [Form] added support for virtual field groups</li>
+<li><a href="http://github.com/symfony/symfony/commit/708c7802135aa88e6f66223fbe45fc6d36186ce1" title="708c7802135aa88e6f66223fbe45fc6d36186ce1 commit on github">708c780</a>: [Validator] renamed @Validation constraint to @Set</li>
+<li><a href="http://github.com/symfony/symfony/commit/85130820079a65494d7cd4834eb120b126650e56" title="85130820079a65494d7cd4834eb120b126650e56 commit on github">8513082</a>: [Form, HttpFoundation] improved File and UploadedFile class</li>
+<li><a href="http://github.com/symfony/symfony/commit/e9a7531a26cccd06e701e3b8ee9df5faa3f4d075" title="e9a7531a26cccd06e701e3b8ee9df5faa3f4d075 commit on github">e9a7531</a>: [Form] added the constrained method Field::isTransformationSuccessful()</li>
+<li><a href="http://github.com/symfony/symfony/commit/48af2fc86edffd83034e2d3d3b94dc75511eae97" title="48af2fc86edffd83034e2d3d3b94dc75511eae97 commit on github">48af2fc</a>: [Form, FrameworkBundle, HttpFoundation] the session is now automatically started when a form is CSRF protected</li>
+<li><a href="http://github.com/symfony/symfony/commit/acdd5c06de1e62caa042df8a37360403475c58f0" title="acdd5c06de1e62caa042df8a37360403475c58f0 commit on github">acdd5c0</a>: [Form] changed value transformers to throw UnexpectedTypeException instances</li>
+<li><a href="http://github.com/symfony/symfony/commit/114b2cf6c1a3ec20957db2333a1dc6d0211032dc" title="114b2cf6c1a3ec20957db2333a1dc6d0211032dc commit on github">114b2cf</a>: [FrameworkBundle] attributes can now be passed when rendering form fields with the PHP renderer</li>
+<li><a href="http://github.com/symfony/symfony/commit/39c9bf160e5716aec0f42b3552524804e534b8e5" title="39c9bf160e5716aec0f42b3552524804e534b8e5 commit on github">39c9bf1</a>: [Validator] implemented @Ip constraint</li>
+<li><a href="http://github.com/symfony/symfony/commit/9b10c8a86652d50e4b3e38dc5dd8ca14ffb5619c" title="9b10c8a86652d50e4b3e38dc5dd8ca14ffb5619c commit on github">9b10c8a</a>: [WebProfileBundle] added more information to the Response content returned when an intercept is redirected</li>
+<li><a href="http://github.com/symfony/symfony/commit/0e487cdda65766d5af9d9181cfc7da5dfb30145f" title="0e487cdda65766d5af9d9181cfc7da5dfb30145f commit on github">0e487cd</a>: [TwigBundle] replaced current {{ foo }} syntax for translation placeholders to %foo%</li>
+<li><a href="http://github.com/symfony/symfony/commit/b60d254be2f9b9a8b1340a8f7b40270748692ca5" title="b60d254be2f9b9a8b1340a8f7b40270748692ca5 commit on github">b60d254</a>: [TwigBundle] added request and session as global variables (removed the &#39;_view&#39; variable from templates, removed the &#39;flash()&#39; function because it&#39;s now available from the session directly)</li>
+<li><a href="http://github.com/symfony/symfony/commit/7b7e83f428fceec8ad20d23e7247a9116f08dc2f" title="7b7e83f428fceec8ad20d23e7247a9116f08dc2f commit on github">7b7e83f</a>: removed js and css helpers and Twig integration as they do not work as expected</li>
+<li><a href="http://github.com/symfony/symfony/commit/7fdc61f2723232ad9e256b01f0ea941c69f9eb63" title="7fdc61f2723232ad9e256b01f0ea941c69f9eb63 commit on github">7fdc61f</a>: [TwigBundle] added a way to register Twig globals from configuration</li>
+<li><a href="http://github.com/symfony/symfony/commit/aea712d8a20ed6a0cb46b49726b0a2cf5b150bf9" title="aea712d8a20ed6a0cb46b49726b0a2cf5b150bf9 commit on github">aea712d</a>: [ZendBundle] added a simple way to add new writers (add a service with a zend.logger.writer tag)</li>
+<li><a href="http://github.com/symfony/symfony/commit/114851969581bbcdae88ea4ac293ca47e878cb1c" title="114851969581bbcdae88ea4ac293ca47e878cb1c commit on github">1148519</a>: [HttpKernel] unified paths on Windows and *nix</li>
+<li><a href="http://github.com/symfony/symfony/commit/1e27d4359c9f70484ca28645da3a288f0267555a" title="1e27d4359c9f70484ca28645da3a288f0267555a commit on github">1e27d43</a>: [DoctrineBundle] added class<em>metadata</em>factory_name Configuration option</li>
+<li><a href="http://github.com/symfony/symfony/commit/3ab82cbd534d19fa2f164c099d87782aedd86eea" title="3ab82cbd534d19fa2f164c099d87782aedd86eea commit on github">3ab82cb</a>: [FrameworkBundle, Security] created DIC aliases for security providers that are explicit services</li>
+<li><a href="http://github.com/symfony/symfony/commit/598d458a3c5e45f67a2f6686433272abde29b1e3" title="598d458a3c5e45f67a2f6686433272abde29b1e3 commit on github">598d458</a>: added CompatAssetsBundle to reintroduce the deprecated css/js helpers/tags</li>
+<li><a href="http://github.com/symfony/symfony/commit/4b78c4376ff02a33afc6c0ac720cf014ac4d90e0" title="4b78c4376ff02a33afc6c0ac720cf014ac4d90e0 commit on github">4b78c43</a>: [Form] added FieldFactory mechanism to automatically create fields by introspecting metadata of a class</li>
+<li><a href="http://github.com/symfony/symfony/commit/c5ef113b186caa09b951c48cc4f637c2660cef6f" title="c5ef113b186caa09b951c48cc4f637c2660cef6f commit on github">c5ef113</a>: DI container optimization</li>
+<li><a href="http://github.com/symfony/symfony/commit/da5475ec428102c90067c284a8995a87f91a8013" title="da5475ec428102c90067c284a8995a87f91a8013 commit on github">da5475e</a>: service visibility changes</li>
+<li><a href="http://github.com/symfony/symfony/commit/b5e26d9db8c723c8812fa4dee6bd2c8a11dd6c5a" title="b5e26d9db8c723c8812fa4dee6bd2c8a11dd6c5a commit on github">b5e26d9</a>: [SwiftmailerBundle] added more private services</li>
+<li><a href="http://github.com/symfony/symfony/commit/f946355f80373f9a985937394d181144742a3b15" title="f946355f80373f9a985937394d181144742a3b15 commit on github">f946355</a>: [TwigBundle] added a form_row() function</li>
+<li><a href="http://github.com/symfony/symfony/commit/584769dd164b1e8f82888c88d436f84fc3146aec" title="584769dd164b1e8f82888c88d436f84fc3146aec commit on github">584769d</a>: [HttpFoundation] added removeFlash &amp; clearFlashes methods to the Session</li>
+<li><a href="http://github.com/symfony/symfony/commit/afc2f965498e1e482ab2c3fcc30b87438f12ac13" title="afc2f965498e1e482ab2c3fcc30b87438f12ac13 commit on github">afc2f96</a>, <a href="http://github.com/symfony/symfony/commit/ed359af5438b93bf0ab1f78a041528a92713db0a" title="ed359af5438b93bf0ab1f78a041528a92713db0a commit on github">ed359af</a>: [Templating] added Global variables as they are implemented with Twig</li>
+<li><a href="http://github.com/symfony/symfony/commit/911dbe9cc4286e51933a0cee6589289afa3bba08" title="911dbe9cc4286e51933a0cee6589289afa3bba08 commit on github">911dbe9</a>: removed a circular reference in the definition of the templating and Twig services (added a new TemplateNameConverter that parses a template name, removed the dependency between the Twig loader and the Templating engine)</li>
+<li><a href="http://github.com/symfony/symfony/commit/af8ebeaabbb3878e5314d73c2ee74b184775e5a9" title="af8ebeaabbb3878e5314d73c2ee74b184775e5a9 commit on github">af8ebea</a>: [DependencyInjection] added automatic detection for service circular references</li>
+<li><a href="http://github.com/symfony/symfony/commit/cfd4e2186f0dc444bec4438a165eef317c58e4e2" title="cfd4e2186f0dc444bec4438a165eef317c58e4e2 commit on github">cfd4e21</a>: fixed UniversalClassLoader matching collisions</li>
+<li><a href="http://github.com/symfony/symfony/commit/314defa8b4f70b41f1c5476d310861766e22ef29" title="314defa8b4f70b41f1c5476d310861766e22ef29 commit on github">314defa</a>: added generic encoder factory</li>
+<li><a href="http://github.com/symfony/symfony/commit/9553971d06875d417695c4a63e03885a608dafb7" title="9553971d06875d417695c4a63e03885a608dafb7 commit on github">9553971</a>: [TwigBundle] allowed Renderer::evaluate() even when Request and Session are not available</li>
+<li><a href="http://github.com/symfony/symfony/commit/2ded40fb7534388209c7522317f8c455480da5d3" title="2ded40fb7534388209c7522317f8c455480da5d3 commit on github">2ded40f</a>: [TwigBundle] added a way to easily register extensions from the configuration</li>
+<li><a href="http://github.com/symfony/symfony/commit/964bf4356ecedcdf02e0bce2d9d7fd0681cd7904" title="964bf4356ecedcdf02e0bce2d9d7fd0681cd7904 commit on github">964bf43</a>: fixed Security tests failing when Doctrine2 is not present</li>
+<li><a href="http://github.com/symfony/symfony/commit/0c50ca87755daf2da40bdca9b8da4868f9b3c7a1" title="0c50ca87755daf2da40bdca9b8da4868f9b3c7a1 commit on github">0c50ca8</a>: [TwigBundle] renderer::evaluate() should ensure the Request is both defined and non-empty</li>
+<li><a href="http://github.com/symfony/symfony/commit/554c86c5895f9ef3e48d6da3d4155b2fd763332d" title="554c86c5895f9ef3e48d6da3d4155b2fd763332d commit on github">554c86c</a>: [DependencyInjection] added hasInterfaceInjectorForClass() which is helpful for extension loader methods</li>
+<li><a href="http://github.com/symfony/symfony/commit/f2ac2a4c8a1e3aa1f75622c358a83984af3bf017" title="f2ac2a4c8a1e3aa1f75622c358a83984af3bf017 commit on github">f2ac2a4</a>: changed templating to use setter injection for renderers</li>
+<li><a href="http://github.com/symfony/symfony/commit/bc2ca8f1cf77a60fdf460614fc9cdc218110dd43" title="bc2ca8f1cf77a60fdf460614fc9cdc218110dd43 commit on github">bc2ca8f</a>: made PHP renderer optional in Templating</li>
+<li><a href="http://github.com/symfony/symfony/commit/3785a99b947c26b84585ffe34225b600822b382e" title="3785a99b947c26b84585ffe34225b600822b382e commit on github">3785a99</a>: added visibility to aliases</li>
+<li><a href="http://github.com/symfony/symfony/commit/a11619973b9fea3b4452a9429968e1905c831392" title="a11619973b9fea3b4452a9429968e1905c831392 commit on github">a116199</a>: [DependencyInjection] fixed xml validation for extension in phar archive</li>
+<li><a href="http://github.com/symfony/symfony/commit/50809d2ae03d4ce0d744ff6fd2b3c515da353d6c" title="50809d2ae03d4ce0d744ff6fd2b3c515da353d6c commit on github">50809d2</a>: [TwigBundle] added the security context and the user as global variables when they are defined</li>
+<li><a href="http://github.com/symfony/symfony/commit/10fee8c8bbd42a8a13efc9bc8e6b9e51ce8edb2a" title="10fee8c8bbd42a8a13efc9bc8e6b9e51ce8edb2a commit on github">10fee8c</a>: [HttpKernel] added escaping to the profiler SQLite storage</li>
+</ul>
+
+<h2>Documentation</h2>
+
+<ul>
+<li>New <a href="http://trac.symfony-project.org/wiki/IRCLogs20110106">IRC logs 2011-01-06</a> page</li>
+</ul>
+
+<h2><a href="http://www.symfony-project.org/plugins/newest/">New plugins</a></h2>
+
+<ul>
+<li><a href="http://www.symfony-project.org/plugins/sfAmazonPlugin">sfAmazon</a>: Allows you to manage amazon aws servers from symfony cli. Also includes widgets, validators, and helpers that you can use within your symfony projects.</li>
+<li><a href="http://www.symfony-project.org/plugins/apostrophePeoplePlugin">apostrophePeople</a>: a simple system for creating and organizing person profiles (plugin for the Apostrophe CMS).</li>
+<li><a href="http://www.symfony-project.org/plugins/sfPostMarkPlugin">sfPostMark</a>: easy integration with postmarkapp.com.</li>
+<li><a href="http://www.symfony-project.org/plugins/gbRememberMePlugin">gbRememberMe</a>: changes the behavior of the &quot;remember me&quot; feature of the sfDoctrineGuard plugin, allowing to remember multiple browser instances on multiple computers and detecting cookie theft.</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/cleverFilesystemPlugin">cleverFilesystem</a>:</p>
+
+<ul>
+<li>added passive mode capacity for FTP filesystems</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineNestedSetPlugin">sfDoctrineNestedSet</a>:</p>
+
+<ul>
+<li>fully functional (add, delete, move nodes and subtrees) Doctrine NestedSet plugin</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfCKEditorPlugin">sfCKEditor</a>:</p>
+
+<ul>
+<li>fixed bug when inserting content with special characters</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineRestGeneratorPlugin">sfDoctrineRestGenerator</a>:</p>
+
+<ul>
+<li>fixed XML and YAML unserializer in order to get the root of the data directly</li>
+<li>have the XML unserializer deal correctly with collections and single records</li>
+<li>removed useless underscoring of variables from the action body</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfDoctrineActAsTaggablePlugin">sfDoctrineActAsTaggable</a>:</p>
+
+<ul>
+<li>fixed an incompatibility between preloadTags() and the Doctrine query cache</li>
+<li>the trim line did not work in IE because IE doesn&#39;t have String.trim. Switched to jQuery&#39;s trim function</li>
+<li>do not add empty tag names</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfYandexYMLPlugin">sfYandexYML</a>:</p>
+
+<ul>
+<li>added unit tests</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfProjectAnalyserPlugin">sfProjectAnalyser</a>:</p>
+
+<ul>
+<li>sdded plugin config controls so the user knows its custom config file must be upgraded</li>
+<li>code cleanup</li>
+<li>updated doc &amp; roadmap</li>
+<li>refactored the way the plugin&#39;s config controls are done</li>
+<li>started the &quot;ignore files and objects&quot; feature</li>
+<li>implemented the &quot;ignore&quot; feature for the partials, applications, classes, modules, actions, templates and layouts</li>
+<li>fixed wrong count of alerts when using the XML output</li>
+<li>fixed the color reporting for modules</li>
+<li>fixed the return code values</li>
+<li>deleted the sfProjectAnanlyserPlugin from the default config</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfFormButtonsPlugin">sfFormButtons</a>:</p>
+
+<ul>
+<li>changed button<em>to</em>url to only set an onclick-Handler, if there is none present</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>you can now see the embedded video at the annotation step fo the &quot;add media&quot; process</li>
+<li>fixed useless metaDescription slots being created with no page id</li>
+<li>correctly render normal script src tags for externally hosted JS files such as addthis when the minifier is active</li>
+<li>fixed slideshows should not say &quot;click for next image&quot; if there is only one image</li>
+<li>all the slots now extend aSlotActions and aSlotComponents, which are empty extensions of BaseaSlotActions and BaseaSlotComponents</li>
+<li>all private items in PluginaPage are now protected so aPage can modify them as needed</li>
+<li>create a lessc compiler object only when needed; let the autoloader find it</li>
+<li>added $word_limit parameter to getAreaText() and getAreaBasicHtml()</li>
+<li>added og-meta slot to the layout.php so og meta data can be set and tossed up into the heading from Pages, Blog Posts, and Events</li>
+<li>fixed Apostrophe reaction when a video is not permitted to be played in your country</li>
+<li>clear call to action to configure unconfigured media services</li>
+<li>error404Success and error404Template work together to allow admins to edit / change the error404 page contents</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheBlogPlugin">apostropheBlog</a>:</p>
+
+<ul>
+<li>migrated all events that run from 12am to 12am to have null start and end times (the new representation of an all day event)</li>
+<li>fixed event slots not being ordered by start date</li>
+<li>added og-meta information to the event and blog showSuccess</li>
+<li>set the published<em>at date on a</em>page when it is a virtual page corresponding to an a<em>blog</em>item</li>
+<li>fixed a bug that was displaying the the same time twice if the starttime and endtime were the same</li>
+<li>getQuery was failing for the title search case because it wasn&#39;t returning the query</li>
+<li>event slot typeahead had a refactoring-related bug</li>
+</ul></li>
+</ul>
+
+<h2>New <a href="http://trac.symfony-project.org/wiki/ApplicationsDevelopedWithSymfony">symfony powered websites</a></h2>
+
+<ul>
+<li><a href="http://www.resursecrestine.ro/">www.resursecrestine.ro</a>: (Romanian) a romanian Christian Resources website</li>
+<li><a href="http://www.attractiveworld.net/">Attractiveworld</a>: (French) singles social network</li>
+<li><a href="http://www.msb-online.org/">msb-online</a>: (English) Mediterranean School of Business academy</li>
+<li><a href="http://www.art-africain.fr/">Art-afriain.fr</a>: (French) african art gallery</li>
+<li><a href="http://www.webdigi.co.uk">Webdigi Web Development</a>: (English) Webdigi develops high performance web applications and websites</li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://www.leftontheweb.com/message/Introducing_phpOpenNOS">Introducing phpOpenNOS</a></li>
+<li><a href="http://www.miximum.fr/actus/558-new-release-of-tjsolrdoctrinebehaviorplugin">New release of tjSolrDoctrineBehaviorPlugin</a></li>
+<li><a href="http://www.symfony.it/articoli/399/anteprima-del-prossimo-admin-generator/">Anteprima del prossimo admin generator</a></li>
+<li><a href="http://test.ical.ly/2011/01/04/allowing-bulk-uploads-by-repetitive-form-saving-for-zip-archives-in-symfony/">Allowing bulk uploads by repetitive form saving for ZIP archives in symfony</a></li>
+<li><a href="http://test.ical.ly/2011/01/05/in-case-you-wonder-how-to-run-a-functional-lime-test-in-a-symfony-plugin/">In case you wonder how to run a functional lime test in a symfony plugin</a></li>
+<li><a href="http://www.whiteoctober.co.uk/blog/2011/01/05/stored-functions-with-symfony-and-doctrine/">Stored functions with Symfony and Doctrine</a></li>
+<li><a href="http://programmazione.it/index.php?entity=eitem&amp;amp;idItem=46178">Twig, template engine per PHP</a></li>
+<li><a href="http://habrahabr.ru/blogs/symfony/111242/">Symfony Code&#39;n&#39;Coffee Minsk (Belarus) Jan 2011</a></li>
+<li><a href="http://test.ical.ly/2011/01/07/a-continuous-deployment-process-for-symfony-plugins/">A continuous deployment process for symfony plugins</a></li>
+<li><a href="http://www.jnieto.org/article/adding_custom_information_to_your_doctrine_schema">Adding custom information to your Doctrine schema</a></li>
+<li><a href="http://www.leftontheweb.com/message/Now_a_Sensio_partner">Now a Sensio partner</a></li>
+<li><a href="http://www.symfony.es/2011/01/07/se-publica-el-programa-definitivo-de-las-conferencias-symfony-live-2011/">Se publica el programa definitivo de las conferencias Symfony Live 2011</a></li>
+<li><a href="http://symfony-hribo.blogspot.com/2011/01/generating-url-from-model-or-task.html">Generating URL from Model or Task</a></li>
+<li><a href="http://www.fizyk.net.pl/blog/cherokee-http-server-and-symfony-1-4-en">Cherokee http server and symfony 1.4</a></li>
+<li><a href="http://www.jnieto.org/article/passing_parameters_from_the_action_to_the_view_symfony_vs_yii">Passing parameters from the action to the view: Symfony vs Yii</a></li>
+<li><a href="http://d.hatena.ne.jp/perezvon/20110109/1294579827">[Symfony]Doctrineを使ってユーザー認証を行う</a></li>
+<li><a href="http://www.entroducing.com/view/symfony-backend-displaying-thumbnail-or-photo-in-listing">symfony backend: displaying thumbnail or photo in listing</a></li>
+<li><a href="http://stereointeractive.com/blog/2011/01/08/symfony-1-4-admin-generator-sort-on-custom-column/">Symfony 1.4 admin generator sort on custom column</a></li>
+<li><a href="http://imanpage.com/code/using-th-native-mysql-enum-type-symfony-14-and-doctrine">Using the native MySQL ENUM type in Symfony 1.4 and Doctrine</a></li>
+<li><a href="http://blog.livedoor.jp/nakatatu2011/archives/51726224.html">Symfonyは情報が少ない</a></li>
+<li><a href="http://www.tutorialjinni.com/2011/01/symfony-doctrine-row-count.html">Symfony Doctrine Row Count</a></li>
+<li><a href="http://afreeland.tk/html/phpbb-4-meets-symfony-2-part-1-of-4.html">phpBB 4 Meets Symfony 2 (Part 1 of 4)</a></li>
+<li><a href="http://www.bloglaptrinh.info/tutorials/symfony/add-multiple-connections-of-database-in-symfony-and-doctrine/">Add multiple connections of database in Symfony and Doctrine</a></li>
+<li><a href="http://www.cotrun.net/blog/599.html">symfony助手及助手参数</a></li>
+<li><a href="http://www.noop.lv/2011/01/05/database-icon-loss-in-symfony-debug-bar/">Database icon loss in symfony debug bar</a></li>
+<li><a href="http://www.waebo.com/symfony-2-evolution-du-code-source-du-framework-php.html">Symfony 2: Evolution du code source du framework PHP</a></li>
+<li><a href="http://www.techiecorner.com/1963/how-to-reduce-admin-generator-query-in-symfony-1-4/">How to reduce admin generator query in Symfony 1.4</a></li>
+<li><a href="http://www.meteenee.com/disable-csrf_token-%E0%B9%83%E0%B8%99-form-%E0%B8%82%E0%B8%AD%E0%B8%87-symfony">disable csrf_token ใน form ของ symfony</a></li>
+<li><a href="http://francescoagati.wordpress.com/2011/01/03/php-symfony-2-e-i-bundle/">PHP: Symfony 2 e i bundle</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

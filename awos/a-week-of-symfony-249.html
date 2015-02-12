@@ -1,0 +1,242 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony #249 (3->9 October 2011) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #249 (3-&gt;9 October 2011)</h1>
+
+<p>Symfony 2.0.4 version was <a href="http://symfony.com/blog/symfony-2-0-4-released">released this week</a>, maintaining the fast pace of Symfony2 upgrades. In addition, the independent <a href="http://symfony.com/blog/symfony2-security-audit">security audit of Symfony2</a> and Twig code was disclosed. Lastly, an important, and backwards incompatible change, was committed to the Symfony2 master branch: locale management was moved from the Session class to the Request class (<a href="https://github.com/symfony/symfony/commit/74bc699b270122b70b1de6ece47c726f5df8bd41">see details</a>).</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/0j1IdfekOHQ">Sessions</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/nWddMcXLbh8">[RFC] [AsseticBundle] configuring bundles</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/1HyK24Zs0I8">symfony 2 - reusable distribution</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/O2EClN1-Q-I">supporting API versioning</a></li>
+</ul>
+
+<h2>symfony 1 development highlights</h2>
+
+<p><a href="http://trac.symfony-project.com/trac/timeline?from=09%2F10%2F2011&amp;daysback=6&amp;milestone=on&amp;ticket=on&amp;changeset=on&amp;update=Update">Changelog</a>:</p>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/33121" title="33121 revision on trac">r33121</a>: [1.4] fixed protocol relative URL in the asset helper</li>
+<li><a href="http://trac.symfony-project.org/changeset/33122" title="33122 revision on trac">r33122</a>: [1.4] fixed include|get_component when sfPartialView class is customized</li>
+<li><a href="http://trac.symfony-project.org/changeset/33125" title="33125 revision on trac">r33125</a>: [1.4] fixed the possibility to include files included in an exclude rule in the deploy task</li>
+</ul>
+
+<p>sfDoctrinePlugin:</p>
+
+<ul>
+<li><a href="http://trac.symfony-project.org/changeset/33123" title="33123 revision on trac">r33123</a>: [1.4] fixed virtual columns in sfFormFilterDoctrine</li>
+</ul>
+
+<h2>Symfony2 development highlights</h2>
+
+<p><a href="http://github.com/symfony/symfony/commits/2.0">2.0 branch</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/cf4a91e923c1192308311c390f42485d27721d10" title="cf4a91e923c1192308311c390f42485d27721d10 commit on github">cf4a91e</a>: [ClassLoader] fixed usage of trait_exists()</li>
+<li><a href="http://github.com/symfony/symfony/commit/92d19063a843c53537e49a3c74a052287b4792b2" title="92d19063a843c53537e49a3c74a052287b4792b2 commit on github">92d1906</a>: [Translation] changed some unit tests for PHPUnit 3.6.0 compatibility</li>
+<li><a href="http://github.com/symfony/symfony/commit/828b18f4673f09832be1692bd99bfe6de9112689" title="828b18f4673f09832be1692bd99bfe6de9112689 commit on github">828b18f</a>: [Form] fixed lacking attributes in DateTimeType</li>
+<li><a href="http://github.com/symfony/symfony/commit/a74ae9d325e23747e274448c69d688bcc2705d42" title="a74ae9d325e23747e274448c69d688bcc2705d42 commit on github">a74ae9d</a>: [HttpFoundation] made X<em>REWRITE</em>URL only available on Windows platforms</li>
+<li><a href="http://github.com/symfony/symfony/commit/95049ef902fa4818bb4c221dc2ed2d582e792cc9" title="95049ef902fa4818bb4c221dc2ed2d582e792cc9 commit on github">95049ef</a>: [Form] added type check to ScalarToChoiceTransformer</li>
+<li><a href="http://github.com/symfony/symfony/commit/18a83c67f41c2052cb1037f629838371d2aea202" title="18a83c67f41c2052cb1037f629838371d2aea202 commit on github">18a83c6</a>: [Form] simplified a bit FormUtil and extended test coverage</li>
+<li><a href="http://github.com/symfony/symfony/commit/ae0685a3142a2c58866f6dcde4145258e673d0c1" title="ae0685a3142a2c58866f6dcde4145258e673d0c1 commit on github">ae0685a</a>: [Translation] loader should only load local files</li>
+</ul>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">Master branch</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/6b16757199000a53d733d5568828e3f6e5b038ab" title="6b16757199000a53d733d5568828e3f6e5b038ab commit on github">6b16757</a>: [Security] changed a RuntimeException to LogicException for consistencies between the different Token classes</li>
+<li><a href="http://github.com/symfony/symfony/commit/3f567b82089e2bdeb6fb731231d398e416cc38a5" title="3f567b82089e2bdeb6fb731231d398e416cc38a5 commit on github">3f567b8</a>: [FrameworkBundle] moved a parameter in the same file as the one where the service is defined for better consistency</li>
+<li><a href="http://github.com/symfony/symfony/commit/d7c9644d291ff17b430912b67cc295dbf15200f2" title="d7c9644d291ff17b430912b67cc295dbf15200f2 commit on github">d7c9644</a>: [Validator] extend and fix DateValidator &amp; TimeValidator tests</li>
+<li><a href="http://github.com/symfony/symfony/commit/deb6dea76dec7d38671afa5ff3f2c278ea28dd65" title="deb6dea76dec7d38671afa5ff3f2c278ea28dd65 commit on github">deb6dea</a>: [Translation] added failing tests to verify that UTF-8 lang files can&#39;t be used with another charset</li>
+<li><a href="http://github.com/symfony/symfony/commit/5473d3b6c94ac38d0658f9745c582f840d49464e" title="5473d3b6c94ac38d0658f9745c582f840d49464e commit on github">5473d3b</a>: [Translation] allowed use of UTF-8 encoded catalogues into non-UTF-8 applications</li>
+<li><a href="http://github.com/symfony/symfony/commit/395f580fd7e9fd49ba850198da0c333bc6d28d3b" title="395f580fd7e9fd49ba850198da0c333bc6d28d3b commit on github">395f580</a>: rebuilt resource files with genrb from ICU 4.2. as ICU 4.4 by default builds them in newer format</li>
+<li><a href="http://github.com/symfony/symfony/commit/8b55541aeefc78366daa0296fc67151edd1977c9" title="8b55541aeefc78366daa0296fc67151edd1977c9 commit on github">8b55541</a>: added an UPGRADE file</li>
+<li><a href="http://github.com/symfony/symfony/commit/74bc699b270122b70b1de6ece47c726f5df8bd41" title="74bc699b270122b70b1de6ece47c726f5df8bd41 commit on github">74bc699</a>: [BC BREAK] moved management of the locale from the Session class to the Request class</li>
+</ul>
+
+<h2><a href="http://www.symfony-project.org/plugins/newest/">New plugins</a></h2>
+
+<ul>
+<li><a href="http://www.symfony-project.org/plugins/sfRestProxyPlugin">sfRestProxy</a>: great REST plugin</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/sfSimplePagePlugin">sfSimplePage</a>:</p>
+
+<ul>
+<li>added new configuration option to disable routes generation</li>
+<li>MOD document new option</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfXssSafePlugin">sfXssSafe</a>:</p>
+
+<ul>
+<li>released 1.1.0 version</li>
+<li>fixed sfXssSafePlugin 0.95 fails to utilize HTML Purifier caching and generates PHP warnings</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfGuardSecurePlugin">sfGuardSecure</a>:</p>
+
+<ul>
+<li>allowes CAPTCHA extra field</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfFormExtraPlugin">sfFormExtra</a>:</p>
+
+<ul>
+<li>fixed recaptcha URLs</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheS3StoragePlugin">apostropheS3Storage</a>:</p>
+
+<ul>
+<li>moved the task out to apostrophePlugin</li>
+<li>debugged the cache feature (read-only cache of the first 8K &amp; results of stat())</li>
+<li>tests pass when the -aux and -aux2 buckets already exist</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>workaround for potential XSS attack in page titles due to framework bug</li>
+<li>made Apostrophe load-balancing and cloud-storage friendly</li>
+<li>button slot no longer does last-minute str_replace on getEmbedCode, which is the old no-longer-supported DOS-friendly thing to do</li>
+<li>existing video thumbnails are correctly accepted as a default for the file widget again</li>
+<li>single-image slot no longer relies on the str_replace technique to generate media URLs</li>
+<li>removed lots of error_log calls</li>
+<li>new &#39;absolute&#39; option to getScaledUrl allows absolute URLs to be retrieved</li>
+<li>if an &#39;authorize&#39; request is sent to getScaledUrl, return an array with just the URL for the image, rather than just returning true</li>
+<li>added a context to the symfony cc task during the preCommand event rather than postCommand so that it benefits all postCommand handlers that need a context</li>
+<li>made very sure we don&#39;t try to delete the original when a crop is removed</li>
+<li>call getOriginalPath when rendering</li>
+<li>use real routing to generate the local media URLs so that overrides of the routes work as expected</li>
+<li>added options parameter and prependToRootRelative option to Minify<em>CSS</em>UriRewriter::prepend()</li>
+</ul></li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://www.symfony.es/2011/10/03/cupon-una-nueva-aplicacion-de-ejemplo-de-symfony2/">Cupon, una nueva aplicación de ejemplo de Symfony2</a></li>
+<li><a href="http://www.strangebuzz.com/post/2011/10/05/symfony1-sfTCPDFPlugin-1-6-3-released">symfony1 sfTCPDFPlugin 1-6-3 released</a></li>
+<li><a href="http://www.symfony.it/articoli/520/usare-symfony2-con-subversion/">Usare Symfony2 con subversion</a></li>
+<li><a href="http://www.leftontheweb.com/message/About_your_job_opening">About your job opening...</a></li>
+<li><a href="http://propel.posterous.com/propel2-has-begun">Propel2 has begun!</a></li>
+<li><a href="http://www.symfony.es/2011/10/06/se-anuncian-grandes-novedades-para-la-proxima-version-de-propel/">Se anuncian grandes novedades para la próxima versión de Propel</a></li>
+<li><a href="http://www.strangebuzz.com/post/2011/09/29/symfony1-sfTaskLoggerPlugin-1-0-3-released">symfony1 sfTaskLoggerPlugin 1-0-3 released</a></li>
+<li><a href="http://www.clever-age.com/veille/blog/quelques-bonnes-raisons-et-pas-uniquement-techniques-de-remplacer-votre-vieux-framework.html">Quelques bonnes raisons (et pas uniquement techniques!) de remplacer votre vieux framework</a></li>
+<li><a href="http://www.symfony.es/2011/10/07/resumen-de-la-reunion-de-desarrolladores-del-6-10-2011/">Resumen de la reunión de desarrolladores del 6-10-2011</a></li>
+<li><a href="http://eatmymonkeydust.com/2011/10/optimising_a_php_symfony_doctrine_application/">Optimising A PHP (Symfony 1.X/Doctrine 1.X) Application</a></li>
+<li><a href="http://avalanche123.com/post/11210600073/about-rel-attribute-from-a-web-developers-point-of">About &#39;rel&#39; attribute from a web developer&#39;s point of view</a></li>
+<li><a href="http://borayalcin.me/2011/10/09/codeigniter-vs-other-frameworks/">Codeigniter vs. Other Frameworks</a></li>
+<li><a href="http://dariussadowski.com/2011/10/symfony-2-listener-logowania-uzytkownikow.html">Symfony 2 – Listener logowania użytkowników</a></li>
+<li><a href="http://www.openpne.jp/archives/6511/">OpenPNE 3.6 の新機能について</a></li>
+<li><a href="http://www.php-boutique.de/symfony-blog-symfony2-security-audit">Symfony Blog: Symfony2 Security Audit</a></li>
+<li><a href="http://elephpants.blog.redpill-linpro.com/2011/10/07/optimising_a_php_symfony_doctrine_application-2/">Optimising a PHP (symfony 1.x/Doctrine 1.x) application</a></li>
+<li><a href="http://hi.baidu.com/avauntage/blog/item/2600d9fd4dc9b459d7887dd1.html">【转】 主流PHP框架间的比较（Zend Framework，CakePHP，CodeIgniter，Symfony，ThinkPHP，FleaPHP）</a></li>
+<li><a href="http://clycks.fr/2011/10/296-symfony2-ce-qui-change">Symfony2 – Ce qui change</a></li>
+<li><a href="http://symfony.outputstudy.info/2011/10/start/">はじめるよ！</a></li>
+<li><a href="http://mikinfo.free.fr/index.php/configurer-les-virtualhosts-pour-symfony/">Configurer les VirtualHosts pour Symfony</a></li>
+<li><a href="http://www.meteenee.com/update-symfony">Update symfony</a></li>
+<li><a href="http://blog.chedushi.com/archives/223">几款主流PHP框架的优缺点评比</a></li>
+<li><a href="http://tomislavsantek.iz.hr/2011/10/customizing-symfony-form-rendering-by-using-form-formatter/">Customizing Symfony form rendering by using form formatter</a></li>
+<li><a href="http://d.hatena.ne.jp/ux00ff/20111004/1317683245">PHP環境構築 on Ubuntu(10) symfony 空アプリケーションにモジュールとアクションを追加してみる</a></li>
+<li><a href="http://www.totophe.com/2011/10/03/a-short-article-on-how-to-setup-a-symfony-1-4-project-with-svn/">A short article on how to setup a symfony 1.4 project with SVN</a></li>
+<li><a href="http://monsterbirth.ru/symfony-2-book-na-russkom/symfony2-protiv-flat-php/">Symfony2 против Flat PHP</a></li>
+<li><a href="http://www.screenfony.com/blog/deploy-symfony-application-with-capifony">Deploy Symfony application with capifony</a></li>
+<li><a href="http://blog.datasolutions.pe/index.php/20111002/generacion-de-reportes-pdf-con-symfony-1-4-doctrine-fpdf/">Generación de reportes PDF con Symfony 1.4, Doctrine y FPDF</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

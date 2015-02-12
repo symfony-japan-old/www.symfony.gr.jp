@@ -1,0 +1,193 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>A week of symfony #250 (10->16 October 2011) | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>A week of symfony #250 (10-&gt;16 October 2011)</h1>
+
+<p>This week, all the Symfony2 components were included in <a href="http://packagist.org/">packagist.org</a>, a public repository for Composer, the package manager that soon will be used on Symfony2. Meanwhile, on the master branch of Symfony2 repository all the <a href="https://github.com/symfony/symfony/commit/beda03ba96b847fb6bcf2d7aed2893c978ec2565">HttpKernel event listeners were updated to implement EventSubscriberInterface</a> and the official repository surpassed the 800 forks milestone.</p>
+
+<h2>Development mailing list</h2>
+
+<ul>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/GIOXA3GFspQ">Standard Solution of serializing Doctrine Entity to json</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/symfony-devs/ojLvh0WUbfo">[Security] ContextListener logic for persisting Tokens</a></li>
+</ul>
+
+<h2>Symfony2 development highlights</h2>
+
+<p><a href="http://github.com/symfony/symfony/commits/master">Master branch changelog</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/8f157942740b61a140997c3e2bfcb8326606e3b7" title="8f157942740b61a140997c3e2bfcb8326606e3b7 commit on github">8f15794</a>: moved LocaleListener and RouterListener to the HttpKernel component</li>
+<li><a href="http://github.com/symfony/symfony/commit/4539e5c554e71d53ae6d4b3b48681fea60d0fd90" title="4539e5c554e71d53ae6d4b3b48681fea60d0fd90 commit on github">4539e5c</a>: moved configuration of the default HTTP and HTTPS ports from RouterListener to RequestContext</li>
+<li><a href="http://github.com/symfony/symfony/commit/beda03ba96b847fb6bcf2d7aed2893c978ec2565" title="beda03ba96b847fb6bcf2d7aed2893c978ec2565 commit on github">beda03b</a>, <a href="http://github.com/symfony/symfony/commit/7a89d34872e82fcc67efef7a709e8501351d6bac" title="7a89d34872e82fcc67efef7a709e8501351d6bac commit on github">7a89d34</a>: [HttpKernel] updated all HttpKernel event listeners to implement EventSubscriberInterface</li>
+<li><a href="http://github.com/symfony/symfony/commit/6e4269f9eb944c879c563b701cbf203ac3a48056" title="6e4269f9eb944c879c563b701cbf203ac3a48056 commit on github">6e4269f</a>, <a href="http://github.com/symfony/symfony/commit/3aa75828b01149a8ea6fbe18f27d1fd27f96bd35" title="3aa75828b01149a8ea6fbe18f27d1fd27f96bd35 commit on github">3aa7582</a>, <a href="http://github.com/symfony/symfony/commit/a2cf023da1e3bc58cd1f3acae9d186cba0aea1dc" title="a2cf023da1e3bc58cd1f3acae9d186cba0aea1dc commit on github">a2cf023</a>: [Form, TwigBridge, FrameworkBundle] added the ability to specify the translation domain</li>
+<li><a href="http://github.com/symfony/symfony/commit/73312ab5e9321bb586fd2e7f7503b01554875969" title="73312ab5e9321bb586fd2e7f7503b01554875969 commit on github">73312ab</a>: [Validator] the Type constraint now accepts the Boolean type instead of boolean</li>
+<li><a href="http://github.com/symfony/symfony/commit/cc76da1144bbeb57db6faafcfd2242e055276275" title="cc76da1144bbeb57db6faafcfd2242e055276275 commit on github">cc76da1</a>: [HttpKernel] fixed file profile storage when trying to read an empty token</li>
+<li><a href="http://github.com/symfony/symfony/commit/5b69dae9c8384a3e8c0cbc1a2ec5dc4fa44d05d3" title="5b69dae9c8384a3e8c0cbc1a2ec5dc4fa44d05d3 commit on github">5b69dae</a>: [HttpKernel] fixed profiler file storage for children</li>
+<li><a href="http://github.com/symfony/symfony/commit/3ca1ccbf6764de5e2d48b2ddabdd2f1eb7075459" title="3ca1ccbf6764de5e2d48b2ddabdd2f1eb7075459 commit on github">3ca1ccb</a>: [DoctrineBridge] removed the Xml and Yaml driver as they are now part of Doctrine</li>
+<li><a href="http://github.com/symfony/symfony/commit/976f8b10fa6bf4505cab6fcec07ff1d73a281994" title="976f8b10fa6bf4505cab6fcec07ff1d73a281994 commit on github">976f8b1</a>: [HttpKernel] moved the Timer data collector to HttpKernel</li>
+<li><a href="http://github.com/symfony/symfony/commit/08285edef973a0c2392503ba499d761e086c49d2" title="08285edef973a0c2392503ba499d761e086c49d2 commit on github">08285ed</a>: [SwiftmailerBundle] fixed email display in the web profiler when the message is not in UTF-8</li>
+</ul>
+
+<p><a href="http://github.com/symfony/symfony/commits/2.0">2.0 branch changelog</a>:</p>
+
+<ul>
+<li><a href="http://github.com/symfony/symfony/commit/2270a4da5ad24fec70142301ee01935efa2e78c9" title="2270a4da5ad24fec70142301ee01935efa2e78c9 commit on github">2270a4d</a>: [Bridge, Doctrine] added a catch for when a developer uses the EntityType with multiple=false but on a hasMany relationship</li>
+<li><a href="http://github.com/symfony/symfony/commit/00cbd398135b865478fa63278e667421368525c5" title="00cbd398135b865478fa63278e667421368525c5 commit on github">00cbd39</a>, <a href="http://github.com/symfony/symfony/commit/d8dfca21f2a61861f3b00114d876210171be446c" title="d8dfca21f2a61861f3b00114d876210171be446c commit on github">d8dfca2</a>: [BrowserKit] fixed cookie expiry discard when attribute contains capitals</li>
+<li><a href="http://github.com/symfony/symfony/commit/9d8046e40739d275de3049283fe934f5de4ae98c" title="9d8046e40739d275de3049283fe934f5de4ae98c commit on github">9d8046e</a>: [Doctrine] UniqueValidator now works with associations</li>
+</ul>
+
+<h2><a href="http://www.symfony-project.org/plugins/newest/">New plugins</a></h2>
+
+<ul>
+<li><a href="http://www.symfony-project.org/plugins/sfCacophonyPlugin">sfCacophony</a>: implements OAuth with PECL OAuth extension (an alternative to sfMelodyPlugin)</li>
+<li><a href="http://www.symfony-project.org/plugins/sfFacebookSliderPlugin">sfFacebookSlider</a>: facebook slider</li>
+</ul>
+
+<h2>Updated plugins</h2>
+
+<ul>
+<li><p><a href="http://www.symfony-project.org/plugins/sfPEARcaptchaPlugin">sfPEARcaptcha</a>:</p>
+
+<ul>
+<li>fixed typo</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/sfGuardSecurePlugin">sfGuardSecure</a>:</p>
+
+<ul>
+<li>tweaked allow<em>extra</em>fields</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/dcReloadedFormExtraPlugin">dcReloadedFormExtra</a>:</p>
+
+<ul>
+<li>tweaks and fixes to chosen.js widgets</li>
+<li>added the alWidgetFormTimepicker widget (wrapper for the jQueryUITimepicker) and the corresponding validator alValidatorTimepicker</li>
+<li>updated README file to add timepicker explanations</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostropheBlogPlugin">apostropheBlog</a>:</p>
+
+<ul>
+<li>fixed a user who was a member of the editor group but not able to edit any particular posts could edit all posts due to an empty whereIn() call</li>
+</ul></li>
+<li><p><a href="http://www.symfony-project.org/plugins/apostrophePlugin">apostrophe</a>:</p>
+
+<ul>
+<li>made sure there&#39;s a full app environment (including invocation of the frontendConfiguration class configure method) in aSyncStaticFiles task</li>
+<li>refactored a-admin generator filter styles</li>
+<li>fixed validated type of file uploads persists properly for Office files</li>
+<li>fixed mysql version of aTools::lock did not return a value properly</li>
+</ul></li>
+</ul>
+
+<h2>They talked about us</h2>
+
+<ul>
+<li><a href="http://www.leftontheweb.com/message/Open_Sourcing_LinkTuesdaycom">Open Sourcing LinkTuesday.com</a></li>
+<li><a href="http://pressnetwork.de/konferenz-zu-beliebtem-framework-symfony-day-cologne-2011/">Konferenz zu beliebtem Framework: Symfony Day Cologne 2011</a></li>
+<li><a href="http://nerdpress.org/2011/10/12/silex-twig-und-html5-boilerplate/">Silex, Twig und HTML5 BoilerPlate</a></li>
+<li><a href="http://www.efytimes.com/e1/creativenews.asp?edid=71133">Open Source Is Powering Pretty Much Everything</a></li>
+<li><a href="http://nerdpress.org/2011/10/13/symfony-2-set-default-locale-on-form-login-2/">Symfony 2 – Set Default Locale On Form Login #2</a></li>
+<li><a href="http://www.leftontheweb.com/message/A_URL_shortener_in_a_couple_of_hours">A URL shortener in a couple of hours</a></li>
+<li><a href="http://www.symfony.es/2011/10/16/la-seguridad-de-utilizar-symfony2/">La seguridad de utilizar Symfony2</a></li>
+<li><a href="http://php-and-symfony.matthiasnoback.nl/2011/10/symfony2-service-container-how-to-make-your-service-use-tags/">Symfony2 service container: how to make your service use tags</a></li>
+<li><a href="http://php-and-symfony.matthiasnoback.nl/2011/10/symfony2-how-to-create-a-userprovider/">Symfony2: How to create a UserProvider</a></li>
+<li><a href="http://blog.44services.jp/?p=542">symfony + Doctrine でi18n</a></li>
+<li><a href="http://www.izazael.com/2011/10/symfony-sub-domains-and-front-controllers/">Symfony: sub-domains and front controllers</a></li>
+<li><a href="http://select.rash.jp/op/710/">OpenPNE3　opFreepagePluginプラグインインストール時のエラー回避方法</a></li>
+<li><a href="http://www.dinduks.com/symfony-2-creer-un-utilisateur-depuis-un-controleur-avec-fosub">Symfony 2: Créer un utilisateur depuis un contrôleur avec FOSUB</a></li>
+<li><a href="http://test.ical.ly/2011/10/11/is-there-a-specific-situation-when-to-use-a-php-micro-framework-like-silex/">Is there a specific situation when to use a PHP micro-framework like Silex</a></li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+

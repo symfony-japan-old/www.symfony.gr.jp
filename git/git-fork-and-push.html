@@ -1,0 +1,165 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>GitHub 上のレポジトリのフォーク、プッシュ、プルリクエスト | 日本Symfonyユーザー会</title>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+    <!--
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+  -->
+  </head>
+  <body>
+
+    <div id="all">
+    <div id="content">
+      <div id="content_wrapper">
+        <div id="top_menu">
+          <div id="top_menu_wrapper">
+          </div>
+        </div>
+        <div id="header_top">
+          <h1 id="logo_top"><a href="http://www.symfony.gr.jp/">日本Symfonyユーザー会</a></h1>
+          <div id="header_top_left"></div>
+        </div>
+        <!-- end #header -->
+        <div id="navbar">
+          <ul>
+            <li><a href="http://docs.symfony.gr.jp/">Symfony2日本語ドキュメント</a></li>
+          </ul>
+        </div>
+        <!-- end #navbar -->
+        <div id="main">
+
+      <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+
+
+<h1>GitHub 上のリポジトリのフォーク、プッシュ、プルリクエスト</h1>
+
+<p>このページでは、GitHub 上の他のユーザーのリポジトリのソースファイルに修正を加え、その修正を該当ユーザーに取り込んでもらう手順について説明します。</p>
+
+<h2>前提知識</h2>
+
+<p>Git 環境の構築、および GitHub 上の自分のリポジトリへのコミットやプッシュが行える環境はすでに構築されているものとします。
+環境の構築方法については、以下のページを参照してください。</p>
+
+<ul>
+<li><a href="setup-git-windows">Windows 上に Git 環境を構築する方法(TortoiseGit と msysGit)</a></li>
+</ul>
+
+<h2>他のユーザーのリポジトリのソースファイルを修正する</h2>
+
+<p>ここでは Symfony ユーザー会のコンテンツリポジトリを例に説明します。
+まず、修正を行いたいソースが含まれているリポジトリを、ローカルコンピューターへ <strong>clone</strong> します。
+この操作により、対象リポジトリがローカルにコピーされます。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git clone git://github.com/hidenorigoto/sfjp-doc-main.git
+</code></pre></div>
+<p>このコマンドを実行すると、<code>sfjp-doc-main</code> というディレクトリが作られ、その中にリポジトリのファイルがコピーされます。</p>
+
+<p>編集したいファイルがあれば編集し、追加したいファイルがあれば追加します。</p>
+
+<p>その後、以下の 2 つの手順でローカルのリポジトリに対して変更をコミットします。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git add .
+$ git commit -m &#39;updated documentation&#39;
+</code></pre></div>
+<p>1 つ目のコマンドでは、カレントディレクトリ配下で変更のあったファイルをすべて「コミット対象」としてマークします。これを「ステージングする」といいます。
+2 つ目のコマンドでは、ステージングされたファイルの変更をコミットします。<code>-m</code> の後にコミットメッセージを入力します。</p>
+
+<blockquote>
+<p><strong>NOTE</strong>
+Git では、コミット対象のステージング、コミットの処理は完全にローカルのリポジトリのみで完結します。
+ですので、コミット処理が非常に軽く、手軽に行えます。</p>
+</blockquote>
+
+<p>ローカルのリポジトリでコミットを繰り返して変更を蓄積し、修正を完成させていきます。</p>
+
+<h2>修正の反映用に GitHub 上でリポジトリをフォークする</h2>
+
+<p>通常は、他のユーザーのリポジトリを直接更新することはできません。
+まずは、対象リポジトリを<strong>フォーク</strong>して、GitHub 上で自分用のリポジトリとして分岐させます。
+例えば Symfony ユーザー会のメインコンテンツリポジトリをフォークする場合は、<a href="http://github.com/hidenorigoto/sfjp-doc-main">hidenorigoto / sfjp-doc-main</a> へアクセスし、「フォーク」というボタンをクリックします。これで、自分のダッシュボードに戻ると sfjp-doc-main というリポジトリが表示されます。</p>
+
+<h2>フォークしたリポジトリへプッシュする</h2>
+
+<p>では、ローカルに蓄積した変更を、自分用のリポジトリへプッシュしましょう。</p>
+
+<p>プッシュなどの操作を行うには、ローカルのリポジトリに対象リポジトリを登録する必要があります。以下のコマンドで、対象リポジトリを登録できます。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git remote add yourname git@github.com:yourname/sfjp-doc-main.git
+# yourname の部分はお使いの GitHub アカウント名に置き換えてください。
+</code></pre></div>
+<p>これで、「リモート」の一覧として <code>yourname</code> リポジトリが追加されました。登録されているリモートの一覧を確認するには、以下のコマンドを実行します。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git remote -v
+</code></pre></div>
+<p>ここまで準備ができたら、実際に「プッシュ」します。ローカルで作業しているブランチが <code>master</code> の場合、以下のコマンドを実行します。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git push yourname master
+</code></pre></div>
+<p>プッシュが完了したら、GitHub 上のリポジトリページへアクセスして、変更が取り込まれていることを確認してください。</p>
+
+<h2>プルリクエストを送信する</h2>
+
+<p><strong>プルリクエスト</strong>とは、「あなたのリポジトリのソースを更新したから、取り込んでください」と GitHub 上で連絡する手段です。
+プルリクエストを送信しなくても、こちらの更新を相手が取り込むことはできます。</p>
+
+<p>プルリクエストを送信するには、GitHub 上のリポジトリページへアクセスして、「プルリクエスト」ボタンをクリックします。
+どのような変更を行ったのかをメッセージ欄に入力し、送信対象をチェックして「Send」ボタンを押すと、プルリクエストが送信されます。</p>
+
+
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<!-- end #main -->
+</div>
+<!-- end #content_wrapper -->
+</div>
+<!-- end #content -->
+
+
+<div id="footer">
+<div id="footer_wrapper">
+<div id="footer_content">
+<div style=" position: relative;">
+<div id="footer_left"></div>
+<div id="footer_right"></div>
+</div>
+<!-- end #navbar -->
+<div>
+<p id="copy">
+  Copyright &copy; 2015 Symfony Japan. All rights reserved.
+  <!-- &nbsp;&nbsp;&nbsp;Bandwidth and hardware provided by <a href="http://www.asial.co.jp/">アシアル株式会社</a>
+  &nbsp;&nbsp;Powered by <a href="http://sphinx.pocoo.org/">Sphinx</a> -->
+</p>
+</div>
+</div>
+<!-- end #footer_content -->
+</div>
+<!-- end #footer_wrapper -->
+</div>
+<!-- end #footer -->
+</div>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16659283-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>
+
